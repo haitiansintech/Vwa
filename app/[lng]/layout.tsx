@@ -1,3 +1,4 @@
+import { dir } from 'i18next'
 import { Inter as FontSans } from "next/font/google"
 import localFont from "next/font/local"
 
@@ -8,6 +9,7 @@ import { Toaster } from "@/components/ui/toaster"
 import { Analytics } from "@/components/analytics"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
 import { ThemeProvider } from "@/components/theme-provider"
+import { languages } from '../i18n/settings'
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -16,12 +18,15 @@ const fontSans = FontSans({
 
 // Font files can be colocated inside of `pages`
 const fontHeading = localFont({
-  src: "../assets/fonts/CalSans-SemiBold.woff2",
+  src: "../../assets/fonts/CalSans-SemiBold.woff2",
   variable: "--font-heading",
 })
 
 interface RootLayoutProps {
   children: React.ReactNode
+  params: {
+    lng: "en" | "fr" | "ht"
+  }
 }
 
 export const metadata = {
@@ -65,9 +70,13 @@ export const metadata = {
   manifest: `${siteConfig.url}/site.webmanifest`,
 }
 
-export default function RootLayout({ children }: RootLayoutProps) {
+export async function generateStaticParams() {
+  return languages.map((lng) => ({ lng }))
+}
+
+export default function RootLayout({ children, params: {lng} }: RootLayoutProps) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang={lng} dir={dir(lng)} suppressHydrationWarning>
       <head />
       <body
         className={cn(

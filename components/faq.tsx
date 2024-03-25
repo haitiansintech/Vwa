@@ -9,6 +9,7 @@ type FaqEntry = {
 }
 
 type FAQPros = { data: FaqEntry[] }
+
 export function FAQ({ data = [] }: FAQPros) {
   if (data.length === 0) return
 

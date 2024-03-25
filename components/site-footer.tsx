@@ -7,9 +7,13 @@ import { cn } from '@/lib/utils'
 import { Icons } from '@/components/icons'
 import { ModeToggle } from '@/components/mode-toggle'
 
-export function SiteFooter() {
+type Props = {
+  className?: string
+
+}
+export function SiteFooter({ className }: Props) {
   return (
-    <footer className="" aria-labelledby="footer-heading">
+    <footer className={className} aria-labelledby="footer-heading">
       <h2 id="footer-heading" className="sr-only">
         Footer
       </h2>

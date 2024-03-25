@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import { Feather } from 'lucide-react'
 
 import { env } from '@/env.mjs'
 import { siteConfig } from '@/config/site'
@@ -7,6 +6,9 @@ import { cn } from '@/lib/utils'
 import { buttonVariants } from '@/components/ui/button'
 import { FAQ } from '@/components/faq'
 import { Icons } from '@/components/icons'
+import type { SiteLang } from '@/types'
+import { getTranslation } from '@/app/i18n'
+import { LanguageSwitcher } from '@/components/LanguageSwitcher'
 
 async function getGitHubStars(): Promise<string | null> {
   try {
@@ -30,8 +32,13 @@ async function getGitHubStars(): Promise<string | null> {
   }
 }
 
-export default async function IndexPage() {
+type Props = {
+  params: SiteLang
+}
+
+export default async function IndexPage({params: {lng}}: Props) {
   const stars = await getGitHubStars()
+  const { t } = await getTranslation(lng)
 
   return (
     <>
@@ -44,6 +51,11 @@ export default async function IndexPage() {
           >
             Follow along on Twitter
           </Link>
+          {/* i18n test */}
+          <h5>{t('title')} - {t('count', {count: 0})}</h5>
+
+          <LanguageSwitcher lng={lng} />
+
           <h1 className="font-heading text-3xl sm:text-5xl md:text-6xl lg:text-7xl">
             Tired of feeling fustrated and helpless about Haiti. Now... there's something you can do
             about it.
