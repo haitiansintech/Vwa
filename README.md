@@ -31,6 +31,7 @@ This project as an experiment to see how we can mobilize Haitains to engage in c
 - Styled using **Tailwind CSS**
 - Validations using **Zod**
 - Written in **TypeScript**
+- i18n ready
 
 ## Roadmap
 
