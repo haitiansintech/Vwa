@@ -53,7 +53,7 @@ export default async function IndexPage({params: {lng}}: Props) {
           </Link>
           {/* i18n test */}
           <h5>{t('title')} - {t('count', {count: 0})}</h5>
-
+        {/* @ts-expect-error Server Component */}
           <LanguageSwitcher lng={lng} />
 
           <h1 className="font-heading text-3xl sm:text-5xl md:text-6xl lg:text-7xl">
