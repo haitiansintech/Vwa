@@ -3,15 +3,15 @@ import { getTranslation } from '@/app/i18n'
 import { languages } from '@/app/i18n/settings'
 import Link from 'next/link'
 import { Trans } from 'react-i18next/TransWithoutContext'
-import { SiteLang } from '@/types'
+import type { SiteLang, TType, WithClassName } from '@/types'
 
-type Props = {
-  lng: SiteLang['lng']
-  className?: string
-}
+type Props = WithClassName<{
+  lang: SiteLang,
+  t: TType
+}>
 
-const getFlag = (lng: string) => {
-  switch (lng) {
+const getFlag = (lang: string) => {
+  switch (lang) {
     case 'en':
       return '🇺🇸'
     case 'ht':
@@ -19,16 +19,14 @@ const getFlag = (lng: string) => {
   }
 }
 
-export const LanguageSwitcher = async ({ lng, className}: Props) => {
-  const { t } = await getTranslation(lng, 'footer')
-  // const { t } = useTranslation(lng)
+export const LanguageSwitcher = ({ lang, className, t }: Props) => {
 
   return (
     <div className={clx("text-2xl", className)}>
       <Trans i18nKey="languageSwitcher" t={t}>
-        Switch from <strong>{getFlag(lng)}</strong> to:{' '}
+        Switch from <strong>{getFlag(lang)}</strong> to:{' '}
       </Trans>
-      {languages.filter((l) => lng !== l).map((l, index) => {
+      {languages.filter((l) => lang !== l).map((l, index) => {
         return (
           <span key={l}>
             {index > 0 && (' or ')}

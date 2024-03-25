@@ -11,7 +11,7 @@ type FaqEntry = {
 type FAQPros = { data: FaqEntry[] }
 
 export function FAQ({ data = [] }: FAQPros) {
-  if (data.length === 0) return
+  if (data.length === 0) return null
 
   return (
     <div className="">
@@ -30,9 +30,9 @@ export function FAQ({ data = [] }: FAQPros) {
                         <span className="text-base font-semibold leading-7">{faq.question}</span>
                         <span className="ml-6 flex h-7 items-center">
                           {open ? (
-                            <MinusSmallIcon className="h-6 w-6" aria-hidden="true" />
+                            <MinusSmallIcon className="size-6" aria-hidden="true" />
                           ) : (
-                            <PlusSmallIcon className="h-6 w-6" aria-hidden="true" />
+                            <PlusSmallIcon className="size-6" aria-hidden="true" />
                           )}
                         </span>
                       </Disclosure.Button>

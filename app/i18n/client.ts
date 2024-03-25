@@ -25,30 +25,30 @@ i18next
     preload: runsOnServerSide ? languages : []
   })
 
-export function useTranslation(lng: string, ns = defaultNS, options = {}) {
+export function useTranslation(lang: string, ns = defaultNS, options = {}) {
   const [cookies, setCookie] = useCookies([cookieName])
   const ret = useTranslationOrg(ns, options)
   const { i18n } = ret
-  if (runsOnServerSide && lng && i18n.resolvedLanguage !== lng) {
-    i18n.changeLanguage(lng)
+  if (runsOnServerSide && lang && i18n.resolvedLanguage !== lang) {
+    i18n.changeLanguage(lang)
   } else {
     // eslint-disable-next-line react-hooks/rules-of-hooks
-    const [activeLng, setActiveLng] = useState(i18n.resolvedLanguage)
+    const [activelang, setActivelang] = useState(i18n.resolvedLanguage)
     // eslint-disable-next-line react-hooks/rules-of-hooks
     useEffect(() => {
-      if (activeLng === i18n.resolvedLanguage) return
-      setActiveLng(i18n.resolvedLanguage)
-    }, [activeLng, i18n.resolvedLanguage])
+      if (activelang === i18n.resolvedLanguage) return
+      setActivelang(i18n.resolvedLanguage)
+    }, [activelang, i18n.resolvedLanguage])
     // eslint-disable-next-line react-hooks/rules-of-hooks
     useEffect(() => {
-      if (!lng || i18n.resolvedLanguage === lng) return
-      i18n.changeLanguage(lng)
-    }, [lng, i18n])
+      if (!lang || i18n.resolvedLanguage === lang) return
+      i18n.changeLanguage(lang)
+    }, [lang, i18n])
     // eslint-disable-next-line react-hooks/rules-of-hooks
     useEffect(() => {
-      if (cookies.i18next === lng) return
-      setCookie(cookieName, lng, { path: '/' })
-    }, [lng, cookies.i18next])
+      if (cookies.i18next === lang) return
+      setCookie(cookieName, lang, { path: '/' })
+    }, [lang, cookies.i18next, setCookie])
   }
   return ret
 }

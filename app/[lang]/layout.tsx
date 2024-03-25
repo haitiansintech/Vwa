@@ -4,12 +4,13 @@ import localFont from "next/font/local"
 
 import "@/styles/globals.css"
 import { siteConfig } from "@/config/site"
-import { absoluteUrl, cn } from "@/lib/utils"
+import { cn } from "@/lib/utils"
 import { Toaster } from "@/components/ui/toaster"
 import { Analytics } from "@/components/analytics"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
 import { ThemeProvider } from "@/components/theme-provider"
 import { languages } from '../i18n/settings'
+import { SiteLang } from '@/types'
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -25,7 +26,7 @@ const fontHeading = localFont({
 interface RootLayoutProps {
   children: React.ReactNode
   params: {
-    lng: "en" | "fr" | "ht"
+    lang: SiteLang
   }
 }
 
@@ -71,12 +72,12 @@ export const metadata = {
 }
 
 export async function generateStaticParams() {
-  return languages.map((lng) => ({ lng }))
+  return languages.map((lang) => ({ lang }))
 }
 
-export default function RootLayout({ children, params: {lng} }: RootLayoutProps) {
+export default function RootLayout({ children, params: { lang } }: RootLayoutProps) {
   return (
-    <html lang={lng} dir={dir(lng)} suppressHydrationWarning>
+    <html lang={lang} dir={dir(lang)} suppressHydrationWarning>
       <head />
       <body
         className={cn(
