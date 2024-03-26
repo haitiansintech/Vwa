@@ -58,7 +58,7 @@ A list of things not working right now:
 1. Install dependencies using pnpm:
 
 ```sh
-pnpm install
+npm install
 ```
 
 2. Copy `.env.example` to `.env.local` and update the variables.
@@ -70,7 +70,7 @@ cp .env.example .env.local
 3. Start the development server:
 
 ```sh
-pnpm dev
+npm run dev
 ```
 
 ## Contributors
