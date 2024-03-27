@@ -1,6 +1,25 @@
+import { NextResponse } from 'next/server'
 import { getToken } from "next-auth/jwt"
 import { withAuth } from "next-auth/middleware"
-import { NextResponse } from "next/server"
+import acceptLanguage from 'accept-language'
+import { fallbacklang, languages, cookieName } from './app/i18n/settings'
+
+acceptLanguage.languages(languages)
+
+// export const config = {
+//   // matcher: '/:lang*'
+//   matcher: ['/((?!api|_next/static|_next/image|assets|favicon.ico|sw.js).*)']
+// }
+
+export const config = {
+  matcher: [
+    "/dashboard/:path*",
+    "/editor/:path*",
+    "/login",
+    "/register",
+    '/((?!api|_next/static|_next/image|assets|favicon.ico|sw.js).*)'
+  ],
+}
 
 export default withAuth(
   async function middleware(req) {
@@ -10,24 +29,44 @@ export default withAuth(
       req.nextUrl.pathname.startsWith("/login") ||
       req.nextUrl.pathname.startsWith("/register")
 
-    if (isAuthPage) {
-      if (isAuth) {
-        return NextResponse.redirect(new URL("/dashboard", req.url))
-      }
+    // i18n
+    let lang
+    if (req.cookies.has(cookieName)) lang = acceptLanguage.get(req.cookies.get(cookieName)?.value)
+    if (!lang) lang = acceptLanguage.get(req.headers.get('Accept-Language'))
+    if (!lang) { lang = fallbacklang }
 
-      return null
+    // Redirect if lang in path is not supported
+    if (
+      !languages.some(loc => req.nextUrl.pathname.startsWith(`/${loc}`)) &&
+      !req.nextUrl.pathname.startsWith('/_next')
+    ) {
+      return NextResponse.redirect(new URL(`/${lang}${req.nextUrl.pathname}`, req.url))
     }
 
-    if (!isAuth) {
-      let from = req.nextUrl.pathname;
+    if (req.headers.has('referer')) {
+      const refererUrl = new URL(req.headers.get('referer') as unknown as URL)
+      const langInReferer = languages.find((l) => refererUrl.pathname.startsWith(`/${l}`))
+      const response = NextResponse.next()
+      if (langInReferer) response.cookies.set(cookieName, langInReferer)
+      return response
+    }
+
+    if (isAuthPage) {
+      if (isAuth) {
+        return NextResponse.redirect(new URL(`/${lang}/dashboard`, req.url))
+      }
+
+      let from = req.nextUrl.pathname
       if (req.nextUrl.search) {
-        from += req.nextUrl.search;
+        from += req.nextUrl.search
       }
 
       return NextResponse.redirect(
-        new URL(`/login?from=${encodeURIComponent(from)}`, req.url)
-      );
+        new URL(`/${lang}/login?from=${encodeURIComponent(from)}`, req.url)
+      )
     }
+
+    return NextResponse.next()
   },
   {
     callbacks: {
@@ -41,6 +80,3 @@ export default withAuth(
   }
 )
 
-export const config = {
-  matcher: ["/dashboard/:path*", "/editor/:path*", "/login", "/register"],
-}

@@ -5,6 +5,7 @@ import * as AlertDialogPrimitive from "@radix-ui/react-alert-dialog"
 
 import { cn } from "@/lib/utils"
 import { buttonVariants } from "@/components/ui/button"
+import { WithClassName } from "@/types"
 
 const AlertDialog = AlertDialogPrimitive.Root
 
@@ -14,7 +15,8 @@ const AlertDialogPortal = ({
   className,
   children,
   ...props
-}: AlertDialogPrimitive.AlertDialogPortalProps) => (
+}: WithClassName<AlertDialogPrimitive.AlertDialogPortalProps>) => (
+  // @ts-expect-error
   <AlertDialogPrimitive.Portal className={cn(className)} {...props}>
     <div className="fixed inset-0 z-50 flex items-end justify-center sm:items-center">
       {children}

@@ -2,6 +2,8 @@ import { User } from "@prisma/client"
 import type { Icon } from "lucide-react"
 
 import { Icons } from "@/components/icons"
+import { CSSProperties } from "react"
+import { getTranslation } from "@/app/i18n"
 
 export type NavItem = {
   title: string
@@ -17,15 +19,16 @@ export type SidebarNavItem = {
   external?: boolean
   icon?: keyof typeof Icons
 } & (
-  | {
+    | {
       href: string
       items?: never
     }
-  | {
+    | {
       href?: string
+      // @ts-expect-error todo fix type
       items: NavLink[]
     }
-)
+  )
 
 export type SiteConfig = {
   name: string
@@ -63,3 +66,14 @@ export type UserSubscriptionPlan = SubscriptionPlan &
     stripeCurrentPeriodEnd: number
     isPro: boolean
   }
+
+
+export type SiteLang = 'en' | 'fr' | 'ht'
+
+export interface WithClassName<T extends object> extends T {
+  className?: string
+  style?: CSSProperties
+}
+
+
+export type TType = Awaited<ReturnType<typeof getTranslation>>['t']

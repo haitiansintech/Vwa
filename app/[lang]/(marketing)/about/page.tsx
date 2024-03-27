@@ -1,21 +1,17 @@
 import Link from "next/link"
-
-import { cn } from "@/lib/utils"
-import { buttonVariants } from "@/components/ui/button"
-import { Icons } from "@/components/icons"
 import { faker } from "@faker-js/faker"
 
 export const metadata = { title: "About" }
 
 export default function AboutPage() {
   return (
-    <section className="container flex flex-col  gap-6 py-8 md:max-w-[64rem] md:py-12 lg:py-24">
+    <section className="container flex flex-col  gap-6 py-8 md:max-w-5xl md:py-12 lg:py-24">
       <div className="mx-auto flex w-full flex-col gap-4 md:max-w-[58rem]">
         <h2 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl">
           Stonger together
         </h2>
         <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
-          We're a passionate group of Haitian technologosits and professionals
+          We&apos; re a passionate group of Haitian technologosits and professionals
           that love Haiti and are dedicated to helping bring about change in the
           Motherland 🇭🇹.
           {/* TODO: get input from marketing */}
@@ -118,8 +114,9 @@ function TeamSection() {
     >
       {people.map((person) => (
         <li key={person.name}>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            className="mx-auto h-24 w-24 rounded-full"
+            className="mx-auto size-24 rounded-full"
             src={person.imageUrl}
             alt=""
           />
