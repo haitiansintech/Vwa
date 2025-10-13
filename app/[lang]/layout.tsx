@@ -44,10 +44,6 @@ export const metadata = {
     },
   ],
   creator: "haitians-in-tech",
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "white" },
-    { media: "(prefers-color-scheme: dark)", color: "black" },
-  ],
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -95,4 +91,11 @@ export default function RootLayout({ children, params: { lang } }: RootLayoutPro
       </body>
     </html>
   )
+}
+
+export const viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "white" },
+    { media: "(prefers-color-scheme: dark)", color: "black" },
+  ],
 }
