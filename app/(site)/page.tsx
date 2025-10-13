@@ -44,9 +44,9 @@ const highlightSections = [
     description:
       "Explore campaigns, events, and resources that make it simple to lend your time, voice, or support right now.",
   },
-]
+] as const
 
-export function SiteHomePage() {
+export default function HomePage() {
   return (
     <main className="bg-background">
       <section className="relative overflow-hidden">
@@ -171,5 +171,3 @@ export function SiteHomePage() {
     </main>
   )
 }
-
-export default SiteHomePage
