@@ -1,6 +1,7 @@
+// tsconfig.json
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "es2020",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
@@ -19,12 +20,10 @@
       "@/*": ["./*"],
       "contentlayer/generated": ["./.contentlayer/generated"]
     },
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
-    "strictNullChecks": true
+    "plugins": [{ "name": "next" }],
+    "strictNullChecks": true,
+
+    "types": ["node", "react", "react-dom"]  // ⬅️ limit implicit type libs
   },
   "include": [
     "next-env.d.ts",

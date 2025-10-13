@@ -97,9 +97,11 @@
     "@commitlint/cli": "^19.2.1",
     "@commitlint/config-conventional": "^19.1.0",
     "@ianvs/prettier-plugin-sort-imports": "^4.2.1",
+    "@mdx-js/mdx": "^2.3.0",
     "@tailwindcss/line-clamp": "^0.4.4",
     "@tailwindcss/typography": "^0.5.10",
-    "@types/node": "^20.11.30",
+    "@types/conventional-commits-parser": "^5.0.1",
+    "@types/node": "^20.19.21",
     "@types/react": "18.2.69",
     "@types/react-dom": "18.2.22",
     "autoprefixer": "^10.4.19",
@@ -109,6 +111,7 @@
     "eslint-plugin-react": "^7.34.1",
     "eslint-plugin-tailwindcss": "^3.15.1",
     "husky": "^9.0.11",
+    "markdown-wasm": "^1.1.2",
     "mdast-util-toc": "^7.0.0",
     "postcss": "^8.4.38",
     "prettier": "^3.2.5",
@@ -125,8 +128,6 @@
     "tailwindcss": "^3.4.1",
     "typescript": "5.4.3",
     "unified": "^10.1.2",
-    "unist-util-visit": "^5.0.0",
-    "@mdx-js/mdx": "^2.3.0",
-    "markdown-wasm": "^1.1.2"
+    "unist-util-visit": "^5.0.0"
   }
 }
