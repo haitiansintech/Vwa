@@ -74,6 +74,9 @@ cp .env.example .env.local
 npm run dev
 ```
 
+4. Open [http://localhost:3000](http://localhost:3000) in your browser to view the marketing site home page (rendered from
+   `app/(site)/page.tsx`).
+
 ## Contributors
 
 - []()
