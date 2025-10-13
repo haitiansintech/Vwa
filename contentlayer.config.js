@@ -4,6 +4,76 @@ import rehypePrettyCode from "rehype-pretty-code"
 import rehypeSlug from "rehype-slug"
 import remarkGfm from "remark-gfm"
 
+const gfmTableGuardSymbol = Symbol("remark-gfm-table-guard")
+const rehypePrettyCodeOptions = {
+  theme: "github-dark",
+  onVisitHighlightedLine(node) {
+    node.properties ||= {}
+    node.properties.className ||= []
+    node.properties.className.push("line--highlighted")
+  },
+  onVisitHighlightedWord(node) {
+    node.properties ||= {}
+    node.properties.className ||= []
+    node.properties.className.push("word--highlighted")
+  },
+}
+
+function remarkGfmTableGuard() {
+  const data = this?.data?.()
+
+  if (!data) {
+    return
+  }
+
+  const queue = Array.isArray(data.fromMarkdownExtensions)
+    ? [...data.fromMarkdownExtensions]
+    : []
+
+  const wrap = (fn) => {
+    if (typeof fn !== "function" || fn[gfmTableGuardSymbol]) {
+      return fn
+    }
+
+    const guarded = function guardedHandler(...args) {
+      if (this && typeof this === "object") {
+        this.data ||= {}
+      }
+
+      return fn.apply(this, args)
+    }
+
+    guarded[gfmTableGuardSymbol] = true
+
+    return guarded
+  }
+
+  while (queue.length > 0) {
+    const extension = queue.shift()
+
+    if (Array.isArray(extension)) {
+      queue.push(...extension)
+      continue
+    }
+
+    if (!extension || typeof extension !== "object") {
+      continue
+    }
+
+    if (extension.enter && typeof extension.enter === "object") {
+      for (const key of Object.keys(extension.enter)) {
+        extension.enter[key] = wrap(extension.enter[key])
+      }
+    }
+
+    if (extension.exit && typeof extension.exit === "object") {
+      for (const key of Object.keys(extension.exit)) {
+        extension.exit[key] = wrap(extension.exit[key])
+      }
+    }
+  }
+}
+
 /** @type {import('contentlayer/source-files').ComputedFields} */
 const computedFields = {
   slug: {
@@ -27,6 +97,10 @@ export const Doc = defineDocumentType(() => ({
     },
     description: {
       type: "string",
+    },
+    date: {
+      type: "date",
+      required: true,
     },
     published: {
       type: "boolean",
@@ -145,28 +219,10 @@ export default makeSource({
   contentDirPath: "./content",
   documentTypes: [Page, Doc, Guide, Post, Author],
   mdx: {
-    remarkPlugins: [remarkGfm],
+    remarkPlugins: [remarkGfm, remarkGfmTableGuard],
     rehypePlugins: [
       rehypeSlug,
-      [
-        rehypePrettyCode,
-        {
-          theme: "github-dark",
-          onVisitLine(node) {
-            // Prevent lines from collapsing in `display: grid` mode, and allow empty
-            // lines to be copy/pasted
-            if (node.children.length === 0) {
-              node.children = [{ type: "text", value: " " }]
-            }
-          },
-          onVisitHighlightedLine(node) {
-            node.properties.className.push("line--highlighted")
-          },
-          onVisitHighlightedWord(node) {
-            node.properties.className = ["word--highlighted"]
-          },
-        },
-      ],
+      [rehypePrettyCode, rehypePrettyCodeOptions],
       [
         rehypeAutolinkHeadings,
         {
