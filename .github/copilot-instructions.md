@@ -55,3 +55,7 @@ This file contains the essential, actionable information an AI coding agent need
    - Contentlayer usage & MDX: `content/`, `next.config.mjs`, `tsconfig.json` (paths)
 
 If anything above is unclear or you want more detail (CI, commit hooks, or specific API shapes), tell me which area to expand and I will iterate.
+
+   9. Designs
+      - Visual designs are stored under `design/` (e.g. `design/VWA.pdf`). Refer to the PDF for intended layout, spacing, and component visuals when implementing UI changes.
+      - Keep visual changes aligned with the Tailwind utility classes in `styles/globals.css` and `tailwind.config.js`.
