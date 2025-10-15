@@ -10,7 +10,8 @@
     "lint": "next lint",
     "preview": "next build && next start",
     "postinstall": "prisma generate",
-    "check:types": "tsc --noEmit"
+    "check:types": "tsc --noEmit",
+    "fix:frontmatter": "node -r ./scripts/register-ts.js scripts/fix-frontmatter.ts"
   },
   "dependencies": {
     "@editorjs/code": "^2.9.0",

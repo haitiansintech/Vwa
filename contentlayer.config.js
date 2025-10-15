@@ -1,4 +1,5 @@
 import { defineDocumentType, makeSource } from "contentlayer/source-files"
+import { z } from "zod"
 import rehypeAutolinkHeadings from "rehype-autolink-headings"
 import rehypePrettyCode from "rehype-pretty-code"
 import rehypeSlug from "rehype-slug"
@@ -108,6 +109,12 @@ export const Doc = defineDocumentType(() => ({
     },
   },
   computedFields,
+  extensions: {
+    schema: (schema) =>
+      schema.extend({
+        date: z.union([z.string(), z.date()]).transform((value) => new Date(value)),
+      }),
+  },
 }))
 
 export const Guide = defineDocumentType(() => ({
@@ -136,6 +143,12 @@ export const Guide = defineDocumentType(() => ({
     },
   },
   computedFields,
+  extensions: {
+    schema: (schema) =>
+      schema.extend({
+        date: z.union([z.string(), z.date()]).transform((value) => new Date(value)),
+      }),
+  },
 }))
 
 export const Post = defineDocumentType(() => ({
