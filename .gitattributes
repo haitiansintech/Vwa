@@ -1,0 +1,5 @@
+# Force LF for content files
+*.md  text eol=lf
+*.mdx text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
