@@ -1,5 +1,5 @@
 import HomePage from "@/components/pages/Home"
 
-export default function LocaleMarketingHomePage() {
+export default function LocaleHomePage() {
   return <HomePage />
 }

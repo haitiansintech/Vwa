@@ -1,34 +1,28 @@
-import { dir } from 'i18next'
+import type { ReactNode } from "react"
+import { dir } from "i18next"
 import { Inter as FontSans } from "next/font/google"
 import localFont from "next/font/local"
 
 import "@/styles/globals.css"
 import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
-import { Toaster } from "@/components/ui/toaster"
 import { Analytics } from "@/components/analytics"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
 import { ThemeProvider } from "@/components/theme-provider"
-import { languages } from '../i18n/settings'
-import { SiteLang } from '@/types'
+import { Toaster } from "@/components/ui/toaster"
+import { languages, fallbacklang } from "../i18n/settings"
 
 const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
 })
 
-// Font files can be colocated inside of `pages`
 const fontHeading = localFont({
   src: "../../assets/fonts/CalSans-SemiBold.woff2",
   variable: "--font-heading",
 })
 
-interface RootLayoutProps {
-  children: React.ReactNode
-  params: {
-    lang: SiteLang
-  }
-}
+const SUPPORTED = languages
 
 export const metadata = {
   title: {
@@ -36,7 +30,7 @@ export const metadata = {
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
-  keywords: ["Haiti", "Haitian"], //TODO: To be seeded by marketing
+  keywords: ["Haiti", "Haitian"],
   authors: [
     {
       name: "Haitians in Tech",
@@ -67,11 +61,19 @@ export const metadata = {
   manifest: `${siteConfig.url}/site.webmanifest`,
 }
 
-export async function generateStaticParams() {
-  return languages.map((lang) => ({ lang }))
+export function generateStaticParams() {
+  return SUPPORTED.map((lang) => ({ lang }))
 }
 
-export default function RootLayout({ children, params: { lang } }: RootLayoutProps) {
+export default function LocaleLayout({
+  children,
+  params,
+}: {
+  children: ReactNode
+  params: { lang: string }
+}) {
+  const lang = SUPPORTED.includes(params.lang) ? params.lang : fallbacklang
+
   return (
     <html lang={lang} dir={dir(lang)} suppressHydrationWarning>
       <head />
