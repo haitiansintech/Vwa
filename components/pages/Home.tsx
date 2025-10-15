@@ -1,3 +1,4 @@
+import Image from "next/image"
 import Link from "next/link"
 import { Facebook, Linkedin, Twitter } from "lucide-react"
 
@@ -50,17 +51,29 @@ export default function HomePage() {
   return (
     <main className="bg-background">
       <section className="relative overflow-hidden">
-        <div className="container py-16 sm:py-24 lg:py-32">
-          <div className="flex flex-col gap-12 lg:grid lg:grid-cols-[auto,1fr] lg:items-start lg:gap-24">
-            <aside className="-ml-6 flex flex-row items-center gap-6 lg:-ml-12 lg:min-h-[18rem] lg:flex-col lg:items-start">
+        <div className="absolute inset-0">
+          <Image
+            src="/images/hero.png"
+            alt="Community members united for progress"
+            fill
+            priority
+            className="object-cover"
+            sizes="100vw"
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-background/95 via-background/90 to-background/70" aria-hidden="true" />
+        </div>
+
+        <div className="relative container py-20 sm:py-28 lg:py-36">
+          <div className="flex flex-col gap-14 lg:grid lg:grid-cols-[auto,1fr] lg:items-start lg:gap-24">
+            <aside className="-ml-6 flex flex-row items-center gap-6 lg:-ml-16 lg:min-h-[20rem] lg:flex-col lg:items-start">
               <div className="flex items-center gap-2 lg:flex-col">
                 <span
                   aria-hidden="true"
-                  className="text-[0.7rem] font-semibold uppercase tracking-[0.5em] text-muted-foreground lg:translate-x-1 lg:transform lg:[writing-mode:vertical-rl]"
+                  className="text-[0.65rem] font-semibold uppercase tracking-[0.6em] text-muted-foreground/80 lg:translate-x-1 lg:transform lg:[writing-mode:vertical-rl]"
                 >
                   Share
                 </span>
-                <span className="h-px w-14 bg-muted lg:h-20 lg:w-px" aria-hidden="true" />
+                <span className="h-px w-16 bg-muted lg:h-24 lg:w-px" aria-hidden="true" />
               </div>
               <nav aria-label="Share" className="flex flex-row gap-4 lg:flex-col">
                 {shareLinks.map(({ href, label, icon: Icon }) => (
@@ -69,7 +82,7 @@ export default function HomePage() {
                     href={href}
                     target="_blank"
                     rel="noreferrer"
-                    className="flex h-10 w-10 items-center justify-center rounded-full border border-border text-muted-foreground transition-colors hover:border-primary hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+                    className="flex h-10 w-10 items-center justify-center rounded-full border border-border/60 bg-background/70 text-muted-foreground transition-colors hover:border-primary hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
                   >
                     <span className="sr-only">{label}</span>
                     <Icon className="h-4 w-4" aria-hidden="true" />
@@ -78,11 +91,11 @@ export default function HomePage() {
               </nav>
             </aside>
 
-            <div className="flex flex-col gap-8">
-              <p className="text-sm font-semibold uppercase tracking-[0.3em] text-primary">
+            <div className="flex max-w-3xl flex-col gap-10">
+              <p className="text-xs font-semibold uppercase tracking-[0.6em] text-primary">
                 Collective Power
               </p>
-              <div className="space-y-6">
+              <div className="space-y-7">
                 <h1 className="font-heading text-4xl leading-tight text-foreground sm:text-5xl md:text-6xl">
                   Empowering the Haitian Diaspora for Change
                 </h1>
@@ -93,7 +106,7 @@ export default function HomePage() {
               <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center">
                 <Link
                   href="/take-action"
-                  className={cn(buttonVariants({ size: "lg" }), "px-6 py-3 text-base font-semibold")}
+                  className={cn(buttonVariants({ size: "lg" }), "px-7 py-3 text-base font-semibold")}
                 >
                   Join the Movement
                 </Link>
