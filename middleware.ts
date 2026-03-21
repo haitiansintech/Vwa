@@ -33,9 +33,9 @@ export default withAuth(
       !languages.some((loc) => req.nextUrl.pathname.startsWith(`/${loc}`)) &&
       !req.nextUrl.pathname.startsWith("/_next")
     ) {
-      return NextResponse.redirect(
-        new URL(`/${lang}${req.nextUrl.pathname}`, req.url)
-      )
+      const redirectUrl = new URL(`/${lang}${req.nextUrl.pathname}`, req.url)
+      redirectUrl.search = req.nextUrl.search
+      return NextResponse.redirect(redirectUrl)
     }
 
     // Persist language cookie from referer

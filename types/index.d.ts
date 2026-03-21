@@ -54,7 +54,7 @@ export type EligibilityStatus =
 export type EligibilityAnswers = {
   birthplace?: "haiti" | "abroad"
   haitianParent?: boolean
-  hasHaitianId?: boolean
+  hasHaitianId?: "yes" | "can_get" | "no"
   currentCountry?: string
   intendToVote?: boolean
 }

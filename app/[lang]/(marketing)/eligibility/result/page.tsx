@@ -19,7 +19,8 @@ function computeResult(answers: EligibilityAnswers): {
 } {
   const bornInHaiti = answers.birthplace === "haiti"
   const haitianParent = answers.haitianParent === true
-  const hasId = answers.hasHaitianId === true
+  const hasId = answers.hasHaitianId === "yes"
+  const canGetId = answers.hasHaitianId === "can_get"
 
   if (bornInHaiti || haitianParent) {
     if (hasId) {
@@ -39,24 +40,47 @@ function computeResult(answers: EligibilityAnswers): {
           "Proof of voter registration (if applicable)",
         ],
       }
-    } else {
+    }
+
+    if (canGetId) {
       return {
-        status: "may_be_eligible",
-        headline: "You may be eligible",
+        status: "likely_eligible",
+        headline: "You are likely eligible — documentation is the next step",
         summary:
-          "You appear to have grounds for Haitian citizenship, but you may need to obtain or renew documentation before you can participate. The process is navigable with early preparation.",
+          "You have the citizenship grounds to participate in Haiti's election. You do not yet hold a Haitian ID or passport, but you are on the right path. Haitian nationals born abroad can use a parent's birth certificate and other supporting documents to apply for a passport at their nearest consulate.",
         nextSteps: [
-          "Contact the nearest Haitian consulate to start the ID or passport process",
-          "Gather any existing documents: birth certificate, parents' documents",
-          "Ask the consulate about the timeline for document processing",
-          "Check the CEP website for voter registration requirements",
+          "Gather your parent's Haitian birth certificate (acte de naissance) — this is the key document",
+          "Locate your nearest Haitian consulate or embassy and book an appointment",
+          "Bring your own birth certificate and any documents showing your parentage",
+          "Apply for a Haitian passport — consulates can process applications for nationals abroad",
+          "Once you have your passport, confirm your voter registration status with the CEP",
         ],
         documents: [
-          "Haitian birth certificate (acte de naissance) or parents' documents",
-          "Haitian national ID card (CIN) or passport (to obtain)",
-          "Proof of Haitian parentage if born abroad",
+          "Your parent's Haitian birth certificate (acte de naissance)",
+          "Your own birth certificate showing your parent's name",
+          "Any existing Haitian documentation (prior IDs, baptismal records, etc.)",
+          "Haitian passport (to obtain — this will be your primary voting document)",
         ],
       }
+    }
+
+    return {
+      status: "may_be_eligible",
+      headline: "You may be eligible — documentation needed",
+      summary:
+        "You appear to have grounds for Haitian citizenship, but obtaining documentation will be a required step before you can participate. Haitian consulates can help you navigate the process, even if you are unsure where to start.",
+      nextSteps: [
+        "Contact the nearest Haitian consulate — they handle document requests for nationals abroad",
+        "Ask about the process for obtaining a Haitian passport using parentage or birthplace records",
+        "Gather any documents you already have: your birth certificate, parents' documents, or prior Haitian IDs",
+        "Check the CEP website for voter registration requirements once you have your documentation",
+      ],
+      documents: [
+        "Your birth certificate (to establish your identity)",
+        "A parent's Haitian birth certificate or ID, if available",
+        "Any prior Haitian documentation you or your family may hold",
+        "Haitian national ID card (CIN) or passport (to obtain)",
+      ],
     }
   }
 
@@ -108,7 +132,7 @@ export default function EligibilityResultPage({ searchParams }: Props) {
   const answers: EligibilityAnswers = {
     birthplace: searchParams.birthplace as "haiti" | "abroad" | undefined,
     haitianParent: searchParams.haitianParent === "true",
-    hasHaitianId: searchParams.hasHaitianId === "true",
+    hasHaitianId: searchParams.hasHaitianId as "yes" | "can_get" | "no" | undefined,
     currentCountry: searchParams.currentCountry,
     intendToVote: searchParams.intendToVote === "true",
   }

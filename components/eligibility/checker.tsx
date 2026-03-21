@@ -39,9 +39,9 @@ const steps: Step[] = [
     question: "Do you currently hold a valid Haitian ID card or Haitian passport?",
     note: "Documentation does not determine your eligibility, but it may be required to register or vote.",
     options: [
-      { label: "Yes, I have one", value: true },
-      { label: "No, but I can get one", value: false },
-      { label: "No, and I am not sure how", value: false },
+      { label: "Yes, I have one", value: "yes" },
+      { label: "No, but I know how to get one", value: "can_get" },
+      { label: "No, and I am not sure how", value: "no" },
     ],
   },
   {
