@@ -71,7 +71,7 @@ export function EligibilityChecker() {
   const router = useRouter()
   const [currentStep, setCurrentStep] = React.useState(0)
   const [answers, setAnswers] = React.useState<EligibilityAnswers>({})
-  const [selectedValue, setSelectedValue] = React.useState<string | boolean | null>(null)
+  const [selectedIndex, setSelectedIndex] = React.useState<number | null>(null)
 
   const step = steps[currentStep]
   const isLast = currentStep === steps.length - 1
@@ -82,16 +82,17 @@ export function EligibilityChecker() {
     }
   }, [currentStep])
 
-  function handleSelect(value: string | boolean) {
-    setSelectedValue(value)
+  function handleSelect(index: number) {
+    setSelectedIndex(index)
   }
 
   function handleNext() {
-    if (selectedValue === null) return
+    if (selectedIndex === null) return
 
+    const selectedValue = step.options[selectedIndex].value
     const newAnswers = { ...answers, [step.id]: selectedValue }
     setAnswers(newAnswers)
-    setSelectedValue(null)
+    setSelectedIndex(null)
 
     if (isLast) {
       track("eligibility_checker_completed")
@@ -109,7 +110,7 @@ export function EligibilityChecker() {
   function handleBack() {
     if (currentStep === 0) return
     setCurrentStep((s) => s - 1)
-    setSelectedValue(null)
+    setSelectedIndex(null)
   }
 
   return (
@@ -138,13 +139,13 @@ export function EligibilityChecker() {
 
       {/* Options */}
       <div className="mb-8 flex flex-col gap-3">
-        {step.options.map((option) => (
+        {step.options.map((option, index) => (
           <button
             key={option.label}
-            onClick={() => handleSelect(option.value)}
+            onClick={() => handleSelect(index)}
             className={cn(
               "w-full rounded-lg border px-4 py-3 text-left text-sm font-medium transition-colors",
-              selectedValue === option.value
+              selectedIndex === index
                 ? "border-primary bg-primary/5 text-primary"
                 : "hover:border-foreground/30 hover:bg-muted/50"
             )}
@@ -163,7 +164,7 @@ export function EligibilityChecker() {
         >
           Back
         </Button>
-        <Button onClick={handleNext} disabled={selectedValue === null}>
+        <Button onClick={handleNext} disabled={selectedIndex === null}>
           {isLast ? "See My Result" : "Continue"}
         </Button>
       </div>
