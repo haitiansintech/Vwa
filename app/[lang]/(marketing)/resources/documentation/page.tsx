@@ -85,12 +85,12 @@ export default function DocumentationPage() {
           The Haitian Ministry of Foreign Affairs maintains a list of consulates and embassies
           worldwide.{" "}
           <a
-            href="https://www.maehaiti.gouv.ht"
+            href="https://www.mae.gouv.ht"
             target="_blank"
             rel="noreferrer"
             className="font-medium text-primary hover:underline"
           >
-            Visit maehaiti.gouv.ht
+            Visit mae.gouv.ht
           </a>
         </p>
       </div>
