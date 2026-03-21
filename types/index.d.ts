@@ -1,4 +1,8 @@
 import type { Icon } from "lucide-react"
+import type { TFunction } from "i18next"
+
+export type TType = TFunction
+export type WithClassName<T> = T & { className?: string }
 
 export type SiteConfig = {
   name: string
