@@ -1,4 +1,20 @@
 {
-  "title": "Sa k ap fèt la menm!",
-  "count": "{{count}} bagay"
+  "nav": {
+    "whyThisElection": "Poukisa Eleksyon Sa a Enpòtan",
+    "eligibility": "Verifye Elejiblite",
+    "resources": "Resous",
+    "timeline": "Kalandriye",
+    "about": "Sou Nou"
+  },
+  "hero": {
+    "badge": "Eleksyon Ayiti 2025",
+    "heading": "Yon Eleksyon Istorik Ap Pwoche",
+    "subtext": "Pou premye fwa depi plizyè ane, Ayiti gen yon chemen pou yon tranzisyon demokratik lejitim. Jwenn si ou ka patisipe.",
+    "primaryCta": "Verifye Elejiblite Ou",
+    "secondaryCta": "Poukisa Eleksyon Sa a Enpòtan"
+  },
+  "footer": {
+    "tagline": "Yon platfòm sivik gratis pou Ayisyen.",
+    "nonpartisan": "Vwa se yon resous sivik ki pa patizan. Nou pa sipòte okenn kandida ni pati politik."
+  }
 }

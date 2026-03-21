@@ -1,34 +1,4 @@
-import { User } from "@prisma/client"
 import type { Icon } from "lucide-react"
-
-import { Icons } from "@/components/icons"
-import { CSSProperties } from "react"
-import { getTranslation } from "@/app/i18n"
-
-export type NavItem = {
-  title: string
-  href: string
-  disabled?: boolean
-}
-
-export type MainNavItem = NavItem
-
-export type SidebarNavItem = {
-  title: string
-  disabled?: boolean
-  external?: boolean
-  icon?: keyof typeof Icons
-} & (
-    | {
-      href: string
-      items?: never
-    }
-    | {
-      href?: string
-      // @ts-expect-error todo fix type
-      items: NavLink[]
-    }
-  )
 
 export type SiteConfig = {
   name: string
@@ -41,39 +11,46 @@ export type SiteConfig = {
   }
 }
 
-export type DocsConfig = {
-  mainNav: MainNavItem[]
-  sidebarNav: SidebarNavItem[]
+export type NavItem = {
+  title: string
+  href: string
+  disabled?: boolean
 }
+
+export type MainNavItem = NavItem
 
 export type MarketingConfig = {
   mainNav: MainNavItem[]
 }
 
-export type DashboardConfig = {
-  mainNav: MainNavItem[]
-  sidebarNav: SidebarNavItem[]
+export type SidebarNavItem = {
+  title: string
+  disabled?: boolean
+  external?: boolean
+  icon?: string
+} & (
+  | {
+      href: string
+      items?: never
+    }
+  | {
+      href?: string
+      items: SidebarNavItem[]
+    }
+)
+
+export type SiteLang = "en" | "ht"
+
+export type EligibilityStatus =
+  | "likely_eligible"
+  | "may_be_eligible"
+  | "more_info_needed"
+  | "likely_ineligible"
+
+export type EligibilityAnswers = {
+  birthplace?: "haiti" | "abroad"
+  haitianParent?: boolean
+  hasHaitianId?: boolean
+  currentCountry?: string
+  intendToVote?: boolean
 }
-
-export type SubscriptionPlan = {
-  name: string
-  description: string
-  stripePriceId: string
-}
-
-export type UserSubscriptionPlan = SubscriptionPlan &
-  Pick<User, "stripeCustomerId" | "stripeSubscriptionId"> & {
-    stripeCurrentPeriodEnd: number
-    isPro: boolean
-  }
-
-
-export type SiteLang = 'en' | 'fr' | 'ht'
-
-export interface WithClassName<T extends object> extends T {
-  className?: string
-  style?: CSSProperties
-}
-
-
-export type TType = Awaited<ReturnType<typeof getTranslation>>['t']

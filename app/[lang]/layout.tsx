@@ -1,23 +1,23 @@
-import { dir } from 'i18next'
+import { dir } from "i18next"
 import { Inter as FontSans } from "next/font/google"
 import localFont from "next/font/local"
 
 import "@/styles/globals.css"
+import "@/styles/mdx.css"
 import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
 import { Toaster } from "@/components/ui/toaster"
 import { Analytics } from "@/components/analytics"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
 import { ThemeProvider } from "@/components/theme-provider"
-import { languages } from '../i18n/settings'
-import { SiteLang } from '@/types'
+import { languages } from "../i18n/settings"
+import type { SiteLang } from "@/types"
 
 const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
 })
 
-// Font files can be colocated inside of `pages`
 const fontHeading = localFont({
   src: "../../assets/fonts/CalSans-SemiBold.woff2",
   variable: "--font-heading",
@@ -25,9 +25,7 @@ const fontHeading = localFont({
 
 interface RootLayoutProps {
   children: React.ReactNode
-  params: {
-    lang: SiteLang
-  }
+  params: { lang: SiteLang }
 }
 
 export const metadata = {
@@ -36,7 +34,14 @@ export const metadata = {
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
-  keywords: ["Haiti", "Haitian"], //TODO: To be seeded by marketing
+  keywords: [
+    "Haiti",
+    "Haitian election",
+    "diaspora",
+    "civic participation",
+    "Haiti vote",
+    "Haitian citizenship",
+  ],
   authors: [
     {
       name: "Haitians in Tech",
@@ -67,6 +72,13 @@ export const metadata = {
   manifest: `${siteConfig.url}/site.webmanifest`,
 }
 
+export const viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "white" },
+    { media: "(prefers-color-scheme: dark)", color: "black" },
+  ],
+}
+
 export async function generateStaticParams() {
   return languages.map((lang) => ({ lang }))
 }
@@ -91,11 +103,4 @@ export default function RootLayout({ children, params: { lang } }: RootLayoutPro
       </body>
     </html>
   )
-}
-
-export const viewport = {
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "white" },
-    { media: "(prefers-color-scheme: dark)", color: "black" },
-  ],
 }

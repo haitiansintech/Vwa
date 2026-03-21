@@ -2,12 +2,14 @@
   "name": "vwq",
   "version": "0.2.0",
   "private": true,
+  "pnpm": {
+    "onlyBuiltDependencies": ["@prisma/client", "esbuild", "prisma", "sharp"]
+  },
   "scripts": {
-    "dev": "next dev",
+    "dev": "velite && next dev",
     "dev:content": "velite --watch",
     "build": "velite && next build",
-    "turbo": "velite && next dev --turbo",
-    "start": "next start",
+"start": "next start",
     "lint": "next lint",
     "preview": "velite && next build && next start",
     "postinstall": "prisma generate",

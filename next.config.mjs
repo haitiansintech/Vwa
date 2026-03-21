@@ -11,10 +11,6 @@ const nextConfig = {
       },
     ],
   },
-  webpack: (config) => {
-    config.plugins.push(new (require("velite").VeliteWebpackPlugin)())
-    return config
-  },
 }
 
 export default nextConfig
