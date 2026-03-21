@@ -15,7 +15,7 @@ export default function AboutPage() {
         <h1 className="font-heading text-4xl font-bold">About Vwa</h1>
         <p className="mt-3 text-xl text-muted-foreground">
           A free, open civic platform built to help Haitians in the diaspora understand and
-          participate in Haiti's political process.
+          participate in Haiti&apos;s political process.
         </p>
       </header>
 
@@ -23,7 +23,7 @@ export default function AboutPage() {
         <section>
           <h2>Our Mission</h2>
           <p>
-            Vwa (which means "voice" in Haitian Creole) was built on a simple belief: informed
+            Vwa (which means &quot;voice&quot; in Haitian Creole) was built on a simple belief: informed
             participation is the foundation of a functioning democracy. We exist to lower the
             barriers between Haitian citizens and their civic responsibilities.
           </p>
@@ -32,7 +32,7 @@ export default function AboutPage() {
         <section>
           <h2>What We Do</h2>
           <ul>
-            <li>Clear, sourced information about Haiti's elections and political institutions</li>
+            <li>Clear, sourced information about Haiti&apos;s elections and political institutions</li>
             <li>An eligibility checker to help diaspora Haitians understand whether they can participate</li>
             <li>Guidance on documentation and next steps for those who want to engage</li>
             <li>A structured, trustworthy reference for issues, people, and institutions</li>
