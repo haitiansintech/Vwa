@@ -5,7 +5,7 @@ import { buttonVariants } from "@/components/ui/button"
 
 export const metadata: Metadata = {
   title: "Election Timeline",
-  description: "Key dates and milestones in Haiti's 2025 electoral process.",
+  description: "Key dates and milestones in Haiti's 2026 electoral process.",
 }
 
 const timelineItems = [
@@ -21,6 +21,13 @@ const timelineItems = [
     title: "Electoral Framework Under Review",
     description:
       "The Conseil Electoral Provisoire (CEP) began formal review of the electoral framework and registration requirements.",
+    category: "Electoral Process",
+  },
+  {
+    date: "March 2 - 12 2026",
+    title: "Political Party Registration",
+    description:
+      "The CEP opened registration for political parties, marking the formal start of the 2026 electoral process.",
     category: "Electoral Process",
   },
   {
@@ -40,12 +47,18 @@ const timelineItems = [
     pending: true,
   },
   {
-    date: "TBD",
-    title: "Election Day",
+    date: "30 August 2026",
+    title: "General Election",
     description:
-      "Election date to be officially confirmed. Vwa will update this page immediately when announced.",
+      "Haiti's government has pledged to hold a general election on this date, as part of a revised electoral calendar approved by the Transitional Presidential Council. Voters will elect the president, all 119 seats in the Chamber of Deputies, all 30 Senate seats, and local and municipal offices.",
     category: "Election",
-    pending: true,
+  },
+  {
+    date: "6 December 2026",
+    title: "Presidential Runoff",
+    description:
+      "A runoff election is scheduled if no presidential candidate wins an outright majority in the first round.",
+    category: "Election",
   },
 ]
 
@@ -55,7 +68,7 @@ export default function TimelinePage() {
       <div className="mb-10">
         <h1 className="font-heading text-4xl font-bold">Election Timeline</h1>
         <p className="mt-3 text-muted-foreground">
-          Key dates and milestones in Haiti&apos;s 2025 electoral process. This page is updated as
+          Key dates and milestones in Haiti&apos;s 2026 electoral process. This page is updated as
           official information becomes available.
         </p>
       </div>
