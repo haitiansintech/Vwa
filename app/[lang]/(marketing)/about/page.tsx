@@ -69,7 +69,7 @@ export default function AboutPage() {
           Check Your Eligibility
         </Link>
         <Link
-          href="mailto:hello@vwa.app"
+          href="mailto:vwa@haitiansintech.com"
           className={cn(buttonVariants({ variant: "outline" }), "sm:w-auto w-full")}
         >
           Contact Us
