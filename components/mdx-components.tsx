@@ -1,6 +1,8 @@
+"use client"
+
 import * as React from "react"
 import Image from "next/image"
-import { useMDXComponent } from "next-contentlayer/hooks"
+import * as runtime from "react/jsx-runtime"
 
 import { cn } from "@/lib/utils"
 import { Callout } from "@/components/callout"
@@ -150,6 +152,13 @@ const components = {
   Image,
   Callout,
   Card: MdxCard,
+}
+
+function useMDXComponent(code: string) {
+  return React.useMemo(() => {
+    const fn = new Function(code)
+    return fn({ ...runtime }).default
+  }, [code])
 }
 
 interface MdxProps {

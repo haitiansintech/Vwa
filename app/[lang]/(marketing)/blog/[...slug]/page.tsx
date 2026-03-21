@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation"
-import { allAuthors, allPosts } from "contentlayer/generated"
+import { allAuthors, allPosts } from "#velite"
 
 import { Mdx } from "@/components/mdx-components"
 
@@ -123,7 +123,7 @@ export default async function PostPage({ params }: PostPageProps) {
             {authors.map((author) =>
               author ? (
                 <Link
-                  key={author._id}
+                  key={author.slug}
                   href={`https://twitter.com/${author.twitter}`}
                   className="flex items-center space-x-2 text-sm"
                 >
@@ -156,7 +156,7 @@ export default async function PostPage({ params }: PostPageProps) {
           priority
         />
       )}
-      <Mdx code={post.body.code} />
+      <Mdx code={post.body} />
       <hr className="mt-12" />
       <div className="flex justify-center py-6 lg:py-10">
         <Link href="/blog" className={cn(buttonVariants({ variant: "ghost" }))}>

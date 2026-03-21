@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
-import { allPosts } from "contentlayer/generated"
+import { allPosts } from "#velite"
 import { compareDesc } from "date-fns"
 
 import { formatDate } from "@/lib/utils"
@@ -33,7 +33,7 @@ export default async function BlogPage() {
         <div className="grid gap-10 sm:grid-cols-2">
           {posts.map((post, index) => (
             <article
-              key={post._id}
+              key={post.slug}
               className="group relative flex flex-col space-y-2"
             >
               {post.image && (
