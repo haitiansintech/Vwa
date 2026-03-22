@@ -3,121 +3,174 @@ import Link from "next/link"
 import { cn } from "@/lib/utils"
 import { buttonVariants } from "@/components/ui/button"
 import { SubscriberForm } from "@/components/subscriber-form"
-import type { EligibilityAnswers, EligibilityStatus } from "@/types"
+import type { EligibilityAnswers, EligibilityIntent, EligibilityStatus } from "@/types"
 
 export const metadata: Metadata = {
   title: "Your Eligibility Result",
   description: "Your Haitian election eligibility result and recommended next steps.",
 }
 
-function computeResult(answers: EligibilityAnswers): {
-  status: EligibilityStatus
+function determineEligibilityResult(answers: EligibilityAnswers): EligibilityStatus {
+  const hasPositiveBasis =
+    answers.bornInHaiti === "yes" || answers.haitianParent === "yes"
+  const hasClearNegative =
+    answers.bornInHaiti === "no" && answers.haitianParent === "no"
+  const hasUncertainty =
+    answers.bornInHaiti === "not_sure" || answers.haitianParent === "not_sure"
+
+  if (hasClearNegative) return "not_eligible"
+  if (hasUncertainty && !hasPositiveBasis) return "needs_verification"
+  if (answers.hasDocuments === "yes") return "eligible"
+  return "likely_eligible"
+}
+
+function determineIntent(answers: EligibilityAnswers): EligibilityIntent {
+  if (answers.intendToVote === "yes") return "ready_to_act"
+  if (answers.intendToVote === "no") return "not_ready"
+  return "learning_first"
+}
+
+type ResultContent = {
   headline: string
   summary: string
   nextSteps: string[]
   documents: string[]
-} {
-  const bornInHaiti = answers.birthplace === "haiti"
-  const haitianParent = answers.haitianParent === true
-  const hasId = answers.hasHaitianId === "yes"
-  const canGetId = answers.hasHaitianId === "can_get"
+}
 
-  if (bornInHaiti || haitianParent) {
-    if (hasId) {
-      return {
-        status: "likely_eligible",
-        headline: "You are likely eligible",
-        summary:
-          "Based on your answers, you appear to meet the citizenship requirements to participate in Haiti's election. The next step is confirming voter registration and verifying any additional requirements with official sources.",
-        nextSteps: [
-          "Confirm your voter registration status with the CEP",
-          "Locate your nearest Haitian consulate or embassy",
-          "Review any diaspora voting procedures announced by the CEP",
-          "Keep your Haitian ID or passport valid and accessible",
-        ],
-        documents: [
-          "Valid Haitian national ID card (CIN) or passport",
-          "Proof of voter registration (if applicable)",
-        ],
-      }
+function getResultContent(
+  status: EligibilityStatus,
+  answers: EligibilityAnswers
+): ResultContent {
+  if (status === "eligible") {
+    return {
+      headline: "You are eligible to participate",
+      summary:
+        "Based on your answers, you have a clear citizenship basis and the documentation to support it. The next step is confirming your voter registration status and staying informed about diaspora voting procedures as the election approaches.",
+      nextSteps: [
+        "Confirm your voter registration status with the Provisional Electoral Council (CEP)",
+        "Locate your nearest Haitian consulate or embassy",
+        "Keep your Haitian ID or passport valid and accessible",
+        "Review any diaspora voting procedures announced by the CEP as August 2026 approaches",
+      ],
+      documents: [
+        "Valid Haitian national ID card (CIN) or passport",
+        "Proof of voter registration (if announced by the CEP)",
+      ],
     }
+  }
 
-    if (canGetId) {
+  if (status === "likely_eligible") {
+    const hasSomeDocuments = answers.hasDocuments === "some"
+    const hasNoDocuments = answers.hasDocuments === "no"
+
+    if (hasSomeDocuments) {
       return {
-        status: "likely_eligible",
-        headline: "You are likely eligible — documentation is the next step",
+        headline: "You are likely eligible — your documents are the next step",
         summary:
-          "You have the citizenship grounds to participate in Haiti's election. You do not yet hold a Haitian ID or passport, but you are on the right path. Haitian nationals born abroad can use a parent's birth certificate and other supporting documents to apply for a passport at their nearest consulate.",
+          "You have a clear citizenship basis and you already have some supporting documents. Haitian nationals born abroad can use a parent's birth certificate and related records to apply for a passport at their nearest consulate. That passport is what you will need to participate.",
         nextSteps: [
           "Gather your parent's Haitian birth certificate (acte de naissance) — this is the key document",
-          "Locate your nearest Haitian consulate or embassy and book an appointment",
-          "Bring your own birth certificate and any documents showing your parentage",
-          "Apply for a Haitian passport — consulates can process applications for nationals abroad",
+          "Book an appointment at your nearest Haitian consulate or embassy",
+          "Bring your own birth certificate showing your parent's name",
+          "Apply for a Haitian passport — consulates process these for nationals living abroad",
           "Once you have your passport, confirm your voter registration status with the CEP",
         ],
         documents: [
           "Your parent's Haitian birth certificate (acte de naissance)",
           "Your own birth certificate showing your parent's name",
           "Any existing Haitian documentation (prior IDs, baptismal records, etc.)",
-          "Haitian passport (to obtain — this will be your primary voting document)",
+          "Haitian passport (to obtain — this will be your primary document to participate)",
         ],
       }
     }
 
+    if (hasNoDocuments) {
+      return {
+        headline: "You are likely eligible — documentation is the next step",
+        summary:
+          "You have a clear citizenship basis, but you will need to obtain documentation before you can participate. Haitian consulates are the starting point — they can guide you through the process based on your specific situation.",
+        nextSteps: [
+          "Contact your nearest Haitian consulate and explain your situation",
+          "Gather any family records you have: your birth certificate, parents' names, any prior Haitian IDs",
+          "Ask specifically about obtaining a Haitian passport through parentage or birthplace",
+          "Once you have your passport, confirm your voter registration status with the CEP",
+        ],
+        documents: [
+          "Your birth certificate (to establish your identity)",
+          "A parent's Haitian birth certificate or ID, if available",
+          "Any prior Haitian documentation your family may hold",
+          "Haitian national ID card (CIN) or passport (to obtain)",
+        ],
+      }
+    }
+
+    // hasDocuments === "not_sure" or undefined
     return {
-      status: "may_be_eligible",
-      headline: "You may be eligible — documentation needed",
+      headline: "You are likely eligible — contact a consulate to confirm your documents",
       summary:
-        "You appear to have grounds for Haitian citizenship, but obtaining documentation will be a required step before you can participate. Haitian consulates can help you navigate the process, even if you are unsure where to start.",
+        "You have a clear citizenship basis. A Haitian consulate can tell you exactly which documents you need and whether what you already have is sufficient. This is a routine inquiry — you do not need to have everything figured out before reaching out.",
       nextSteps: [
-        "Contact the nearest Haitian consulate — they handle document requests for nationals abroad",
-        "Ask about the process for obtaining a Haitian passport using parentage or birthplace records",
-        "Gather any documents you already have: your birth certificate, parents' documents, or prior Haitian IDs",
-        "Check the CEP website for voter registration requirements once you have your documentation",
+        "Contact your nearest Haitian consulate — bring any documents you already have",
+        "Ask them to confirm what is needed for a passport application in your situation",
+        "Once you have your Haitian passport, confirm your voter registration status with the CEP",
       ],
       documents: [
-        "Your birth certificate (to establish your identity)",
-        "A parent's Haitian birth certificate or ID, if available",
-        "Any prior Haitian documentation you or your family may hold",
-        "Haitian national ID card (CIN) or passport (to obtain)",
+        "Any documents you currently have (birth certificate, parent's ID, prior Haitian documents)",
+        "Haitian passport (to obtain — consulate will advise on the exact requirements)",
       ],
     }
   }
 
+  if (status === "needs_verification") {
+    return {
+      headline: "Your eligibility needs verification",
+      summary:
+        "Your citizenship basis is not immediately clear from your answers, but this is not a final result. Haitian citizenship law has multiple pathways, and a consulate or legal adviser can help you determine whether you qualify.",
+      nextSteps: [
+        "Review Articles 11 to 14 of the Haitian Constitution, which define citizenship rights",
+        "Contact your nearest Haitian consulate — explain your family background and ask about your options",
+        "Gather any documents that connect you to Haitian family or birthplace",
+        "Consult an immigration attorney familiar with Haitian nationality law if needed",
+      ],
+      documents: [
+        "Any documentation linking you to Haitian family or birthplace",
+        "Records of parents or grandparents who held Haitian citizenship",
+        "Your own birth certificate",
+      ],
+    }
+  }
+
+  // not_eligible
   return {
-    status: "more_info_needed",
-    headline: "More information needed",
+    headline: "You may not be eligible through these pathways",
     summary:
-      "Based on your answers, your eligibility is not immediately clear. Haitian citizenship law has several pathways, and your situation may warrant a closer look with official sources or a legal adviser.",
+      "Based on your answers, you do not appear to have a citizenship basis through birth in Haiti or Haitian parentage. However, Haitian citizenship law has other pathways — including naturalization — that are not captured in this checker.",
     nextSteps: [
-      "Review the Haitian Constitution, particularly Articles 11 to 14",
-      "Contact the Haitian consulate nearest to you",
-      "Consult an immigration attorney familiar with Haitian law if needed",
+      "Review Articles 11 to 14 of the Haitian Constitution for a full picture of citizenship pathways",
+      "Contact a Haitian consulate if you believe there are other factors that may apply",
+      "Consult an attorney familiar with Haitian nationality law for a personalized assessment",
     ],
-    documents: [
-      "Any documentation linking you to Haitian family or birthplace",
-      "Records of ancestors or relatives who held Haitian citizenship",
-    ],
+    documents: [],
   }
 }
 
 const statusStyles: Record<EligibilityStatus, { bg: string; text: string; dot: string }> = {
-  likely_eligible: {
+  eligible: {
     bg: "bg-green-50 dark:bg-green-950/30",
     text: "text-green-900 dark:text-green-100",
     dot: "bg-green-500",
   },
-  may_be_eligible: {
-    bg: "bg-yellow-50 dark:bg-yellow-950/30",
-    text: "text-yellow-900 dark:text-yellow-100",
-    dot: "bg-yellow-500",
+  likely_eligible: {
+    bg: "bg-green-50 dark:bg-green-950/30",
+    text: "text-green-900 dark:text-green-100",
+    dot: "bg-green-400",
   },
-  more_info_needed: {
+  needs_verification: {
     bg: "bg-blue-50 dark:bg-blue-950/30",
     text: "text-blue-900 dark:text-blue-100",
     dot: "bg-blue-500",
   },
-  likely_ineligible: {
+  not_eligible: {
     bg: "bg-muted",
     text: "text-muted-foreground",
     dot: "bg-muted-foreground",
@@ -128,17 +181,26 @@ type Props = {
   searchParams: Record<string, string>
 }
 
+const intentCta: Record<EligibilityIntent, { label: string; href: string } | null> = {
+  ready_to_act: { label: "View Documentation Guide", href: "/resources/documentation" },
+  learning_first: { label: "Why This Election Matters", href: "/why-this-election-matters" },
+  not_ready: null,
+}
+
 export default function EligibilityResultPage({ searchParams }: Props) {
   const answers: EligibilityAnswers = {
-    birthplace: searchParams.birthplace as "haiti" | "abroad" | undefined,
-    haitianParent: searchParams.haitianParent === "true",
-    hasHaitianId: searchParams.hasHaitianId as "yes" | "can_get" | "no" | undefined,
+    bornInHaiti: searchParams.bornInHaiti as EligibilityAnswers["bornInHaiti"],
+    haitianParent: searchParams.haitianParent as EligibilityAnswers["haitianParent"],
+    hasDocuments: searchParams.hasDocuments as EligibilityAnswers["hasDocuments"],
     currentCountry: searchParams.currentCountry,
-    intendToVote: searchParams.intendToVote === "true",
+    intendToVote: searchParams.intendToVote as EligibilityAnswers["intendToVote"],
   }
 
-  const result = computeResult(answers)
-  const style = statusStyles[result.status]
+  const status = determineEligibilityResult(answers)
+  const intent = determineIntent(answers)
+  const result = getResultContent(status, answers)
+  const style = statusStyles[status]
+  const primaryCta = intentCta[intent]
 
   return (
     <div className="container max-w-2xl py-12 md:py-20">
@@ -199,8 +261,13 @@ export default function EligibilityResultPage({ searchParams }: Props) {
         </div>
       )}
 
-      {/* Continue learning */}
+      {/* Intent-driven CTA + secondary links */}
       <div className="mb-8 grid gap-3 sm:grid-cols-2">
+        {primaryCta && (
+          <Link href={primaryCta.href} className={cn(buttonVariants(), "w-full")}>
+            {primaryCta.label}
+          </Link>
+        )}
         <Link
           href="/why-this-election-matters"
           className={cn(buttonVariants({ variant: "outline" }), "w-full")}

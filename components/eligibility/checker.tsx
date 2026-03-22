@@ -11,17 +11,18 @@ type Step = {
   id: keyof EligibilityAnswers
   question: string
   note?: string
-  options: { label: string; value: string | boolean }[]
+  options: { label: string; value: string }[]
 }
 
 const steps: Step[] = [
   {
-    id: "birthplace",
-    question: "Where were you born?",
-    note: "Haitian citizenship can pass through parentage, even if you were born abroad.",
+    id: "bornInHaiti",
+    question: "Were you born in Haiti?",
+    note: "Haitian citizenship can also pass through parentage, even if you were born abroad.",
     options: [
-      { label: "In Haiti", value: "haiti" },
-      { label: "Outside Haiti", value: "abroad" },
+      { label: "Yes", value: "yes" },
+      { label: "No", value: "no" },
+      { label: "I am not sure", value: "not_sure" },
     ],
   },
   {
@@ -29,19 +30,20 @@ const steps: Step[] = [
     question: "Do you have at least one parent who was born in Haiti or holds Haitian citizenship?",
     note: "Under Article 13 of the Haitian Constitution, children of Haitian nationals are entitled to Haitian citizenship.",
     options: [
-      { label: "Yes", value: true },
-      { label: "No", value: false },
-      { label: "I am not sure", value: false },
+      { label: "Yes", value: "yes" },
+      { label: "No", value: "no" },
+      { label: "I am not sure", value: "not_sure" },
     ],
   },
   {
-    id: "hasHaitianId",
-    question: "Do you currently hold a valid Haitian ID card or Haitian passport?",
-    note: "Documentation does not determine your eligibility, but it may be required to register or vote.",
+    id: "hasDocuments",
+    question: "Do you have documents to support your Haitian citizenship?",
+    note: "This includes a Haitian ID or passport, or documents like a parent's birth certificate that can be used to obtain one.",
     options: [
-      { label: "Yes, I have one", value: "yes" },
-      { label: "No, but I know how to get one", value: "can_get" },
-      { label: "No, and I am not sure how", value: "no" },
+      { label: "Yes, I have a Haitian ID or passport", value: "yes" },
+      { label: "I have some documents (birth certificate, parent's ID, etc.)", value: "some" },
+      { label: "No, I do not have any documents", value: "no" },
+      { label: "I am not sure what counts", value: "not_sure" },
     ],
   },
   {
@@ -58,11 +60,11 @@ const steps: Step[] = [
   },
   {
     id: "intendToVote",
-    question: "Do you intend to participate in the election if eligible?",
+    question: "What best describes your current situation? Do you intend to participate in Haiti's upcoming election?",
     options: [
-      { label: "Yes, definitely", value: true },
-      { label: "I want to learn more first", value: true },
-      { label: "I am not sure yet", value: false },
+      { label: "I am ready to take the next steps", value: "yes" },
+      { label: "I am still learning and exploring", value: "exploring" },
+      { label: "I am not planning to participate at this time", value: "no" },
     ],
   },
 ]

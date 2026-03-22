@@ -46,15 +46,20 @@ export type SidebarNavItem = {
 export type SiteLang = "en" | "ht"
 
 export type EligibilityStatus =
+  | "eligible"
   | "likely_eligible"
-  | "may_be_eligible"
-  | "more_info_needed"
-  | "likely_ineligible"
+  | "needs_verification"
+  | "not_eligible"
+
+export type EligibilityIntent =
+  | "ready_to_act"
+  | "learning_first"
+  | "not_ready"
 
 export type EligibilityAnswers = {
-  birthplace?: "haiti" | "abroad"
-  haitianParent?: boolean
-  hasHaitianId?: "yes" | "can_get" | "no"
+  bornInHaiti?: "yes" | "no" | "not_sure"
+  haitianParent?: "yes" | "no" | "not_sure"
+  hasDocuments?: "yes" | "some" | "no" | "not_sure"
   currentCountry?: string
-  intendToVote?: boolean
+  intendToVote?: "yes" | "exploring" | "no"
 }
