@@ -7,6 +7,7 @@ export type AnalyticsEvent =
   | "eligibility_result_viewed"
   | "subscriber_signup_submitted"
   | "donation_banner_clicked"
+  | "donation_checkout_started"
   | "donation_completed"
   | "content_page_viewed"
 

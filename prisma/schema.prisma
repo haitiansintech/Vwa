@@ -3,8 +3,9 @@ generator client {
 }
 
 datasource db {
-  provider = "mysql"
-  url      = env("DATABASE_URL")
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DATABASE_URL_UNPOOLED")
 }
 
 // Admin Auth
@@ -15,12 +16,12 @@ model Account {
   type              String
   provider          String
   providerAccountId String
-  refresh_token     String?  @db.Text
-  access_token      String?  @db.Text
+  refresh_token     String?
+  access_token      String?
   expires_at        Int?
   token_type        String?
   scope             String?
-  id_token          String?  @db.Text
+  id_token          String?
   session_state     String?
   createdAt         DateTime @default(now()) @map("created_at")
   updatedAt         DateTime @default(now()) @map("updated_at")
@@ -85,13 +86,14 @@ model Subscriber {
 }
 
 model Donation {
-  id                    String         @id @default(cuid())
-  amountCents           Int
-  currency              String         @default("usd")
-  donorEmail            String?
-  stripePaymentIntentId String?        @unique @map("stripe_payment_intent_id")
-  status                DonationStatus @default(PENDING)
-  createdAt             DateTime       @default(now()) @map("created_at")
+  id                      String         @id @default(cuid())
+  amountCents             Int
+  currency                String         @default("usd")
+  donorEmail              String?
+  stripeCheckoutSessionId String?        @unique @map("stripe_checkout_session_id")
+  stripePaymentIntentId   String?        @unique @map("stripe_payment_intent_id")
+  status                  DonationStatus @default(PENDING)
+  createdAt               DateTime       @default(now()) @map("created_at")
 
   @@map("donations")
 }
@@ -100,6 +102,7 @@ enum DonationStatus {
   PENDING
   COMPLETED
   FAILED
+  CANCELED
   REFUNDED
 }
 
@@ -107,8 +110,8 @@ model Issue {
   id          String   @id @default(cuid())
   slug        String   @unique
   title       String
-  summary     String   @db.Text
-  body        String?  @db.LongText
+  summary     String
+  body        String?
   published   Boolean  @default(false)
   createdAt   DateTime @default(now()) @map("created_at")
   updatedAt   DateTime @updatedAt @map("updated_at")
@@ -121,7 +124,7 @@ model Person {
   slug      String   @unique
   name      String
   role      String?
-  bio       String?  @db.Text
+  bio       String?
   imageUrl  String?  @map("image_url")
   published Boolean  @default(false)
   createdAt DateTime @default(now()) @map("created_at")
@@ -135,7 +138,7 @@ model Institution {
   slug        String   @unique
   name        String
   type        String?
-  description String?  @db.Text
+  description String?
   published   Boolean  @default(false)
   createdAt   DateTime @default(now()) @map("created_at")
   updatedAt   DateTime @updatedAt @map("updated_at")
@@ -147,7 +150,7 @@ model TimelineEntry {
   id          String   @id @default(cuid())
   date        DateTime
   title       String
-  description String?  @db.Text
+  description String?
   category    String?
   sourceUrl   String?  @map("source_url")
   createdAt   DateTime @default(now()) @map("created_at")
