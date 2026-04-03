@@ -50,16 +50,32 @@ export default function PersonPage({ params }: Props) {
       </div>
 
       {/* Metadata strip */}
-      {party && (
-        <div className="mb-8 rounded-xl border bg-muted/30 p-5 text-sm">
-          <p className="font-semibold text-foreground">Party</p>
-          <Link
-            href={`/parties/${party.slugAsParams}`}
-            className="text-primary hover:underline"
-          >
-            {party.title}
-            {party.acronym && ` (${party.acronym})`}
-          </Link>
+      {(party || person.department || person.municipality) && (
+        <div className="mb-8 grid gap-3 rounded-xl border bg-muted/30 p-5 text-sm sm:grid-cols-3">
+          {party && (
+            <div>
+              <p className="font-semibold text-foreground">Party</p>
+              <Link
+                href={`/parties/${party.slugAsParams}`}
+                className="text-primary hover:underline"
+              >
+                {party.title}
+                {party.acronym && ` (${party.acronym})`}
+              </Link>
+            </div>
+          )}
+          {person.department && (
+            <div>
+              <p className="font-semibold text-foreground">Department</p>
+              <p className="text-muted-foreground">{person.department}</p>
+            </div>
+          )}
+          {person.municipality && (
+            <div>
+              <p className="font-semibold text-foreground">Municipality</p>
+              <p className="text-muted-foreground">{person.municipality}</p>
+            </div>
+          )}
         </div>
       )}
 

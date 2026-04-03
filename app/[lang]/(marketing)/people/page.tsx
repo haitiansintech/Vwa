@@ -33,8 +33,12 @@ export default function PeoplePage() {
               className="group flex flex-col rounded-xl border bg-card p-5 transition-colors hover:border-foreground/20"
             >
               <h2 className="font-semibold">{person.title}</h2>
-              {person.role && (
-                <p className="mt-0.5 text-xs text-muted-foreground">{person.role}</p>
+              {(person.role || person.municipality || person.department) && (
+                <p className="mt-0.5 text-xs text-muted-foreground">
+                  {[person.role, person.municipality, person.department]
+                    .filter(Boolean)
+                    .join(" · ")}
+                </p>
               )}
               {person.bio && (
                 <p className="mt-2 flex-1 text-sm text-muted-foreground line-clamp-3">

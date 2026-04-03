@@ -90,6 +90,8 @@ const allPeople = defineCollection({
     title: s.string(),
     role: s.string().optional(),
     party: s.string().optional(),
+    department: s.string().optional(),
+    municipality: s.string().optional(),
     bio: s.string().optional(),
     imageUrl: s.string().optional(),
     body: s.mdx(),
