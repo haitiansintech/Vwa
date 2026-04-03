@@ -64,6 +64,40 @@ const allResources = defineCollection({
   }),
 })
 
+// Political parties
+const allParties = defineCollection({
+  name: "Party",
+  pattern: "parties/**/*.mdx",
+  schema: s.object({
+    title: s.string(),
+    acronym: s.string().optional(),
+    description: s.string().optional(),
+    founded: s.string().optional(),
+    ideology: s.string().optional(),
+    website: s.string().optional(),
+    imageUrl: s.string().optional(),
+    body: s.mdx(),
+    slug: s.path().transform((v) => `/${v}`),
+    slugAsParams: s.path().transform((v) => v.split("/").slice(1).join("/")),
+  }),
+})
+
+// People — candidates, officials, and key figures
+const allPeople = defineCollection({
+  name: "Person",
+  pattern: "people/**/*.mdx",
+  schema: s.object({
+    title: s.string(),
+    role: s.string().optional(),
+    party: s.string().optional(),
+    bio: s.string().optional(),
+    imageUrl: s.string().optional(),
+    body: s.mdx(),
+    slug: s.path().transform((v) => `/${v}`),
+    slugAsParams: s.path().transform((v) => v.split("/").slice(1).join("/")),
+  }),
+})
+
 export default defineConfig({
   root: "content",
   output: {
@@ -73,7 +107,7 @@ export default defineConfig({
     name: "[name]-[hash:6].[ext]",
     clean: true,
   },
-  collections: { allPages, allResources },
+  collections: { allPages, allResources, allParties, allPeople },
   mdx: {
     remarkPlugins: [remarkGfm],
     rehypePlugins: [

@@ -11,6 +11,14 @@ export const marketingConfig: MarketingConfig = {
       href: "/eligibility",
     },
     {
+      title: "Parties",
+      href: "/parties",
+    },
+    {
+      title: "People",
+      href: "/people",
+    },
+    {
       title: "Resources",
       href: "/resources",
     },
