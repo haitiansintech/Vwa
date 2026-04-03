@@ -7,7 +7,11 @@ export const metadata: Metadata = {
     "Find out whether you may be eligible to participate in Haiti's upcoming election.",
 }
 
-export default function EligibilityPage() {
+type Props = {
+  params: { lang: string }
+}
+
+export default function EligibilityPage({ params: { lang } }: Props) {
   return (
     <div className="container max-w-2xl py-12 md:py-20">
       <div className="mb-8 text-center">
@@ -19,7 +23,7 @@ export default function EligibilityPage() {
           in Haiti&apos;s election. This is not legal advice.
         </p>
       </div>
-      <EligibilityChecker />
+      <EligibilityChecker lang={lang} />
     </div>
   )
 }

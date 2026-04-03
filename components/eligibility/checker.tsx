@@ -94,7 +94,11 @@ function computePathLength(answers: EligibilityAnswers): number {
   return count
 }
 
-export function EligibilityChecker() {
+interface EligibilityCheckerProps {
+  lang: string
+}
+
+export function EligibilityChecker({ lang }: EligibilityCheckerProps) {
   const router = useRouter()
   const [stepHistory, setStepHistory] = React.useState<StepId[]>(["bornInHaiti"])
   const [answers, setAnswers] = React.useState<EligibilityAnswers>({})
@@ -105,6 +109,14 @@ export function EligibilityChecker() {
   const isFirst = stepHistory.length === 1
   const pathLength = computePathLength(answers)
 
+  // Restore the selected index when navigating back to a step that was already answered
+  const currentAnswer = answers[currentStepId]
+  const restoredIndex = currentAnswer != null
+    ? step.options.findIndex((o) => o.value === currentAnswer)
+    : null
+
+  const effectiveSelectedIndex = selectedIndex ?? (restoredIndex !== -1 ? restoredIndex : null)
+
   React.useEffect(() => {
     if (stepHistory.length === 1) {
       track("eligibility_checker_started")
@@ -112,9 +124,9 @@ export function EligibilityChecker() {
   }, [stepHistory.length])
 
   function handleNext() {
-    if (selectedIndex === null) return
+    if (effectiveSelectedIndex === null) return
 
-    const selectedValue = step.options[selectedIndex].value
+    const selectedValue = step.options[effectiveSelectedIndex].value
     const newAnswers = { ...answers, [currentStepId]: selectedValue }
     setAnswers(newAnswers)
     setSelectedIndex(null)
@@ -125,7 +137,7 @@ export function EligibilityChecker() {
       track("eligibility_checker_completed")
       const params = new URLSearchParams()
       Object.entries(newAnswers).forEach(([k, v]) => params.set(k, String(v)))
-      router.push(`/eligibility/result?${params.toString()}`)
+      router.push(`/${lang}/eligibility/result?${params.toString()}`)
       return
     }
 
@@ -170,7 +182,7 @@ export function EligibilityChecker() {
             onClick={() => setSelectedIndex(index)}
             className={cn(
               "w-full rounded-lg border px-4 py-3 text-left text-sm font-medium transition-colors",
-              selectedIndex === index
+              effectiveSelectedIndex === index
                 ? "border-primary bg-primary/5 text-primary"
                 : "hover:border-foreground/30 hover:bg-muted/50"
             )}
@@ -185,7 +197,7 @@ export function EligibilityChecker() {
         <Button variant="ghost" onClick={handleBack} disabled={isFirst}>
           Back
         </Button>
-        <Button onClick={handleNext} disabled={selectedIndex === null}>
+        <Button onClick={handleNext} disabled={effectiveSelectedIndex === null}>
           {getNextStepId(currentStepId, answers) === null ? "See My Result" : "Continue"}
         </Button>
       </div>

@@ -154,6 +154,38 @@ function getResultContent(
   }
 }
 
+type ConsulateInfo = {
+  name: string
+  city: string
+  url: string
+  phone?: string
+}
+
+const consulateByCountry: Record<string, ConsulateInfo[]> = {
+  us: [
+    { name: "Haitian Embassy", city: "Washington, D.C.", url: "https://www.haiti.org", phone: "(202) 332-4090" },
+    { name: "Consulate General of Haiti", city: "New York, NY", url: "https://www.haitianconsulate-nyc.org", phone: "(212) 697-9767" },
+    { name: "Consulate General of Haiti", city: "Miami, FL", url: "https://haitianconsulatemiamifl.com", phone: "(305) 859-2003" },
+    { name: "Consulate General of Haiti", city: "Boston, MA", url: "https://www.consulatehaitiboston.org", phone: "(617) 266-3660" },
+    { name: "Consulate General of Haiti", city: "Chicago, IL", url: "https://haitianconsulate-chicago.com", phone: "(312) 372-5933" },
+    { name: "Consulate General of Haiti", city: "Orlando, FL", url: "https://haitianconsulateorlando.com", phone: "(407) 578-2500" },
+  ],
+  ca: [
+    { name: "Haitian Embassy", city: "Ottawa, ON", url: "https://ambahaiti-canada.ca", phone: "(613) 238-1628" },
+    { name: "Consulate General of Haiti", city: "Montréal, QC", url: "https://consulat-haiti-montreal.org", phone: "(514) 499-1919" },
+  ],
+  fr: [
+    { name: "Haitian Embassy", city: "Paris", url: "https://www.ambafrance-ht.org", phone: "+33 1 47 63 47 78" },
+  ],
+  do: [
+    { name: "Haitian Embassy", city: "Santo Domingo", url: "https://www.embajadahaiti.org.do" },
+  ],
+  ht: [
+    { name: "Provisional Electoral Council (CEP)", city: "Port-au-Prince", url: "https://www.cep-ht.org" },
+  ],
+  other: [],
+}
+
 const statusStyles: Record<EligibilityStatus, { bg: string; text: string; dot: string }> = {
   eligible: {
     bg: "bg-green-50 dark:bg-green-950/30",
@@ -259,6 +291,39 @@ export default function EligibilityResultPage({ searchParams }: Props) {
             Full documentation guide &rarr;
           </Link>
         </div>
+      )}
+
+      {/* Consulate links */}
+      {answers.currentCountry && (
+        (() => {
+          const consulates = consulateByCountry[answers.currentCountry] ?? []
+          if (consulates.length === 0) return null
+          const isHaiti = answers.currentCountry === "ht"
+          return (
+            <div className="mb-8 rounded-xl border p-5 space-y-3">
+              <h2 className="font-semibold">
+                {isHaiti ? "Electoral Authority" : "Haitian Consulates Near You"}
+              </h2>
+              <ul className="space-y-3">
+                {consulates.map((c) => (
+                  <li key={c.url} className="flex flex-col gap-0.5 text-sm">
+                    <a
+                      href={c.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-medium text-primary hover:underline"
+                    >
+                      {c.name} — {c.city}
+                    </a>
+                    {c.phone && (
+                      <span className="text-muted-foreground">{c.phone}</span>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )
+        })()
       )}
 
       {/* Intent-driven CTA + secondary links */}
