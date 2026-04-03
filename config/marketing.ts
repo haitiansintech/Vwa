@@ -15,7 +15,7 @@ export const marketingConfig: MarketingConfig = {
       href: "/parties",
     },
     {
-      title: "People",
+      title: "Candidates",
       href: "/people",
     },
     {
