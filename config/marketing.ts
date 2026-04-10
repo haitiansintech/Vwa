@@ -19,6 +19,10 @@ export const marketingConfig: MarketingConfig = {
       href: "/people",
     },
     {
+      title: "Submit a Profile",
+      href: "/submit",
+    },
+    {
       title: "Resources",
       href: "/resources",
     },
