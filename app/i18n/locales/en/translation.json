@@ -1,4 +1,20 @@
 {
-  "title": "Hi there!",
-  "count": "{{count}} item"
+  "nav": {
+    "whyThisElection": "Why This Election",
+    "eligibility": "Check Eligibility",
+    "resources": "Resources",
+    "timeline": "Timeline",
+    "about": "About"
+  },
+  "hero": {
+    "badge": "Haiti 2025 Election",
+    "heading": "A Historic Election Is Approaching",
+    "subtext": "For the first time in years, Haiti has a path toward a legitimate democratic transition. Find out whether you are eligible to participate.",
+    "primaryCta": "Check Your Eligibility",
+    "secondaryCta": "Why This Election Matters"
+  },
+  "footer": {
+    "tagline": "A free civic platform for Haitians.",
+    "nonpartisan": "Vwa is a nonpartisan civic resource. We do not endorse any candidate or political party."
+  }
 }

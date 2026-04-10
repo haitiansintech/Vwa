@@ -1,14 +1,14 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
 generator client {
   provider = "prisma-client-js"
 }
 
 datasource db {
-  provider = "mysql"
-  url      = env("DATABASE_URL")
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DATABASE_URL_UNPOOLED")
 }
+
+// Admin Auth
 
 model Account {
   id                String   @id @default(cuid())
@@ -16,20 +16,20 @@ model Account {
   type              String
   provider          String
   providerAccountId String
-  refresh_token     String?  @db.Text
-  access_token      String?  @db.Text
+  refresh_token     String?
+  access_token      String?
   expires_at        Int?
   token_type        String?
   scope             String?
-  id_token          String?  @db.Text
+  id_token          String?
   session_state     String?
-  createdAt         DateTime @default(now()) @map(name: "created_at")
-  updatedAt         DateTime @default(now()) @map(name: "updated_at")
+  createdAt         DateTime @default(now()) @map("created_at")
+  updatedAt         DateTime @default(now()) @map("updated_at")
 
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@unique([provider, providerAccountId])
-  @@map(name: "accounts")
+  @@map("accounts")
 }
 
 model Session {
@@ -39,7 +39,7 @@ model Session {
   expires      DateTime
   user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
 
-  @@map(name: "sessions")
+  @@map("sessions")
 }
 
 model User {
@@ -48,19 +48,14 @@ model User {
   email         String?   @unique
   emailVerified DateTime?
   image         String?
-  createdAt     DateTime  @default(now()) @map(name: "created_at")
-  updatedAt     DateTime  @default(now()) @map(name: "updated_at")
+  role          UserRole  @default(VIEWER)
+  createdAt     DateTime  @default(now()) @map("created_at")
+  updatedAt     DateTime  @updatedAt @map("updated_at")
 
   accounts Account[]
   sessions Session[]
-  Post     Post[]
 
-  stripeCustomerId       String?   @unique @map(name: "stripe_customer_id")
-  stripeSubscriptionId   String?   @unique @map(name: "stripe_subscription_id")
-  stripePriceId          String?   @map(name: "stripe_price_id")
-  stripeCurrentPeriodEnd DateTime? @map(name: "stripe_current_period_end")
-
-  @@map(name: "users")
+  @@map("users")
 }
 
 model VerificationToken {
@@ -69,19 +64,96 @@ model VerificationToken {
   expires    DateTime
 
   @@unique([identifier, token])
-  @@map(name: "verification_tokens")
+  @@map("verification_tokens")
 }
 
-model Post {
+enum UserRole {
+  ADMIN
+  EDITOR
+  VIEWER
+}
+
+// Civic Platform
+
+model Subscriber {
   id        String   @id @default(cuid())
-  title     String
-  content   Json?
+  email     String   @unique
+  source    String?
+  locale    String?  @default("en")
+  createdAt DateTime @default(now()) @map("created_at")
+
+  @@map("subscribers")
+}
+
+model Donation {
+  id                      String         @id @default(cuid())
+  amountCents             Int
+  currency                String         @default("usd")
+  donorEmail              String?
+  stripeCheckoutSessionId String?        @unique @map("stripe_checkout_session_id")
+  stripePaymentIntentId   String?        @unique @map("stripe_payment_intent_id")
+  status                  DonationStatus @default(PENDING)
+  createdAt               DateTime       @default(now()) @map("created_at")
+
+  @@map("donations")
+}
+
+enum DonationStatus {
+  PENDING
+  COMPLETED
+  FAILED
+  CANCELED
+  REFUNDED
+}
+
+model Issue {
+  id          String   @id @default(cuid())
+  slug        String   @unique
+  title       String
+  summary     String
+  body        String?
+  published   Boolean  @default(false)
+  createdAt   DateTime @default(now()) @map("created_at")
+  updatedAt   DateTime @updatedAt @map("updated_at")
+
+  @@map("issues")
+}
+
+model Person {
+  id        String   @id @default(cuid())
+  slug      String   @unique
+  name      String
+  role      String?
+  bio       String?
+  imageUrl  String?  @map("image_url")
   published Boolean  @default(false)
-  createdAt DateTime @default(now()) @map(name: "created_at")
-  updatedAt DateTime @default(now()) @map(name: "updated_at")
-  authorId  String
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
 
-  author User @relation(fields: [authorId], references: [id])
+  @@map("people")
+}
 
-  @@map(name: "posts")
+model Institution {
+  id          String   @id @default(cuid())
+  slug        String   @unique
+  name        String
+  type        String?
+  description String?
+  published   Boolean  @default(false)
+  createdAt   DateTime @default(now()) @map("created_at")
+  updatedAt   DateTime @updatedAt @map("updated_at")
+
+  @@map("institutions")
+}
+
+model TimelineEntry {
+  id          String   @id @default(cuid())
+  date        DateTime
+  title       String
+  description String?
+  category    String?
+  sourceUrl   String?  @map("source_url")
+  createdAt   DateTime @default(now()) @map("created_at")
+
+  @@map("timeline_entries")
 }
