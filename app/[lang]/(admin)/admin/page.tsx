@@ -1,5 +1,7 @@
 import { db } from "@/lib/db"
 
+export const dynamic = "force-dynamic"
+
 export const metadata = {
   title: "Admin",
 }
