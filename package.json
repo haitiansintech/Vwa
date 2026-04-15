@@ -1,7 +1,10 @@
 {
-  "name": "vwq",
+  "name": "vwa",
   "version": "0.2.0",
   "private": true,
+  "engines": {
+  "node": "20.x"
+  },
   "packageManager": "pnpm@10.15.1",
   "pnpm": {
     "onlyBuiltDependencies": ["@prisma/client", "esbuild", "prisma", "sharp"],
@@ -29,12 +32,13 @@
     "dev": "velite && next dev",
     "dev:content": "velite --watch",
     "build": "velite && next build",
-"start": "next start",
+    "start": "next start",
     "lint": "next lint",
     "preview": "velite && next build && next start",
     "postinstall": "prisma generate",
     "check:types": "tsc --noEmit",
-    "mcp:vwa": "tsx mcp/vwa-mcp-server.ts"
+    "mcp:vwa": "tsx mcp/vwa-mcp-server.ts",
+    "preinstall": "corepack enable"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.3.4",
