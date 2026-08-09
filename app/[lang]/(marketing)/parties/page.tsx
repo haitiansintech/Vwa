@@ -1,58 +1,52 @@
-import type { Metadata } from "next"
-import Link from "next/link"
-import { allParties } from "#velite"
+import type { Metadata } from 'next'
+import type { SiteLang } from '@/types'
 
-export const metadata: Metadata = {
-  title: "Political Parties",
-  description: "Profiles of the political parties participating in Haiti's election.",
+import { politicalParties } from '@/lib/political-parties'
+import { PartiesDirectory, type PartiesDirectoryCopy } from '@/components/parties/parties-directory'
+import { getTranslation } from '@/app/i18n'
+
+type Props = {
+  params: { lang: SiteLang }
 }
 
-export default function PartiesPage() {
-  const parties = allParties
+export async function generateMetadata({ params: { lang } }: Props): Promise<Metadata> {
+  const { t } = await getTranslation(lang)
 
-  return (
-    <div className="container max-w-3xl py-12 md:py-20">
-      <div className="mb-10">
-        <h1 className="font-heading text-4xl font-bold">Political Parties</h1>
-        <p className="mt-3 text-muted-foreground">
-          An overview of the parties participating in Haiti&apos;s electoral process. Profiles are
-          updated as official information becomes available.
-        </p>
-      </div>
+  return {
+    title: t('parties.metaTitle'),
+    description: t('parties.metaDescription'),
+  }
+}
 
-      {parties.length === 0 ? (
-        <p className="text-muted-foreground">Party profiles are coming soon.</p>
-      ) : (
-        <div className="grid gap-4 sm:grid-cols-2">
-          {parties.map((party) => (
-            <Link
-              key={party.slug}
-              href={`/parties/${party.slugAsParams}`}
-              className="group flex flex-col rounded-xl border bg-card p-5 transition-colors hover:border-foreground/20"
-            >
-              <div className="mb-2 flex items-center gap-2">
-                <h2 className="font-semibold">{party.title}</h2>
-                {party.acronym && (
-                  <span className="rounded-full bg-muted px-2 py-0.5 text-xs font-medium text-muted-foreground">
-                    {party.acronym}
-                  </span>
-                )}
-              </div>
-              {party.description && (
-                <p className="flex-1 text-sm text-muted-foreground line-clamp-3">
-                  {party.description}
-                </p>
-              )}
-              {party.ideology && (
-                <p className="mt-3 text-xs text-muted-foreground">{party.ideology}</p>
-              )}
-              <p className="mt-3 text-sm font-medium text-primary group-hover:underline">
-                View profile &rarr;
-              </p>
-            </Link>
-          ))}
-        </div>
-      )}
-    </div>
-  )
+export default async function PartiesPage({ params: { lang } }: Props) {
+  const { t } = await getTranslation(lang)
+  const copy: PartiesDirectoryCopy = {
+    heading: t('parties.heading'),
+    summary: t('parties.summary'),
+    registered: t('parties.registered'),
+    approved: t('parties.approved'),
+    notApproved: t('parties.notApproved'),
+    searchLabel: t('parties.searchLabel'),
+    searchPlaceholder: t('parties.searchPlaceholder'),
+    filterLabel: t('parties.filterLabel'),
+    all: t('parties.all'),
+    approvedFilter: t('parties.approvedFilter'),
+    notApprovedFilter: t('parties.notApprovedFilter'),
+    partyColumn: t('parties.partyColumn'),
+    acronymColumn: t('parties.acronymColumn'),
+    statusColumn: t('parties.statusColumn'),
+    results: t('parties.results'),
+    noResults: t('parties.noResults'),
+    officialSource: t('parties.officialSource'),
+    publicationPage: t('parties.publicationPage'),
+    sourcePublished: t('parties.sourcePublished'),
+    qualificationNote: t('parties.qualificationNote'),
+    sourceAnomaly: t('parties.sourceAnomaly'),
+    missingName: t('parties.missingName'),
+    needsReview: t('parties.needsReview'),
+    viewProfile: t('parties.viewProfile'),
+    tableCaption: t('parties.tableCaption'),
+  }
+
+  return <PartiesDirectory parties={politicalParties} copy={copy} lang={lang} />
 }

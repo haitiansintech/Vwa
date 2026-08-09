@@ -16,5 +16,34 @@
   "footer": {
     "tagline": "Yon platfòm sivik gratis pou Ayisyen.",
     "nonpartisan": "Vwa se yon resous sivik ki pa patizan. Nou pa sipòte okenn kandida ni pati politik."
+  },
+  "parties": {
+    "metaTitle": "Pati politik CEP apwouve pou pwosesis elektoral 2026 la",
+    "metaDescription": "Chèche nan rejis ofisyèl CEP la ki gen 320 pati politik, ansanm ak estati apwobasyon yo ak enfòmasyon sou sous la.",
+    "heading": "Pati politik ki anrejistre pou pwosesis elektoral 2026–2027 la",
+    "summary": "Konsèy Elektoral Pwovizwa a (CEP) pibliye rejis definitif sa a pou pati politik yo te egzamine pou pwochen etap pwosesis elektoral Ayiti a. Non ak sig ofisyèl pati yo rete jan CEP pibliye yo.",
+    "registered": "Total ki anrejistre",
+    "approved": "Apwouve",
+    "notApproved": "Pa apwouve",
+    "searchLabel": "Chèche pati",
+    "searchPlaceholder": "Chèche ak non ofisyèl oswa sig",
+    "filterLabel": "Filtre selon estati",
+    "all": "Tout pati",
+    "approvedFilter": "Apwouve",
+    "notApprovedFilter": "Pa apwouve",
+    "partyColumn": "Non ofisyèl pati a",
+    "acronymColumn": "Sig",
+    "statusColumn": "Estati CEP",
+    "results": "{count} pati parèt",
+    "noResults": "Pa gen pati ki koresponn ak rechèch ak filtè sa yo.",
+    "officialSource": "Sous ofisyèl CEP",
+    "publicationPage": "Paj piblikasyon CEP",
+    "sourcePublished": "Sous la pibliye 9 jiyè 2026",
+    "qualificationNote": "Lè CEP make yon pati “Agréé”, sa vle di pati a apwouve pou kontinye nan pwochen etap pwosesis elektoral la dapre Atik 129 nan dekrè elektoral 2 jen 2026 la. Sa pa konfime pati a gen kandida kalifye sou bilten final la.",
+    "sourceAnomaly": "Rezime CEP a di gen 320 pati, men tablo PDF pibliye a pa gen liy nimewo 174, 202 ak 309. Non ak sig yo bezwen konfimasyon CEP; estati apwouve yo dedwi sèlman nan total ofisyèl 316/4 la.",
+    "missingName": "Liy la pa nan tablo sous la — verifikasyon manyèl nesesè",
+    "needsReview": "Pou verifye",
+    "viewProfile": "Gen pwofil detaye",
+    "tableCaption": "Rejis ofisyèl pati politik CEP la"
   }
 }

@@ -34,6 +34,8 @@
     "build": "velite && next build",
     "start": "next start",
     "lint": "next lint",
+    "test": "tsx --test tests/political-parties.test.tsx",
+    "validate:parties": "tsx scripts/validate-political-parties.ts",
     "preview": "velite && next build && next start",
     "postinstall": "prisma generate",
     "check:types": "tsc --noEmit",

@@ -1,0 +1,2885 @@
+[
+  {
+    "sequence": 1,
+    "name": "Zouti Pou Yon Lot Ayiti",
+    "acronym": "ZOULA",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 2
+  },
+  {
+    "sequence": 2,
+    "name": "Parti Nationale pour L'Aternatif de bien Être",
+    "acronym": "PANAB",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 2
+  },
+  {
+    "sequence": 3,
+    "name": "Les Démocrates visionnaire pour la nouvelle Haïti",
+    "acronym": "DVNH",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 2
+  },
+  {
+    "sequence": 4,
+    "name": "Alliance Populaire Pour la Réconciliation Nationale et le Développement",
+    "acronym": "APPREND",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 2
+  },
+  {
+    "sequence": 5,
+    "name": "Patriyot Rasanble pou sove Lakay",
+    "acronym": "PARASOL",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 2
+  },
+  {
+    "sequence": 6,
+    "name": "Pati Kris La",
+    "acronym": "PK",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 2
+  },
+  {
+    "sequence": 7,
+    "name": "Rassemblement des Démocrates pour la République",
+    "acronym": "RDR",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 2
+  },
+  {
+    "sequence": 8,
+    "name": "Parti des Travailleurs agricoles Pour Une Gouvernance Eclairee",
+    "acronym": "PARTAGE",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 2
+  },
+  {
+    "sequence": 9,
+    "name": "Parti Unité Reformé",
+    "acronym": "PUR",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 2
+  },
+  {
+    "sequence": 10,
+    "name": "Relève Citoyenne",
+    "acronym": "RELEC",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 2
+  },
+  {
+    "sequence": 11,
+    "name": "Mouvement des Nationaux Progressiste pour le redressement d'Haïti",
+    "acronym": "MNPRH",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 2
+  },
+  {
+    "sequence": 12,
+    "name": "Gwoupman Angaje Pou Demokrasi",
+    "acronym": "GAD",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 2
+  },
+  {
+    "sequence": 13,
+    "name": "Réseau des Patriotes Intègres pour le Redressement d'Haïti",
+    "acronym": "RESPIRE-HAITI",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 2
+  },
+  {
+    "sequence": 14,
+    "name": "ESKWAD DEMOKRATIK",
+    "acronym": "ESKWAD",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 2
+  },
+  {
+    "sequence": 15,
+    "name": "Pati Ayiti Kanpe",
+    "acronym": "PAK",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 2
+  },
+  {
+    "sequence": 16,
+    "name": "Organisation Socio-Politique pour le Relancement d'Haiti",
+    "acronym": "OSPRH",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 2
+  },
+  {
+    "sequence": 17,
+    "name": "Voix De La Majorité Silencieuse",
+    "acronym": "VMS",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 2
+  },
+  {
+    "sequence": 18,
+    "name": "Héritage 86 La Relève",
+    "acronym": "HLR-86",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 2
+  },
+  {
+    "sequence": 19,
+    "name": "Organisation du Peuple en lutte",
+    "acronym": "OPL",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 2
+  },
+  {
+    "sequence": 20,
+    "name": "Equilibre Démocratique",
+    "acronym": "EKILIB",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 2
+  },
+  {
+    "sequence": 21,
+    "name": "La Colombe",
+    "acronym": "LA COLOMBE",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 2
+  },
+  {
+    "sequence": 22,
+    "name": "Cri du Peuple Haïtien pour la Reconciliation Nationale",
+    "acronym": "CPHREN",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 2
+  },
+  {
+    "sequence": 23,
+    "name": "Le parti De La Diaspora Haïtienne Pour Haïti",
+    "acronym": "MUDHAH",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 2
+  },
+  {
+    "sequence": 24,
+    "name": "Konfyans",
+    "acronym": "KONFYANS",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 2
+  },
+  {
+    "sequence": 25,
+    "name": "Mouvement Jeunesse pour Refonder Ayiti",
+    "acronym": "MJRA",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 3
+  },
+  {
+    "sequence": 26,
+    "name": "Rassemblement des Elites et du Peuple pour l'Organisation de la Nation et le Sauvetage de l'Etat",
+    "acronym": "REPONS",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 3
+  },
+  {
+    "sequence": 27,
+    "name": "Entente Nationale",
+    "acronym": "ENA",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 3
+  },
+  {
+    "sequence": 28,
+    "name": "Union des Forces Progressistes Haitiennes.",
+    "acronym": "UFPHA",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 3
+  },
+  {
+    "sequence": 29,
+    "name": "Parti de la Restauration et du Changement",
+    "acronym": "PRC",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 3
+  },
+  {
+    "sequence": 30,
+    "name": "Parti Réformiste Pour L'Emancipation Du Peuple",
+    "acronym": "PREPEP",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 3
+  },
+  {
+    "sequence": 31,
+    "name": "PARTI REPUBLICAIN HAITEN",
+    "acronym": "PRHA HAYITI",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 3
+  },
+  {
+    "sequence": 32,
+    "name": "Force 50",
+    "acronym": "FORCE 50",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 3
+  },
+  {
+    "sequence": 33,
+    "name": "Groupe de Réflexion pour un Réveil Historique Haïtien",
+    "acronym": "GRHA",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 3
+  },
+  {
+    "sequence": 34,
+    "name": "Mouvements des Patriotes pour le Changement d'Haiti",
+    "acronym": "MPC-HAITI",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 3
+  },
+  {
+    "sequence": 35,
+    "name": "GROUPE DE REFLEXIONS SOCIALES ET POLITIQUES POUR UNE NOUVELLE HAÎTI",
+    "acronym": "GRENOPSH",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 3
+  },
+  {
+    "sequence": 36,
+    "name": "FORCES MORALES VIVANTES D'HATI",
+    "acronym": "FORMVIVH",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 3
+  },
+  {
+    "sequence": 37,
+    "name": "Ayiti Toma",
+    "acronym": "AYTO",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 3
+  },
+  {
+    "sequence": 38,
+    "name": "Konbit Pou Ayiti Mache",
+    "acronym": "KPAM",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 3
+  },
+  {
+    "sequence": 39,
+    "name": "Parti Politique Pour L'Avancement Economique Haitien",
+    "acronym": "PLEH",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 3
+  },
+  {
+    "sequence": 40,
+    "name": "Mobilizasyon Ayisyen Natif Natal Pou Manbre Avansman Nasyonal",
+    "acronym": "MANMAN",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 3
+  },
+  {
+    "sequence": 41,
+    "name": "KONBIT POU REVEYE AYITI",
+    "acronym": "KOREA",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 3
+  },
+  {
+    "sequence": 42,
+    "name": "Platfòm Nasyonal Sektè Popilè Ayisyen",
+    "acronym": "PLANSPA",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 3
+  },
+  {
+    "sequence": 43,
+    "name": "SOLIDARITE DES UNITES DEMOCRATIQUES DEVOUEES",
+    "acronym": "SUDD",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 3
+  },
+  {
+    "sequence": 44,
+    "name": "Mouvement des Travailleurs et des Citoyens",
+    "acronym": "MTC",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 3
+  },
+  {
+    "sequence": 45,
+    "name": "Pèp Ayisyen An Mouvman",
+    "acronym": "PAAM",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 3
+  },
+  {
+    "sequence": 46,
+    "name": "Nouveau Parti pour la Renaissance d'Haiti",
+    "acronym": "NOUPAREH",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 3
+  },
+  {
+    "sequence": 47,
+    "name": "Konbit Liberasyon Ekonomik",
+    "acronym": "KLE",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 3
+  },
+  {
+    "sequence": 48,
+    "name": "RENAISSANCE PATRIOTIQUE D'HAÎTI",
+    "acronym": "REPAH",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 3
+  },
+  {
+    "sequence": 49,
+    "name": "COPPOS-HAÎTI",
+    "acronym": "CH",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 3
+  },
+  {
+    "sequence": 50,
+    "name": "Mouvement pour L'Integration de la Nation au Developpement Effectif et Irreversible d'HvAITI",
+    "acronym": "MINDEFFIHA",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 3
+  },
+  {
+    "sequence": 51,
+    "name": "PARTI POLITIQUE DE L'UNITE POUR LA SOLIDARITE CITOYENNE",
+    "acronym": "USC",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 3
+  },
+  {
+    "sequence": 52,
+    "name": "Mouvement pour la Sauvegarde de la Démocratie",
+    "acronym": "MSD",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 3
+  },
+  {
+    "sequence": 53,
+    "name": "Dignité Nationale Pour la Mobilisation",
+    "acronym": "DINAMO",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 3
+  },
+  {
+    "sequence": 54,
+    "name": "JEUNESSE UNIE POUR UNE NOUVELLE HAÎTI",
+    "acronym": "JEUNEH",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 3
+  },
+  {
+    "sequence": 55,
+    "name": "Mouvement Travailliste Haîtienne",
+    "acronym": "MTH",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 3
+  },
+  {
+    "sequence": 56,
+    "name": "Parti Politique des Associations Intégrales pour la Défense des Droits des Haîtiens",
+    "acronym": "PPAIDDH",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 3
+  },
+  {
+    "sequence": 57,
+    "name": "PÒT LOUVRI POU CHANJE AYITI",
+    "acronym": "POLCA",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 3
+  },
+  {
+    "sequence": 58,
+    "name": "Parti Politique des Organisations de la Jeunesse Forte d'Haiti.",
+    "acronym": "PPOJFH",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 3
+  },
+  {
+    "sequence": 59,
+    "name": "Parti Politique Solidarité pour le Développement d'Haiti",
+    "acronym": "SDH",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 3
+  },
+  {
+    "sequence": 60,
+    "name": "Parti Polique Coordination Nationale pour la Reconstruction D'Haïti",
+    "acronym": "PPCNRH",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 3
+  },
+  {
+    "sequence": 61,
+    "name": "Parti Politique Entre Nous",
+    "acronym": "PPEN",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 3
+  },
+  {
+    "sequence": 62,
+    "name": "RÉVEIL D'HAÎTI",
+    "acronym": "REHA",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 3
+  },
+  {
+    "sequence": 63,
+    "name": "Vision d'Intégration de Valeur et d'avancement",
+    "acronym": "VIVA",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 4
+  },
+  {
+    "sequence": 64,
+    "name": "Misyon Ayisyen Pou Libere Ayiti",
+    "acronym": "MAPLA",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 4
+  },
+  {
+    "sequence": 65,
+    "name": "Mouvement pour l'Engagement et le Réveil des Citoyens Haitiens.",
+    "acronym": "MERCIH",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 4
+  },
+  {
+    "sequence": 66,
+    "name": "Inisyativ pou Devlope Ayiti",
+    "acronym": "I.D.A",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 4
+  },
+  {
+    "sequence": 67,
+    "name": "Rassemblement des Démocrates Nationaux Progressistes",
+    "acronym": "RDNP",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 4
+  },
+  {
+    "sequence": 68,
+    "name": "Haïti Solidaire",
+    "acronym": "H.S",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 4
+  },
+  {
+    "sequence": 69,
+    "name": "Parti Politique de la Génération 18",
+    "acronym": "P.P.G.18",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 4
+  },
+  {
+    "sequence": 70,
+    "name": "Haïti par la Foi pour l'Alternance Démocratique",
+    "acronym": "HAFAD",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 4
+  },
+  {
+    "sequence": 71,
+    "name": "Repons Klas Mwayèn",
+    "acronym": "REKLAM",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 4
+  },
+  {
+    "sequence": 72,
+    "name": "Travay Ansanm Pou Sove Ayiti",
+    "acronym": "TAPSA",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 4
+  },
+  {
+    "sequence": 73,
+    "name": "PATI POLITIK MIRAK AYITI",
+    "acronym": "P.P.M.A",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 4
+  },
+  {
+    "sequence": 74,
+    "name": "Parti National Des Democrates Reunis pour le Developpement d'Haïti",
+    "acronym": "PNDRH",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 4
+  },
+  {
+    "sequence": 75,
+    "name": "Parti Concorde Nationale",
+    "acronym": "CONCORDE",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 4
+  },
+  {
+    "sequence": 76,
+    "name": "Pati Politik Wonn sant lan",
+    "acronym": "PPWSL",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 4
+  },
+  {
+    "sequence": 77,
+    "name": "FIERTÉ NATIONALE HAITIENNE",
+    "acronym": "FNH",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 4
+  },
+  {
+    "sequence": 78,
+    "name": "Pati Vizyon Dayiti",
+    "acronym": "PVD",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 4
+  },
+  {
+    "sequence": 79,
+    "name": "College National des Democrates",
+    "acronym": "CND",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 4
+  },
+  {
+    "sequence": 80,
+    "name": "Fanmi Ayisyen Reveye",
+    "acronym": "FAR",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 4
+  },
+  {
+    "sequence": 81,
+    "name": "Pati Kreyol Nou Ye",
+    "acronym": "P.K.N",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 4
+  },
+  {
+    "sequence": 82,
+    "name": "Parti de L'integration Nationale",
+    "acronym": "PIN",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 4
+  },
+  {
+    "sequence": 83,
+    "name": "Mouvement de Recherche Ensemble la Dignité Haïtienne",
+    "acronym": "MORDH",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 4
+  },
+  {
+    "sequence": 84,
+    "name": "Mouvman Angajman pou Chanjman.",
+    "acronym": "MACH",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 4
+  },
+  {
+    "sequence": 85,
+    "name": "Parti Revolutionnaire Quisqueyen",
+    "acronym": "P.R.Q",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 4
+  },
+  {
+    "sequence": 86,
+    "name": "En Avant",
+    "acronym": "EN",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 4
+  },
+  {
+    "sequence": 87,
+    "name": "Konbit Pou Bati Ayiti",
+    "acronym": "KONBA",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 4
+  },
+  {
+    "sequence": 88,
+    "name": "Mouvement de Solidarité Pour L'Avencement D'une Nouvelle Haïti",
+    "acronym": "MOSANOH",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 4
+  },
+  {
+    "sequence": 89,
+    "name": "Mobilisation des Ouvriers pour l'Unité Nationale",
+    "acronym": "MOUN",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 4
+  },
+  {
+    "sequence": 90,
+    "name": "Pati Respè Peyizan",
+    "acronym": "PRP",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 4
+  },
+  {
+    "sequence": 91,
+    "name": "Force Pour une Haïti Fédérée",
+    "acronym": "FORCE-HAITI",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 4
+  },
+  {
+    "sequence": 92,
+    "name": "Mouvement pour la Reconstruction Nationale",
+    "acronym": "MRN",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 4
+  },
+  {
+    "sequence": 93,
+    "name": "Organisation pour l'Avancement d'Haiti et des Haîtiens",
+    "acronym": "OLAHH",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 4
+  },
+  {
+    "sequence": 94,
+    "name": "Parti National de la Régénération d'Haïti.",
+    "acronym": "PNRH",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 4
+  },
+  {
+    "sequence": 95,
+    "name": "Démocrates Engagés Pour une Haïti Forte et Inclusive",
+    "acronym": "DEHFI",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 4
+  },
+  {
+    "sequence": 96,
+    "name": "Force Revolutionnaire D'Entente Nationale",
+    "acronym": "FREN",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 4
+  },
+  {
+    "sequence": 97,
+    "name": "Union des Democrates Pour la Liberation D'Haiti",
+    "acronym": "UDELH",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 4
+  },
+  {
+    "sequence": 98,
+    "name": "Renouveau National",
+    "acronym": "RN",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 4
+  },
+  {
+    "sequence": 99,
+    "name": "Mouvement d'Union Républicaine",
+    "acronym": "MUR",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 4
+  },
+  {
+    "sequence": 100,
+    "name": "Union des Patriotes pour le Développement d'Haïti.",
+    "acronym": "UPADH",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 4
+  },
+  {
+    "sequence": 101,
+    "name": "Pati Sèvitè Ayisyen",
+    "acronym": "PSA",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 5
+  },
+  {
+    "sequence": 102,
+    "name": "Voix des Indépendants Patriotes",
+    "acronym": "VIP",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 5
+  },
+  {
+    "sequence": 103,
+    "name": "Konsyans Ayisyen Pou Yon Lot Ayiti",
+    "acronym": "KALA",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 5
+  },
+  {
+    "sequence": 104,
+    "name": "LA VOIE DE L'ESPERANCE D'HAITI",
+    "acronym": "LAVEH",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 5
+  },
+  {
+    "sequence": 105,
+    "name": "Vision-Action-Réalisation",
+    "acronym": "VAR",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 5
+  },
+  {
+    "sequence": 106,
+    "name": "Parti Héritage des Précursseurs Nationaux",
+    "acronym": "PHPN",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 5
+  },
+  {
+    "sequence": 107,
+    "name": "Ayiti 2054",
+    "acronym": "AYITI2054",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 5
+  },
+  {
+    "sequence": 108,
+    "name": "ELAN DEMOCRATIQUE POUR LA MAJORITÉ",
+    "acronym": "EDEM",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 5
+  },
+  {
+    "sequence": 109,
+    "name": "Mouvement Avisé des Patriotes Organisées pour l'Unité",
+    "acronym": "MAPOU",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 5
+  },
+  {
+    "sequence": 110,
+    "name": "Parti INITE",
+    "acronym": "INITE",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 5
+  },
+  {
+    "sequence": 111,
+    "name": "Avèk Jezi nou kapab Chanje Ayiti",
+    "acronym": "AJCA",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 5
+  },
+  {
+    "sequence": 112,
+    "name": "Alternative pour Transformer Haïti",
+    "acronym": "ATHA",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 5
+  },
+  {
+    "sequence": 113,
+    "name": "PARTI DEMOCRATE ORGANISÉ POUR UNE NOUVELLE HAITI",
+    "acronym": "PARDON-HAITI",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 5
+  },
+  {
+    "sequence": 114,
+    "name": "Pati Chimen Limyè",
+    "acronym": "CHIMEN LIMYE",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 5
+  },
+  {
+    "sequence": 115,
+    "name": "Konviksyon Pou Chanjman",
+    "acronym": "KPC",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 5
+  },
+  {
+    "sequence": 116,
+    "name": "LANBI DEMOKRATIK POU CHANJMAN",
+    "acronym": "LDC",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 5
+  },
+  {
+    "sequence": 117,
+    "name": "Rassemblement Social-Democrate pour le Progres D'Haiti",
+    "acronym": "RSD",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 5
+  },
+  {
+    "sequence": 118,
+    "name": "Pati Politique Indigène",
+    "acronym": "PPI",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 5
+  },
+  {
+    "sequence": 119,
+    "name": "Mobilisation Démocratique pour le Relèvement d'Haïti",
+    "acronym": "MDRH",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 5
+  },
+  {
+    "sequence": 120,
+    "name": "Rassemblement National pour le Progrès d'Haïti.",
+    "acronym": "RANPHA",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 5
+  },
+  {
+    "sequence": 121,
+    "name": "Regroupement Planifié pour une Idéologie Continue",
+    "acronym": "REPLIC",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 5
+  },
+  {
+    "sequence": 122,
+    "name": "Parti Reseau Citoyens Haitiens Conscients",
+    "acronym": "ESEAU CITOYENS H",
+    "status": "approved",
+    "verification": "needs-review",
+    "statusEvidence": "printed",
+    "sourcePage": 5
+  },
+  {
+    "sequence": 123,
+    "name": "Nou Dako Replanifye Ayiti",
+    "acronym": "NODRA",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 5
+  },
+  {
+    "sequence": 124,
+    "name": "Lòd Demokratik",
+    "acronym": "LOD",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 5
+  },
+  {
+    "sequence": 125,
+    "name": "Tèt Ansanm pour le Sauvetage Haïtien",
+    "acronym": "TASH",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 5
+  },
+  {
+    "sequence": 126,
+    "name": "Parti des Patriotes Engages pour Haiti",
+    "acronym": "PAPEH",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 5
+  },
+  {
+    "sequence": 127,
+    "name": "Vision Intégrale pour la Reconstruction Haïtienne",
+    "acronym": "VIREHA",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 5
+  },
+  {
+    "sequence": 128,
+    "name": "Nouvelle Orientation Unifiée pour Libérer Hayti",
+    "acronym": "NOULHA",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 5
+  },
+  {
+    "sequence": 129,
+    "name": "Destinée Du Peuple Haïtien",
+    "acronym": "DPH",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 5
+  },
+  {
+    "sequence": 130,
+    "name": "Parti Revolutionnaire Pour l'Organisation et le Progres",
+    "acronym": "PROP",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 5
+  },
+  {
+    "sequence": 131,
+    "name": "Pati Rezistans Natyonal Pou Sove Souverènte ak Idantite Pèp la",
+    "acronym": "PRENSSIP",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 5
+  },
+  {
+    "sequence": 132,
+    "name": "Jenès Konsyan Angaje pou Changman",
+    "acronym": "JKAPC",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 5
+  },
+  {
+    "sequence": 133,
+    "name": "ANN CHANJE LAVI",
+    "acronym": "ACL",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 5
+  },
+  {
+    "sequence": 134,
+    "name": "Génération du Renouveau Patriotique",
+    "acronym": "GREP",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 5
+  },
+  {
+    "sequence": 135,
+    "name": "RASANBLEMAN PATRIYÒT PWOGRESIS POU DEVLOPMAN",
+    "acronym": "RPPD",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 5
+  },
+  {
+    "sequence": 136,
+    "name": "Technocratie d'Action pour un Meilleur Leadership Eclairé et Organisé",
+    "acronym": "TEAMLEO",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 5
+  },
+  {
+    "sequence": 137,
+    "name": "Parti Democrate-Chretien Haitien",
+    "acronym": "PDCH",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 5
+  },
+  {
+    "sequence": 138,
+    "name": "PRAN KONSYANS POU N LIBERE AYITI",
+    "acronym": "PKOLA",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 5
+  },
+  {
+    "sequence": 139,
+    "name": "Konbit Nasyonal pou Ekilibre ak Transfome Ekonomi'n",
+    "acronym": "KONEKTE",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 6
+  },
+  {
+    "sequence": 140,
+    "name": "Camp National",
+    "acronym": "CANAL",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 6
+  },
+  {
+    "sequence": 141,
+    "name": "Grand Rassemblement des Citoyens Emancipés",
+    "acronym": "GRACE",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 6
+  },
+  {
+    "sequence": 142,
+    "name": "Héritage 1804",
+    "acronym": "HERITAGE1804",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 6
+  },
+  {
+    "sequence": 143,
+    "name": "Force Patriotique pour la Rénovation d'Haiti",
+    "acronym": "FPRH",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 6
+  },
+  {
+    "sequence": 144,
+    "name": "Parti Résistance Démocratique",
+    "acronym": "RED",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 6
+  },
+  {
+    "sequence": 145,
+    "name": "Inisyativ Sitwayen Ayisyen Kap Travay sou Wout yon lot Ayiti pou Evolisyon ak Anviwonman Nomal",
+    "acronym": "SITWAYEN",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 6
+  },
+  {
+    "sequence": 146,
+    "name": "Goupe d'Appui Juvenille pour le changement d'Haïti",
+    "acronym": "GAJCH",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 6
+  },
+  {
+    "sequence": 147,
+    "name": "Konvansyon pou Refondasyon Nasyon An",
+    "acronym": "KORE-N",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 6
+  },
+  {
+    "sequence": 148,
+    "name": "Parti Equilibriste National",
+    "acronym": "PENA",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 6
+  },
+  {
+    "sequence": 149,
+    "name": "Ansanm Nou Fò",
+    "acronym": "ANF",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 6
+  },
+  {
+    "sequence": 150,
+    "name": "Union Nationale des Démocrates Haitiens",
+    "acronym": "UNDH",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 6
+  },
+  {
+    "sequence": 151,
+    "name": "Organisation pour le Changement d'Haïti",
+    "acronym": "OCHANH",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 6
+  },
+  {
+    "sequence": 152,
+    "name": "Parti des Haïtiens Unis pour Sauver Haiti",
+    "acronym": "PHUSHA",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 6
+  },
+  {
+    "sequence": 153,
+    "name": "Parti National Démocratique Progressiste D'Haïti",
+    "acronym": "PNDPH",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 6
+  },
+  {
+    "sequence": 154,
+    "name": "INIFOS",
+    "acronym": "INIFOS",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 6
+  },
+  {
+    "sequence": 155,
+    "name": "Rasanbleman Sosyalis pou yon Inisyativ tou Nèf",
+    "acronym": "RASIN",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 6
+  },
+  {
+    "sequence": 156,
+    "name": "Parti Politique Ekla",
+    "acronym": "PPE",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 6
+  },
+  {
+    "sequence": 157,
+    "name": "PARTI FRATERNITE HAITI",
+    "acronym": "PFH",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 6
+  },
+  {
+    "sequence": 158,
+    "name": "LUMIERE d'HAITI",
+    "acronym": "LUMIERE D'HAITI",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 6
+  },
+  {
+    "sequence": 159,
+    "name": "RELANS",
+    "acronym": "RELANS",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 6
+  },
+  {
+    "sequence": 160,
+    "name": "Fusion des Sociaux-Democrates Haïtien",
+    "acronym": "PFSDH",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 6
+  },
+  {
+    "sequence": 161,
+    "name": "Mouvement Démocratique Libéral d'Haiti",
+    "acronym": "MDLH",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 6
+  },
+  {
+    "sequence": 162,
+    "name": "REGROUPEMENT ORGANISÉ POUR LE CHANGEMENT D'HAÏTI",
+    "acronym": "ROCH",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 6
+  },
+  {
+    "sequence": 163,
+    "name": "Fanmi Lavalas",
+    "acronym": "FANMI LAVALAS",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 6
+  },
+  {
+    "sequence": 164,
+    "name": "Konbit Nasyonal",
+    "acronym": "KONA",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 6
+  },
+  {
+    "sequence": 165,
+    "name": "AYITI AN AKSYON",
+    "acronym": "AAA",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 6
+  },
+  {
+    "sequence": 166,
+    "name": "Pati Liberatè Ayiti",
+    "acronym": "PLA",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 6
+  },
+  {
+    "sequence": 167,
+    "name": "Alliance pour une Société sans Exclusion",
+    "acronym": "ASE",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 6
+  },
+  {
+    "sequence": 168,
+    "name": "Veye-Yo",
+    "acronym": "VY",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 6
+  },
+  {
+    "sequence": 169,
+    "name": "Fwon Revolisyonè pou Entegrasyon Mas-yo",
+    "acronym": "FREM",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 6
+  },
+  {
+    "sequence": 170,
+    "name": "Parti Démocrate Institutionnaliste",
+    "acronym": "PDI",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 6
+  },
+  {
+    "sequence": 171,
+    "name": "Parti Nouvelle Génération Pour Une Autre Alternative",
+    "acronym": "PANOGAA",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 6
+  },
+  {
+    "sequence": 172,
+    "name": "TRAVAY",
+    "acronym": "TRAVAY",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 6
+  },
+  {
+    "sequence": 173,
+    "name": "Haiti en Marche pour le Développement",
+    "acronym": "HAMAD",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 6
+  },
+  {
+    "sequence": 174,
+    "name": null,
+    "acronym": null,
+    "status": "approved",
+    "verification": "source-row-missing",
+    "statusEvidence": "inferred-from-summary",
+    "sourcePage": 6,
+    "sourceNote": "Sequence 174 is absent from the published PDF table. Name and acronym require CEP confirmation; approved status is inferred from the published totals."
+  },
+  {
+    "sequence": 175,
+    "name": "Haiti Devant",
+    "acronym": "HD",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 6
+  },
+  {
+    "sequence": 176,
+    "name": "Konbit Aksyon pou Delope Ayiti",
+    "acronym": "KAD-AYITI",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 6
+  },
+  {
+    "sequence": 177,
+    "name": "PARTI AGRICOLE HAÏTIEN",
+    "acronym": "PAH",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 6
+  },
+  {
+    "sequence": 178,
+    "name": "Fòs Pèp La",
+    "acronym": "FPL",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 7
+  },
+  {
+    "sequence": 179,
+    "name": "Coalition Indépendante pour l'Espoir et la Libération.",
+    "acronym": "CIEL",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 7
+  },
+  {
+    "sequence": 180,
+    "name": "Kolektif Nasyonal Pou Sove Ayiti",
+    "acronym": "KONSA",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 7
+  },
+  {
+    "sequence": 181,
+    "name": "Gran Repantans pou Avansman Nouvo Pep Ayisyen An",
+    "acronym": "GRANPA",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 7
+  },
+  {
+    "sequence": 182,
+    "name": "PARTI INFLUENCE NATIONALE",
+    "acronym": "INFLUENCE",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 7
+  },
+  {
+    "sequence": 183,
+    "name": "Mouvement Nationaliste Progressiste Haïtien",
+    "acronym": "MNPH",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 7
+  },
+  {
+    "sequence": 184,
+    "name": "Societe Optimiste de Lutte pour l'Union la Transparence l'Integrite et l'Orgnisation de la Nation",
+    "acronym": "SOLUTION",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 7
+  },
+  {
+    "sequence": 185,
+    "name": "Pati Konbit pou Demokrasi",
+    "acronym": "P-KODEMO",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 7
+  },
+  {
+    "sequence": 186,
+    "name": "TOUT AYISYEN KONSÈNE",
+    "acronym": "TAK",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 7
+  },
+  {
+    "sequence": 187,
+    "name": "Kombite National pour le Développement Economique et Sociale d'Haiti",
+    "acronym": "K.O.N.A.D.E.S.H",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 7
+  },
+  {
+    "sequence": 188,
+    "name": "Parti Nouvelle Perspective",
+    "acronym": "PNP",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 7
+  },
+  {
+    "sequence": 189,
+    "name": "ANSANM POU JISTIS AK PWOGRÈ AYITI",
+    "acronym": "ANSANM",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 7
+  },
+  {
+    "sequence": 190,
+    "name": "Parti Réformiste National",
+    "acronym": "PRN",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 7
+  },
+  {
+    "sequence": 191,
+    "name": "Chaine de Solidarite Haitienne",
+    "acronym": "CHASOLH",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 7
+  },
+  {
+    "sequence": 192,
+    "name": "Force Nationale d'Espoir et Lumiere",
+    "acronym": "FONDEL",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 7
+  },
+  {
+    "sequence": 193,
+    "name": "COALLITION POUR LA CONVENTION DE LA RECONSTRUCTION ET LA RÉCONCILIATION DES CITOYENS HAÏTIENS",
+    "acronym": "CORRECH",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 7
+  },
+  {
+    "sequence": 194,
+    "name": "Palmis",
+    "acronym": "PALMIS",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 7
+  },
+  {
+    "sequence": 195,
+    "name": "Effort et Solidarité pour Construire une Alternative Nationale Populaire",
+    "acronym": "ESCANP",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 7
+  },
+  {
+    "sequence": 196,
+    "name": "Rasanbleman Nasyonal Voudouyizan Demokrat pou Libere Ayiti",
+    "acronym": "RANAVODELA",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 7
+  },
+  {
+    "sequence": 197,
+    "name": "Initiative Citoyenne pour l'Inclusion",
+    "acronym": "ICI",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 7
+  },
+  {
+    "sequence": 198,
+    "name": "Pati Nasyonal Seksyon m Se Priyorite m",
+    "acronym": "PNSP",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 7
+  },
+  {
+    "sequence": 199,
+    "name": "Konbit pour le Bien-Être et l'Inclusion Totale du Nord-Ouest",
+    "acronym": "ONBIT NORD-OUES",
+    "status": "approved",
+    "verification": "needs-review",
+    "statusEvidence": "printed",
+    "sourcePage": 7
+  },
+  {
+    "sequence": 200,
+    "name": "Fòs Chanjman Nasyonal",
+    "acronym": "FCN",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 7
+  },
+  {
+    "sequence": 201,
+    "name": "RESULTAT DEMOCRATIQUE",
+    "acronym": "RD",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 7
+  },
+  {
+    "sequence": 202,
+    "name": null,
+    "acronym": null,
+    "status": "approved",
+    "verification": "source-row-missing",
+    "statusEvidence": "inferred-from-summary",
+    "sourcePage": 7,
+    "sourceNote": "Sequence 202 is absent from the published PDF table. Name and acronym require CEP confirmation; approved status is inferred from the published totals."
+  },
+  {
+    "sequence": 203,
+    "name": "Parti Conscience Nationale",
+    "acronym": "PCN",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 7
+  },
+  {
+    "sequence": 204,
+    "name": "Union Patriotique des Démocrates Chrétiens",
+    "acronym": "UPDC",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 7
+  },
+  {
+    "sequence": 205,
+    "name": "Parti des Révoltés",
+    "acronym": "PREV",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 7
+  },
+  {
+    "sequence": 206,
+    "name": "Pati Politik Peyizan",
+    "acronym": "PEYIZAN",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 7
+  },
+  {
+    "sequence": 207,
+    "name": "Union Nationale pour l'Integrité et la Réconciliation",
+    "acronym": "UNIR AYITI INI",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 7
+  },
+  {
+    "sequence": 208,
+    "name": "Front National pour Libérer Haïti",
+    "acronym": "FNLH",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 7
+  },
+  {
+    "sequence": 209,
+    "name": "Parti Démocrate Haïtien",
+    "acronym": "PADEMH",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 7
+  },
+  {
+    "sequence": 210,
+    "name": "Mouvement des paysans pour l'Avancement Local",
+    "acronym": "MPL",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 7
+  },
+  {
+    "sequence": 211,
+    "name": "Rasanbleman Nasyonal pou Chanjman Dirab",
+    "acronym": "RNCD",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 7
+  },
+  {
+    "sequence": 212,
+    "name": "Parti des Organisations Visionnaires d'Haïti",
+    "acronym": "POVHA",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 7
+  },
+  {
+    "sequence": 213,
+    "name": "Parti Populaire Natif Natal Pour une Nouvelle Haïti",
+    "acronym": "PAPNANH",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 7
+  },
+  {
+    "sequence": 214,
+    "name": "Réseau pour le Plaidoyer l'Epanouissement et le Progrès",
+    "acronym": "REZO-PEP",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 7
+  },
+  {
+    "sequence": 215,
+    "name": "Konbit pou Rekonstwi Haiti",
+    "acronym": "KOREH",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 7
+  },
+  {
+    "sequence": 216,
+    "name": "Parti Politique Transparans",
+    "acronym": "PPT",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 7
+  },
+  {
+    "sequence": 217,
+    "name": "Pati Pèp La",
+    "acronym": "PPL",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 8
+  },
+  {
+    "sequence": 218,
+    "name": "Parti Fédéraliste",
+    "acronym": "PF",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 8
+  },
+  {
+    "sequence": 219,
+    "name": "Rasanbleman Nasyonal Fos Demokratik yo",
+    "acronym": "RANFO",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 8
+  },
+  {
+    "sequence": 220,
+    "name": "Unification Nationale des Forces Democratique d'Haïti",
+    "acronym": "UNAFODH",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 8
+  },
+  {
+    "sequence": 221,
+    "name": "LIGUE ALTERNATIVE POUR LE PROGRÈS ET L'EMANCIPATION HAÏTIENNE",
+    "acronym": "LAPEH",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 8
+  },
+  {
+    "sequence": 222,
+    "name": "Parti Nationaliste Haitien",
+    "acronym": "PANAH",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 8
+  },
+  {
+    "sequence": 223,
+    "name": "Boukan Rasanbleman Ayisyen pou yon Vi Oganize",
+    "acronym": "BRAVO",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 8
+  },
+  {
+    "sequence": 224,
+    "name": "Pou Nou Tout",
+    "acronym": "PONT",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 8
+  },
+  {
+    "sequence": 225,
+    "name": "Mouvement pour la Libération d'Haïti",
+    "acronym": "MOLHA",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 8
+  },
+  {
+    "sequence": 226,
+    "name": "Parti Le Reformiste",
+    "acronym": "PR",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 8
+  },
+  {
+    "sequence": 227,
+    "name": "Parti Reconstruire Haïti",
+    "acronym": "RH",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 8
+  },
+  {
+    "sequence": 228,
+    "name": "Assemblée Citoyenne pour Relancer Haïti",
+    "acronym": "ACIREH",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 8
+  },
+  {
+    "sequence": 229,
+    "name": "Parti Différence Pour Haïti",
+    "acronym": "PADHA",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 8
+  },
+  {
+    "sequence": 230,
+    "name": "PATI REMANBRE POU YON ALTENATIV SITWAYÈN",
+    "acronym": "PARE",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 8
+  },
+  {
+    "sequence": 231,
+    "name": "Pacte Coude-à-Coude Inter-Classes et Inter-Génération",
+    "acronym": "PCC-II",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 8
+  },
+  {
+    "sequence": 232,
+    "name": "Ayisyen pou Ayiti",
+    "acronym": "S.O",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 8
+  },
+  {
+    "sequence": 233,
+    "name": "Inspiration Novatrice d'Integration et d'Orientation Nationale",
+    "acronym": "INNOVATION",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 8
+  },
+  {
+    "sequence": 234,
+    "name": "Alliance pour la Renaissance d'Haïti",
+    "acronym": "ARH",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 8
+  },
+  {
+    "sequence": 235,
+    "name": "Rassemblement National Haïtien",
+    "acronym": "RNH",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 8
+  },
+  {
+    "sequence": 236,
+    "name": "Parti d'Intégration des Patriotes Reformistes Pour l'Emergence du Peuple Haïtien",
+    "acronym": "PIPREP",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 8
+  },
+  {
+    "sequence": 237,
+    "name": "Parti Mobilisation Organisationelle Des Patriotes pour des Actions Modernnes D'Haïti",
+    "acronym": "MOPACMH",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 8
+  },
+  {
+    "sequence": 238,
+    "name": "Rapwoche",
+    "acronym": "RAPWOCHE",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 8
+  },
+  {
+    "sequence": 239,
+    "name": "Organisation Politique Sove Ayiti",
+    "acronym": "OPSA",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 8
+  },
+  {
+    "sequence": 240,
+    "name": "Parti des Démocrates",
+    "acronym": "PD",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 8
+  },
+  {
+    "sequence": 241,
+    "name": "REKONSILYE",
+    "acronym": "RIEN",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 8
+  },
+  {
+    "sequence": 242,
+    "name": "Parti Révolutionnaire Integré d'Haïti",
+    "acronym": "PRIH",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 8
+  },
+  {
+    "sequence": 243,
+    "name": "Parti Tangible du Regroupement Organisé des Nationalistes",
+    "acronym": "PATRON",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 8
+  },
+  {
+    "sequence": 244,
+    "name": "Coalition Citoyenne et Humanitaire pour le Développement d'Haïti",
+    "acronym": "COACHDHA",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 8
+  },
+  {
+    "sequence": 245,
+    "name": "Rassemblement des Citoyens en Mouvement d'Haiti",
+    "acronym": "RCMH",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 8
+  },
+  {
+    "sequence": 246,
+    "name": "Alternatif du Changement",
+    "acronym": "AC",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 8
+  },
+  {
+    "sequence": 247,
+    "name": "Parti Haïtien pour la Democratie",
+    "acronym": "PHD",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 8
+  },
+  {
+    "sequence": 248,
+    "name": "Les engagés pour le Développement",
+    "acronym": "EDE",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 8
+  },
+  {
+    "sequence": 249,
+    "name": "Rassemblement National des Forces Organisées",
+    "acronym": "RANFOR",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 8
+  },
+  {
+    "sequence": 250,
+    "name": "Rassemblement des Patriotes Haîtien",
+    "acronym": "RPH",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 8
+  },
+  {
+    "sequence": 251,
+    "name": "Réveil des Citoyens Haitiens",
+    "acronym": "RCH",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 8
+  },
+  {
+    "sequence": 252,
+    "name": "Parti de la défense et de la Reconstruction d'Haïti",
+    "acronym": "PDRH",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 8
+  },
+  {
+    "sequence": 253,
+    "name": "Mouvement Indépendant pour la Réconciliation Nationale",
+    "acronym": "MIRN",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 8
+  },
+  {
+    "sequence": 254,
+    "name": "Résistance Populaire",
+    "acronym": "RP",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 8
+  },
+  {
+    "sequence": 255,
+    "name": "Konviksyon pou AYiti",
+    "acronym": "KAY",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 9
+  },
+  {
+    "sequence": 256,
+    "name": "Zouti Ayisyen Pou Konstwi Ayiti",
+    "acronym": "ZAKA",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 9
+  },
+  {
+    "sequence": 257,
+    "name": "Flambeau Démocratique",
+    "acronym": "FD",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 9
+  },
+  {
+    "sequence": 258,
+    "name": "Plan d'Action Citoyenne",
+    "acronym": "PAC",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 9
+  },
+  {
+    "sequence": 259,
+    "name": "Union des Patriotes Progressistes en Action",
+    "acronym": "UPPA",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 9
+  },
+  {
+    "sequence": 260,
+    "name": "Aksyon Patriyotik",
+    "acronym": "AP",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 9
+  },
+  {
+    "sequence": 261,
+    "name": "Parti Konvansyon Inite Demokratik",
+    "acronym": "KID",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 9
+  },
+  {
+    "sequence": 262,
+    "name": "Defile Fos Demokratik Revolisyonè",
+    "acronym": "DFDR",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 9
+  },
+  {
+    "sequence": 263,
+    "name": "Parti Social Rénové",
+    "acronym": "PSR",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 9
+  },
+  {
+    "sequence": 264,
+    "name": "Gwoup Inisyativ pou Inite Kan Pèp la",
+    "acronym": "GIIKAP",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 9
+  },
+  {
+    "sequence": 265,
+    "name": "Nou Vle Viv",
+    "acronym": "PPNVV",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 9
+  },
+  {
+    "sequence": 266,
+    "name": "Collectif des Acteurs Haïtiens pour le Développement et l'Organisation Alternative",
+    "acronym": "CAHDOA",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 9
+  },
+  {
+    "sequence": 267,
+    "name": "Chanjman Ayiti Natirèlman ak Yahwey",
+    "acronym": "CHANY",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 9
+  },
+  {
+    "sequence": 268,
+    "name": "Parti de la Révolution Sociale",
+    "acronym": "PRS",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 9
+  },
+  {
+    "sequence": 269,
+    "name": "Alternative Socialiste",
+    "acronym": "ASO",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 9
+  },
+  {
+    "sequence": 270,
+    "name": "Rèv Ayisyen",
+    "acronym": "RA",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 9
+  },
+  {
+    "sequence": 271,
+    "name": "Parti Renové pour une Nouvelle Haiti",
+    "acronym": "PARENHA",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 9
+  },
+  {
+    "sequence": 272,
+    "name": "Parti Nationaliste Chrétien d'Haïti",
+    "acronym": "PNCH",
+    "status": "not-approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 9
+  },
+  {
+    "sequence": 273,
+    "name": "Konbit Dyaspora ak Peyizan Lakay",
+    "acronym": "KDPL",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 9
+  },
+  {
+    "sequence": 274,
+    "name": "Mouvement des Citoyens pour une Nouvelle Haiti",
+    "acronym": "MCNH",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 9
+  },
+  {
+    "sequence": 275,
+    "name": "Mobilisation pour le Progrès d'Haïti",
+    "acronym": "MPH",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 9
+  },
+  {
+    "sequence": 276,
+    "name": "Mouvement pour L'Instauration de la Democatie en Haïti",
+    "acronym": "MIDH",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 9
+  },
+  {
+    "sequence": 277,
+    "name": "Mouvman Nasyonal pou Transparans-Toutouni",
+    "acronym": "MNT",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 9
+  },
+  {
+    "sequence": 278,
+    "name": "Mouvement Konbite National",
+    "acronym": "MKN",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 9
+  },
+  {
+    "sequence": 279,
+    "name": "Emergence Patriotiques",
+    "acronym": "EMERGENCE",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 9
+  },
+  {
+    "sequence": 280,
+    "name": "Parti pour le Bien-être des Haïtiens",
+    "acronym": "PBH",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 9
+  },
+  {
+    "sequence": 281,
+    "name": "Patriyot Natif Natal",
+    "acronym": "PNN",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 9
+  },
+  {
+    "sequence": 282,
+    "name": "PARTI RÉNOVATEUR HAÏTIEN",
+    "acronym": "PREH",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 9
+  },
+  {
+    "sequence": 283,
+    "name": "Force Louverturienne Réformiste",
+    "acronym": "FORCE",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 9
+  },
+  {
+    "sequence": 284,
+    "name": "Initiative des Combattants pour l'Avancement et le Progres d'Haiti",
+    "acronym": "ICAP",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 9
+  },
+  {
+    "sequence": 285,
+    "name": "Regroupman Sitwayen Pou Espwa",
+    "acronym": "RESPE",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 9
+  },
+  {
+    "sequence": 286,
+    "name": "Pati Politik Pitit DESSALINES",
+    "acronym": "PPPD",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 9
+  },
+  {
+    "sequence": 287,
+    "name": "Parti Populaire Haitien",
+    "acronym": "PPH",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 9
+  },
+  {
+    "sequence": 288,
+    "name": "Regroupement des Modernistes Pour l'Économie et la Démocratie",
+    "acronym": "REMED",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 9
+  },
+  {
+    "sequence": 289,
+    "name": "KONBIT POU REMANBRE AYITI",
+    "acronym": "KORAY",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 9
+  },
+  {
+    "sequence": 290,
+    "name": "Le National",
+    "acronym": "LN",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 9
+  },
+  {
+    "sequence": 291,
+    "name": "Ayiti Anvan",
+    "acronym": "AYA",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 9
+  },
+  {
+    "sequence": 292,
+    "name": "Parti Politique Providence",
+    "acronym": "PROVIDENCE",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 9
+  },
+  {
+    "sequence": 293,
+    "name": "Parti Populaire National",
+    "acronym": "PPN",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 10
+  },
+  {
+    "sequence": 294,
+    "name": "Mouvement National des Citoyens",
+    "acronym": "MNC",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 10
+  },
+  {
+    "sequence": 295,
+    "name": "Fos Liberatris pou Ayiti Demen",
+    "acronym": "FLAD",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 10
+  },
+  {
+    "sequence": 296,
+    "name": "Parti National pour le Développement",
+    "acronym": "PND",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 10
+  },
+  {
+    "sequence": 297,
+    "name": "Rassemblement des Révoltés",
+    "acronym": "REVOLTES",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 10
+  },
+  {
+    "sequence": 298,
+    "name": "Rasanble",
+    "acronym": "RASANBLE",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 10
+  },
+  {
+    "sequence": 299,
+    "name": "Ayiti Demen Ansanm",
+    "acronym": "AYIDA",
+    "status": "not-approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 10
+  },
+  {
+    "sequence": 300,
+    "name": "Grand Défis des Démocrates d'Haïti",
+    "acronym": "GDDH",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 10
+  },
+  {
+    "sequence": 301,
+    "name": "Mouvement National pour la Prospérité d'Haïti",
+    "acronym": "MONAPHA",
+    "status": "not-approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 10
+  },
+  {
+    "sequence": 302,
+    "name": "Òganizasyon Lavni",
+    "acronym": "ÒGANIZASYONLAVN",
+    "status": "approved",
+    "verification": "needs-review",
+    "statusEvidence": "printed",
+    "sourcePage": 10
+  },
+  {
+    "sequence": 303,
+    "name": "Parti pour la Réorganisation l'Ordre la Gouvernance et le Redressement Economique et Social",
+    "acronym": "LE PROGRES",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 10
+  },
+  {
+    "sequence": 304,
+    "name": "Fos Peyizan Pou Changman",
+    "acronym": "FPPC",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 10
+  },
+  {
+    "sequence": 305,
+    "name": "Grand Rassemblement National Des Forces Sociales",
+    "acronym": "GRANFOS",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 10
+  },
+  {
+    "sequence": 306,
+    "name": "Le Patriotisme Nationale d'Haïti",
+    "acronym": "PANH",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 10
+  },
+  {
+    "sequence": 307,
+    "name": "Parti Mackandal pour le Progres d'Haiti",
+    "acronym": "PMPH",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 10
+  },
+  {
+    "sequence": 308,
+    "name": "Rassemblement des Militants Progressiste d'Haïti",
+    "acronym": "RAMPHA",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 10
+  },
+  {
+    "sequence": 309,
+    "name": null,
+    "acronym": null,
+    "status": "approved",
+    "verification": "source-row-missing",
+    "statusEvidence": "inferred-from-summary",
+    "sourcePage": 10,
+    "sourceNote": "Sequence 309 is absent from the published PDF table. Name and acronym require CEP confirmation; approved status is inferred from the published totals."
+  },
+  {
+    "sequence": 310,
+    "name": "Conviction Patriotique Pour la Restauration d'Haïti",
+    "acronym": "CONPRESH",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 10
+  },
+  {
+    "sequence": 311,
+    "name": "Front Unifié de la Liberation Nationale d'Haîti",
+    "acronym": "FULNH",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 10
+  },
+  {
+    "sequence": 312,
+    "name": "RENMEN AYITI",
+    "acronym": "RENMEN AYITI",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 10
+  },
+  {
+    "sequence": 313,
+    "name": "Dyaspora Ini pou Libere Ayiti",
+    "acronym": "DILIA",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 10
+  },
+  {
+    "sequence": 314,
+    "name": "Parti National de l'Exemple dit Exemple National",
+    "acronym": "PANEX",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 10
+  },
+  {
+    "sequence": 315,
+    "name": "Rassemblement National des Collectivités Haîtiennes",
+    "acronym": "RANACH",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 10
+  },
+  {
+    "sequence": 316,
+    "name": "Parti Libéral Républicain Bloc Centriste",
+    "acronym": "LR Bloc Centriste",
+    "status": "not-approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 10
+  },
+  {
+    "sequence": 317,
+    "name": "Aksyon pou Konstwi yon Ayiti Oganize",
+    "acronym": "AKAO",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 10
+  },
+  {
+    "sequence": 318,
+    "name": "Mouvement des Militants pour le Changement D'HAïti",
+    "acronym": "MMCDHA",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 10
+  },
+  {
+    "sequence": 319,
+    "name": "Réseau Bouclier National",
+    "acronym": "BOUCLIER",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 10
+  },
+  {
+    "sequence": 320,
+    "name": "Konkèt pou Konkeri Kiskeya",
+    "acronym": "KONKET-K2",
+    "status": "approved",
+    "verification": "visually-verified",
+    "statusEvidence": "printed",
+    "sourcePage": 10
+  }
+]

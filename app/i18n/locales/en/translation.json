@@ -16,5 +16,34 @@
   "footer": {
     "tagline": "A free civic platform for Haitians.",
     "nonpartisan": "Vwa is a nonpartisan civic resource. We do not endorse any candidate or political party."
+  },
+  "parties": {
+    "metaTitle": "Political Parties Approved for Haiti's 2026 Electoral Process",
+    "metaDescription": "Search the official CEP registry of 320 political parties published in July 2026, including approval status and source information.",
+    "heading": "Political parties registered for the 2026–2027 electoral process",
+    "summary": "The Conseil électoral provisoire (CEP) published this definitive registry of political parties reviewed for the next stages of Haiti's electoral process. Official party names and acronyms appear as published by the CEP.",
+    "registered": "Total registered",
+    "approved": "Approved",
+    "notApproved": "Not approved",
+    "searchLabel": "Search parties",
+    "searchPlaceholder": "Search by official name or acronym",
+    "filterLabel": "Filter by status",
+    "all": "All parties",
+    "approvedFilter": "Approved",
+    "notApprovedFilter": "Not approved",
+    "partyColumn": "Official party name",
+    "acronymColumn": "Acronym",
+    "statusColumn": "CEP status",
+    "results": "{count} parties shown",
+    "noResults": "No parties match your search and status filter.",
+    "officialSource": "Official CEP source",
+    "publicationPage": "CEP publication page",
+    "sourcePublished": "Source published July 9, 2026",
+    "qualificationNote": "CEP status “Agréé” means a party was approved to continue to the next stages of the electoral process under Article 129 of the June 2, 2026 electoral decree. It does not confirm that the party has qualified candidates on the final ballot.",
+    "sourceAnomaly": "The CEP summary states 320 parties, but the published PDF table omits sequence rows 174, 202, and 309. Their names and acronyms require CEP confirmation; their approved status is inferred only from the published 316/4 totals.",
+    "missingName": "Source row absent — manual verification required",
+    "needsReview": "Needs review",
+    "viewProfile": "Detailed profile available",
+    "tableCaption": "Official CEP political party registry"
   }
 }
