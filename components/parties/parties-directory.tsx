@@ -38,8 +38,8 @@ export type PartiesDirectoryCopy = {
   sourceAnomaly: string
   missingName: string
   needsReview: string
-  viewProfile: string
   tableCaption: string
+  digitalPresenceSnapshotLink: string
 }
 
 type PartiesDirectoryProps = {
@@ -57,7 +57,6 @@ export function PartiesDirectory({ parties, copy, lang }: PartiesDirectoryProps)
     () => filterPoliticalParties(parties, query, status),
     [parties, query, status]
   )
-
   const stats = {
     total: parties.length,
     approved: parties.filter((party) => party.status === 'approved').length,
@@ -82,7 +81,7 @@ export function PartiesDirectory({ parties, copy, lang }: PartiesDirectoryProps)
             href={parties[0].sourceUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 font-medium text-primary hover:underline"
+            className="inline-flex items-center gap-1.5 font-medium text-primary hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
           >
             {copy.officialSource}
             <ExternalLink className="size-3.5" aria-hidden="true" />
@@ -91,13 +90,20 @@ export function PartiesDirectory({ parties, copy, lang }: PartiesDirectoryProps)
             href={parties[0].publicationUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 text-muted-foreground hover:text-foreground hover:underline"
+            className="inline-flex items-center gap-1.5 text-muted-foreground hover:text-foreground hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
           >
             {copy.publicationPage}
             <ExternalLink className="size-3.5" aria-hidden="true" />
           </a>
           <span className="text-muted-foreground">{copy.sourcePublished}</span>
         </div>
+        <Link
+          href={`/${lang}/parties/digital-presence`}
+          className="mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+        >
+          {copy.digitalPresenceSnapshotLink}
+          <span aria-hidden="true">→</span>
+        </Link>
       </header>
 
       <dl className="mt-10 grid gap-4 sm:grid-cols-3">
@@ -180,7 +186,7 @@ export function PartiesDirectory({ parties, copy, lang }: PartiesDirectoryProps)
 
         <div className="mt-5 overflow-hidden rounded-xl border bg-card">
           <div className="overflow-x-auto">
-            <table className="w-full min-w-[720px] border-collapse text-left text-sm">
+            <table className="w-full min-w-[680px] border-collapse text-left text-sm">
               <caption className="sr-only">{copy.tableCaption}</caption>
               <thead className="border-b bg-muted/60 text-xs uppercase tracking-wide text-muted-foreground">
                 <tr>
@@ -249,38 +255,32 @@ function PartyRow({
 }) {
   const isApproved = party.status === 'approved'
   const needsReview = party.verification !== 'visually-verified'
-
   return (
     <tr className="align-top transition-colors hover:bg-muted/30">
       <th scope="row" className="p-4 font-mono text-xs font-medium text-muted-foreground">
         {party.sequence}
       </th>
       <td className="p-4">
-        <div className="font-medium">
-          {party.profileSlug && party.name ? (
-            <Link
-              href={`/${lang}/parties/${party.profileSlug}`}
-              className="text-primary hover:underline"
-            >
-              {party.name}
-            </Link>
-          ) : (
-            (party.name ?? copy.missingName)
-          )}
-        </div>
-        <div className="mt-1 flex flex-wrap items-center gap-2">
-          {party.profileSlug && (
-            <span className="text-xs text-muted-foreground">{copy.viewProfile}</span>
-          )}
-          {needsReview && (
+        {party.name ? (
+          <Link
+            href={`/${lang}/parties/${party.profileSlug}`}
+            className="font-medium text-primary underline-offset-4 hover:underline focus-visible:rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+          >
+            {party.name}
+          </Link>
+        ) : (
+          <span className="font-medium">{copy.missingName}</span>
+        )}
+        {needsReview && (
+          <div className="mt-1">
             <Badge
               variant="outline"
               className="border-amber-500/60 text-amber-800 dark:text-amber-300"
             >
               {copy.needsReview}
             </Badge>
-          )}
-        </div>
+          </div>
+        )}
       </td>
       <td className="p-4 font-mono text-xs sm:text-sm">
         {party.acronym ?? <span className="text-muted-foreground">—</span>}

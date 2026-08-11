@@ -35,7 +35,7 @@ The platform is bilingual (English and Haitian Creole) and designed for accessib
 | `/[lang]/support` | Support / donate page |
 | `/admin` | Protected admin area (NextAuth required) |
 
-Supported languages: `en` (English), `ht` (Haitian Creole). Language is detected from the URL path, cookie, or `Accept-Language` header.
+Supported languages: `en` (English), `es` (Spanish), `fr` (French), and `ht` (Haitian Creole). Language is detected from the URL path, cookie, or `Accept-Language` header.
 
 ## Running Locally
 
@@ -137,6 +137,11 @@ velite.config.ts     # Content collection definitions
 ```
 
 ## Content
+
+Political-party digital-presence monitoring is documented in
+[`docs/PARTY_PRESENCE_MONITOR.md`](docs/PARTY_PRESENCE_MONITOR.md). The public
+directory uses only reviewed, version-controlled data; scheduled network checks
+run separately in GitHub Actions.
 
 All editorial content lives in `content/` as MDX files. Velite compiles them into `.velite/` (auto-generated, never edit directly). Next.js pages import from `.velite/` — they never read MDX files at runtime.
 

@@ -40,3 +40,7 @@ next-env.d.ts
 .vscode
 .contentlayer
 .velite
+
+# Party monitor downloads are untrusted staging artifacts, never public content
+/.party-monitor-staging/
+/.codex-dev*.log

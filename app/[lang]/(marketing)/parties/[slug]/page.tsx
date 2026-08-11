@@ -1,96 +1,102 @@
-import type { Metadata } from "next"
-import { notFound } from "next/navigation"
-import Link from "next/link"
-import { allParties } from "#velite"
-import { cn } from "@/lib/utils"
-import { buttonVariants } from "@/components/ui/button"
-import { Mdx } from "@/components/mdx-components"
-import "@/styles/mdx.css"
+import type { Metadata } from 'next'
+import { notFound } from 'next/navigation'
+import type { SiteLang } from '@/types'
+
+import { getPartyPresence } from '@/lib/party-presence'
+import { getPublishedCandidatesForParty } from '@/lib/political-candidates'
+import { politicalParties, resolvePoliticalPartySlug } from '@/lib/political-parties'
+import { PartyProfile, type PartyProfileCopy } from '@/components/parties/party-profile'
+import { getTranslation } from '@/app/i18n'
 
 type Props = {
-  params: { slug: string }
+  params: { lang: SiteLang; slug: string }
 }
 
 export function generateStaticParams() {
-  return allParties.map((party) => ({ slug: party.slugAsParams }))
+  return politicalParties.map((party) => ({ slug: party.profileSlug }))
 }
 
-export function generateMetadata({ params }: Props): Metadata {
-  const party = allParties.find((p) => p.slugAsParams === params.slug)
+export async function generateMetadata({ params: { lang, slug } }: Props): Promise<Metadata> {
+  const party = resolvePoliticalPartySlug(slug)
   if (!party) return {}
+  const { t } = await getTranslation(lang)
   return {
-    title: party.title,
-    description: party.description,
+    title: t('parties.profile.metaTitle').replace(
+      '{party}',
+      party.name ?? t('parties.missingName')
+    ),
+    description: t('parties.profile.metaDescription').replace(
+      '{party}',
+      party.name ?? t('parties.missingName')
+    ),
   }
 }
 
-export default function PartyPage({ params }: Props) {
-  const party = allParties.find((p) => p.slugAsParams === params.slug)
+export default async function PartyPage({ params: { lang, slug } }: Props) {
+  const party = resolvePoliticalPartySlug(slug)
   if (!party) notFound()
+  const { t } = await getTranslation(lang)
+  const copy: PartyProfileCopy = {
+    backToParties: t('parties.profile.backToParties'),
+    officialInformation: t('parties.profile.officialInformation'),
+    cepSequence: t('parties.profile.cepSequence'),
+    cepStatus: t('parties.profile.cepStatus'),
+    electionCycle: t('parties.profile.electionCycle'),
+    electionCycleValue: t('parties.profile.electionCycleValue'),
+    sourcePublication: t('parties.profile.sourcePublication'),
+    lastDataUpdate: t('parties.profile.lastDataUpdate'),
+    approved: t('parties.approvedFilter'),
+    notApproved: t('parties.notApprovedFilter'),
+    officialDigitalPresence: t('parties.profile.officialDigitalPresence'),
+    vwaResearchNotice: t('parties.profile.vwaResearchNotice'),
+    reviewPending: t('parties.profile.reviewPending'),
+    noPresenceFound: t('parties.profile.noPresenceFound'),
+    verifiedActive: t('parties.profile.verifiedActive'),
+    verifiedUnreachable: t('parties.profile.verifiedUnreachable'),
+    archivedInactive: t('parties.profile.archivedInactive'),
+    lastChecked: t('parties.profile.lastChecked'),
+    lastHumanReview: t('parties.profile.lastHumanReview'),
+    verificationEvidence: t('parties.profile.verificationEvidence'),
+    politicalPlatform: t('parties.profile.politicalPlatform'),
+    platformPending: t('parties.profile.platformPending'),
+    platformFull: t('parties.profile.platformFull'),
+    platformSummary: t('parties.profile.platformSummary'),
+    platformVision: t('parties.profile.platformVision'),
+    platformSlogans: t('parties.profile.platformSlogans'),
+    platformNoneFound: t('parties.profile.platformNoneFound'),
+    platformUnknown: t('parties.profile.platformUnknown'),
+    originalLanguages: t('parties.profile.originalLanguages'),
+    platformSource: t('parties.profile.platformSource'),
+    candidates: t('parties.profile.candidates'),
+    candidatesUnavailable: t('parties.profile.candidatesUnavailable'),
+    office: t('parties.profile.office'),
+    geography: t('parties.profile.geography'),
+    candidateStatus: t('parties.profile.candidateStatus'),
+    sourcesAndHistory: t('parties.profile.sourcesAndHistory'),
+    officialCepSource: t('parties.profile.officialCepSource'),
+    cepPublicationPage: t('parties.profile.cepPublicationPage'),
+    digitalPresenceSnapshot: t('parties.profile.digitalPresenceSnapshot'),
+    channelLabels: {
+      website: t('parties.channels.website'),
+      facebook: t('parties.channels.facebook'),
+      x: t('parties.channels.x'),
+      instagram: t('parties.channels.instagram'),
+      youtube: t('parties.channels.youtube'),
+      tiktok: t('parties.channels.tiktok'),
+      other: t('parties.channels.other'),
+      platform_page: t('parties.channels.platformPage'),
+      platform_document: t('parties.channels.platformDocument'),
+      contact_page: t('parties.channels.contactPage'),
+    },
+  }
 
   return (
-    <div className="container max-w-3xl py-12 md:py-20">
-      <div className="mb-8">
-        <Link
-          href="/parties"
-          className="mb-4 inline-block text-sm text-muted-foreground hover:text-foreground"
-        >
-          &larr; All parties
-        </Link>
-        <div className="flex flex-wrap items-center gap-3">
-          <h1 className="font-heading text-4xl font-bold">{party.title}</h1>
-          {party.acronym && (
-            <span className="rounded-full border px-3 py-1 text-sm font-medium">
-              {party.acronym}
-            </span>
-          )}
-        </div>
-        {party.description && (
-          <p className="mt-3 text-lg text-muted-foreground">{party.description}</p>
-        )}
-      </div>
-
-      {/* Metadata strip */}
-      {(party.founded || party.ideology || party.website) && (
-        <div className="mb-8 grid gap-3 rounded-xl border bg-muted/30 p-5 text-sm sm:grid-cols-3">
-          {party.founded && (
-            <div>
-              <p className="font-semibold text-foreground">Founded</p>
-              <p className="text-muted-foreground">{party.founded}</p>
-            </div>
-          )}
-          {party.ideology && (
-            <div>
-              <p className="font-semibold text-foreground">Ideology</p>
-              <p className="text-muted-foreground">{party.ideology}</p>
-            </div>
-          )}
-          {party.website && (
-            <div>
-              <p className="font-semibold text-foreground">Website</p>
-              <a
-                href={party.website}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-primary hover:underline"
-              >
-                {new URL(party.website).hostname}
-              </a>
-            </div>
-          )}
-        </div>
-      )}
-
-      <Mdx code={party.body} />
-
-      <div className="mt-10 flex gap-3">
-        <Link href="/parties" className={cn(buttonVariants({ variant: "outline" }))}>
-          All Parties
-        </Link>
-        <Link href="/people" className={cn(buttonVariants({ variant: "outline" }))}>
-          People
-        </Link>
-      </div>
-    </div>
+    <PartyProfile
+      party={party}
+      presence={getPartyPresence(party.sequence)}
+      candidates={getPublishedCandidatesForParty(`cep-${party.sequence}`)}
+      copy={copy}
+      lang={lang}
+    />
   )
 }

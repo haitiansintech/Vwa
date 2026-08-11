@@ -43,7 +43,7 @@ export type SidebarNavItem = {
     }
 )
 
-export type SiteLang = "en" | "ht"
+export type SiteLang = "en" | "es" | "fr" | "ht"
 
 export type EligibilityStatus =
   | "eligible"

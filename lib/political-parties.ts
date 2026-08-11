@@ -1,11 +1,15 @@
 import rawPartyData from '@/data/cep-political-parties.json'
 
+import type { PublishedPartyPresence } from '@/lib/party-monitor/types'
+import { getPartyPresence } from '@/lib/party-presence'
+
 export const CEP_PARTIES_SOURCE_URL =
   'https://cephaiti.ht/wp-content/uploads/2026/07/NOTE-PP-AGREES-9-JUILLET-2026.pdf'
 export const CEP_PARTIES_PUBLICATION_URL =
   'https://cephaiti.ht/publication-de-la-liste-definitive-des-partis-politioues-agrees/'
 export const CEP_PARTIES_SOURCE_PUBLISHED = '2026-07-09'
 export const CEP_PARTIES_TABLE_DATE = '2026-07-07'
+export const RESERVED_PARTY_SLUGS = new Set(['digital-presence'])
 
 export type PartyApprovalStatus = 'approved' | 'not-approved'
 export type PartyStatusFilter = 'all' | PartyApprovalStatus
@@ -28,7 +32,12 @@ export type PoliticalParty = RawPartyRecord & {
   sourceTableDate: typeof CEP_PARTIES_TABLE_DATE
   sourceUrl: typeof CEP_PARTIES_SOURCE_URL
   publicationUrl: typeof CEP_PARTIES_PUBLICATION_URL
-  profileSlug?: string
+  profileSlug: string
+  digitalPresence?: PublishedPartyPresence
+}
+
+export function getPoliticalPartySlug(sequence: number) {
+  return `cep-${sequence}`
 }
 
 export const politicalParties: PoliticalParty[] = (rawPartyData as RawPartyRecord[]).map(
@@ -38,9 +47,20 @@ export const politicalParties: PoliticalParty[] = (rawPartyData as RawPartyRecor
     sourceTableDate: CEP_PARTIES_TABLE_DATE,
     sourceUrl: CEP_PARTIES_SOURCE_URL,
     publicationUrl: CEP_PARTIES_PUBLICATION_URL,
-    profileSlug: party.sequence === 163 ? 'fanmi-lavalas' : undefined,
+    profileSlug: getPoliticalPartySlug(party.sequence),
+    digitalPresence: getPartyPresence(party.sequence),
   })
 )
+
+export function resolvePoliticalPartySlug(slug: string) {
+  if (RESERVED_PARTY_SLUGS.has(slug)) return undefined
+  const match = /^cep-(\d+)$/.exec(slug)
+  if (match) return politicalParties.find((party) => party.sequence === Number(match[1]))
+
+  // Preserve the one profile URL that existed before stable CEP identifiers were introduced.
+  if (slug === 'fanmi-lavalas') return politicalParties.find((party) => party.sequence === 163)
+  return undefined
+}
 
 export const politicalPartyStats = {
   total: politicalParties.length,

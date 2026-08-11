@@ -1,0 +1,284 @@
+{
+  "schemaVersion": 1,
+  "latestCompletedAudit": "2026-08-10T00:32:26.992Z",
+  "records": [
+    {
+      "partyId": "cep-160",
+      "cepSequence": 160,
+      "researchStatus": "researched",
+      "channels": [
+        {
+          "id": "channel-a39143071ad1a62a",
+          "type": "x",
+          "url": "https://x.com/PartiFusion_ht",
+          "verificationStatus": "verified_official",
+          "operationalStatus": "unknown",
+          "evidence": [
+            {
+              "description": "Administrator-submitted candidate reviewed for official ownership.",
+              "urls": [
+                "https://x.com/PartiFusion_ht"
+              ]
+            }
+          ],
+          "confidence": "low",
+          "firstDiscoveredAt": "2026-08-09T23:57:38.940Z",
+          "lastCheckedAt": "2026-08-09T23:57:38.940Z",
+          "lastSuccessfullyReachedAt": null,
+          "lastHumanVerifiedAt": "2026-08-10T00:13:09.558Z",
+          "verifiedBy": "Wlubi"
+        },
+        {
+          "id": "channel-e68e19e41c92af17",
+          "type": "website",
+          "url": "https://partifusion.ht/",
+          "verificationStatus": "verified_official",
+          "operationalStatus": "unknown",
+          "evidence": [
+            {
+              "description": "Administrator-submitted candidate reviewed for official ownership.",
+              "urls": [
+                "https://x.com/PartiFusion_ht"
+              ]
+            }
+          ],
+          "confidence": "low",
+          "firstDiscoveredAt": "2026-08-09T23:57:40.206Z",
+          "lastCheckedAt": "2026-08-09T23:57:40.206Z",
+          "lastSuccessfullyReachedAt": null,
+          "lastHumanVerifiedAt": "2026-08-10T00:13:11.019Z",
+          "verifiedBy": "Wlubi"
+        },
+        {
+          "id": "channel-ac7286a284a1332d",
+          "type": "facebook",
+          "url": "https://www.facebook.com/partifusionht",
+          "verificationStatus": "verified_official",
+          "operationalStatus": "unknown",
+          "evidence": [
+            {
+              "description": "Administrator-submitted candidate for human ownership review.",
+              "urls": [
+                "https://x.com/PartiFusion_ht"
+              ]
+            }
+          ],
+          "confidence": "low",
+          "firstDiscoveredAt": "2026-08-10T00:32:11.645Z",
+          "lastCheckedAt": "2026-08-10T00:32:11.645Z",
+          "lastSuccessfullyReachedAt": null,
+          "lastHumanVerifiedAt": "2026-08-10T00:32:22.802Z",
+          "verifiedBy": "Wlubi"
+        },
+        {
+          "id": "channel-3fd35ef5c35cacd6",
+          "type": "youtube",
+          "url": "https://www.youtube.com/@partifusionhaiti",
+          "verificationStatus": "verified_official",
+          "operationalStatus": "unknown",
+          "evidence": [
+            {
+              "description": "Administrator-submitted candidate for human ownership review.",
+              "urls": [
+                "https://x.com/PartiFusion_ht"
+              ]
+            }
+          ],
+          "confidence": "low",
+          "firstDiscoveredAt": "2026-08-10T00:32:13.355Z",
+          "lastCheckedAt": "2026-08-10T00:32:13.355Z",
+          "lastSuccessfullyReachedAt": null,
+          "lastHumanVerifiedAt": "2026-08-10T00:32:24.651Z",
+          "verifiedBy": "Wlubi"
+        }
+      ],
+      "platform": {
+        "classification": "unknown",
+        "urls": [],
+        "languages": [],
+        "summary": null,
+        "lastHumanVerifiedAt": null,
+        "verifiedBy": null
+      },
+      "sourceTitle": "CEP definitive list of approved political parties",
+      "sourceUrl": "https://cephaiti.ht/wp-content/uploads/2026/07/NOTE-PP-AGREES-9-JUILLET-2026.pdf",
+      "sourcePublicationDate": "2026-07-09",
+      "lastObservedSubstantiveUpdateAt": null,
+      "changeHistory": [
+        {
+          "at": "2026-08-10T00:13:09.558Z",
+          "reviewer": "Wlubi",
+          "description": "Approved candidate_channel proposal proposal-8d7f6da93c89d571."
+        },
+        {
+          "at": "2026-08-10T00:13:11.019Z",
+          "reviewer": "Wlubi",
+          "description": "Approved candidate_channel proposal proposal-e8a0f040f868d229."
+        },
+        {
+          "at": "2026-08-10T00:32:22.802Z",
+          "reviewer": "Wlubi",
+          "description": "Approved candidate_channel proposal proposal-e9ceb3c67f6e4898."
+        },
+        {
+          "at": "2026-08-10T00:32:24.651Z",
+          "reviewer": "Wlubi",
+          "description": "Approved candidate_channel proposal proposal-be13268457766e10."
+        }
+      ]
+    },
+    {
+      "partyId": "cep-248",
+      "cepSequence": 248,
+      "researchStatus": "researched",
+      "channels": [
+        {
+          "id": "channel-45bc923544759500",
+          "type": "facebook",
+          "url": "https://www.facebook.com/edehaiti2021",
+          "verificationStatus": "verified_official",
+          "operationalStatus": "unknown",
+          "evidence": [
+            {
+              "description": "Administrator-submitted candidate reviewed for official ownership.",
+              "urls": [
+                "https://www.facebook.com/edehaiti2021"
+              ]
+            }
+          ],
+          "confidence": "low",
+          "firstDiscoveredAt": "2026-08-09T23:59:34.298Z",
+          "lastCheckedAt": "2026-08-09T23:59:34.298Z",
+          "lastSuccessfullyReachedAt": null,
+          "lastHumanVerifiedAt": "2026-08-10T00:13:12.715Z",
+          "verifiedBy": "Wlubi"
+        },
+        {
+          "id": "channel-796590cebfe1e9ce",
+          "type": "website",
+          "url": "https://ede.ht/",
+          "verificationStatus": "verified_official",
+          "operationalStatus": "unknown",
+          "evidence": [
+            {
+              "description": "Administrator-submitted candidate reviewed for official ownership.",
+              "urls": [
+                "https://www.facebook.com/edehaiti2021"
+              ]
+            }
+          ],
+          "confidence": "low",
+          "firstDiscoveredAt": "2026-08-09T23:59:35.748Z",
+          "lastCheckedAt": "2026-08-09T23:59:35.748Z",
+          "lastSuccessfullyReachedAt": null,
+          "lastHumanVerifiedAt": "2026-08-10T00:13:15.158Z",
+          "verifiedBy": "Wlubi"
+        },
+        {
+          "id": "channel-5e2daa3c55514a14",
+          "type": "x",
+          "url": "https://x.com/edehaiti2021",
+          "verificationStatus": "verified_official",
+          "operationalStatus": "unknown",
+          "evidence": [
+            {
+              "description": "Party-branded YouTube channel uses @edehaiti2021 and links to matching EDE X and Facebook accounts.",
+              "urls": [
+                "https://ede.ht/",
+                "https://www.youtube.com/@edehaiti2021"
+              ]
+            }
+          ],
+          "confidence": "low",
+          "firstDiscoveredAt": "2026-08-10T00:01:28.629Z",
+          "lastCheckedAt": "2026-08-10T00:01:28.629Z",
+          "lastSuccessfullyReachedAt": null,
+          "lastHumanVerifiedAt": "2026-08-10T00:13:16.845Z",
+          "verifiedBy": "Wlubi"
+        },
+        {
+          "id": "channel-ada926e99483b2d1",
+          "type": "instagram",
+          "url": "https://www.instagram.com/edehaiti2021",
+          "verificationStatus": "verified_official",
+          "operationalStatus": "unknown",
+          "evidence": [
+            {
+              "description": "Administrator-submitted candidate reviewed for official ownership.",
+              "urls": [
+                "https://ede.ht/"
+              ]
+            }
+          ],
+          "confidence": "low",
+          "firstDiscoveredAt": "2026-08-10T00:01:29.965Z",
+          "lastCheckedAt": "2026-08-10T00:01:29.965Z",
+          "lastSuccessfullyReachedAt": null,
+          "lastHumanVerifiedAt": "2026-08-10T00:13:18.238Z",
+          "verifiedBy": "Wlubi"
+        },
+        {
+          "id": "channel-5a965a40a4def08d",
+          "type": "youtube",
+          "url": "https://www.youtube.com/@edehaiti2021",
+          "verificationStatus": "verified_official",
+          "operationalStatus": "unknown",
+          "evidence": [
+            {
+              "description": "Party-branded YouTube channel uses @edehaiti2021 and links to matching EDE X and Facebook accounts.",
+              "urls": [
+                "https://ede.ht/",
+                "https://www.youtube.com/@edehaiti2021"
+              ]
+            }
+          ],
+          "confidence": "low",
+          "firstDiscoveredAt": "2026-08-10T00:01:31.436Z",
+          "lastCheckedAt": "2026-08-10T00:01:31.436Z",
+          "lastSuccessfullyReachedAt": null,
+          "lastHumanVerifiedAt": "2026-08-10T00:13:19.549Z",
+          "verifiedBy": "Wlubi"
+        }
+      ],
+      "platform": {
+        "classification": "unknown",
+        "urls": [],
+        "languages": [],
+        "summary": null,
+        "lastHumanVerifiedAt": null,
+        "verifiedBy": null
+      },
+      "sourceTitle": "CEP definitive list of approved political parties",
+      "sourceUrl": "https://cephaiti.ht/wp-content/uploads/2026/07/NOTE-PP-AGREES-9-JUILLET-2026.pdf",
+      "sourcePublicationDate": "2026-07-09",
+      "lastObservedSubstantiveUpdateAt": null,
+      "changeHistory": [
+        {
+          "at": "2026-08-10T00:13:12.715Z",
+          "reviewer": "Wlubi",
+          "description": "Approved candidate_channel proposal proposal-3fdca8838e51bc50."
+        },
+        {
+          "at": "2026-08-10T00:13:15.158Z",
+          "reviewer": "Wlubi",
+          "description": "Approved candidate_channel proposal proposal-4fecb292b15bb945."
+        },
+        {
+          "at": "2026-08-10T00:13:16.845Z",
+          "reviewer": "Wlubi",
+          "description": "Approved candidate_channel proposal proposal-114f1eed04fa52bb."
+        },
+        {
+          "at": "2026-08-10T00:13:18.238Z",
+          "reviewer": "Wlubi",
+          "description": "Approved candidate_channel proposal proposal-bd8c71e262913443."
+        },
+        {
+          "at": "2026-08-10T00:13:19.549Z",
+          "reviewer": "Wlubi",
+          "description": "Approved candidate_channel proposal proposal-a7991b56235e9d2d."
+        }
+      ]
+    }
+  ]
+}

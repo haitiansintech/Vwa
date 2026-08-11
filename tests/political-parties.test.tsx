@@ -4,12 +4,17 @@ import React from 'react'
 import { renderToStaticMarkup } from 'react-dom/server'
 
 import './test-env'
+
+import { getPublishedCandidatesForParty } from '@/lib/political-candidates'
 import {
   filterPoliticalParties,
+  getPoliticalPartySlug,
   politicalParties,
+  resolvePoliticalPartySlug,
   validatePoliticalPartyDataset,
 } from '@/lib/political-parties'
 import { PartiesDirectory, type PartiesDirectoryCopy } from '@/components/parties/parties-directory'
+import { PartyProfile, type PartyProfileCopy } from '@/components/parties/party-profile'
 
 const copy: PartiesDirectoryCopy = {
   heading: 'Political parties registered for the 2026–2027 electoral process',
@@ -35,8 +40,62 @@ const copy: PartiesDirectoryCopy = {
   sourceAnomaly: 'Rows 174, 202, and 309 are absent from the source table.',
   missingName: 'Source row absent — manual verification required',
   needsReview: 'Needs review',
-  viewProfile: 'Detailed profile available',
   tableCaption: 'Official CEP political party registry',
+  digitalPresenceSnapshotLink: 'View the party digital-presence snapshot',
+}
+
+const profileCopy: PartyProfileCopy = {
+  backToParties: 'Political Parties',
+  officialInformation: 'Official CEP party information',
+  cepSequence: 'CEP sequence number',
+  cepStatus: 'CEP electoral status',
+  electionCycle: 'Election cycle',
+  electionCycleValue: '2026–2027 electoral process',
+  sourcePublication: 'CEP source published',
+  lastDataUpdate: 'Last published data update',
+  approved: 'Approved',
+  notApproved: 'Not approved',
+  officialDigitalPresence: 'Official Digital Presence',
+  vwaResearchNotice: 'Human-reviewed VWA research.',
+  reviewPending: 'VWA has not yet completed its digital-presence review for this party.',
+  noPresenceFound: 'No verified official presence was located.',
+  verifiedActive: 'Verified and active',
+  verifiedUnreachable: 'Verified but currently unreachable',
+  archivedInactive: 'Archived or inactive',
+  lastChecked: 'Last successfully checked',
+  lastHumanReview: 'Last human-reviewed',
+  verificationEvidence: 'Verification evidence',
+  politicalPlatform: 'Political Platform',
+  platformPending: 'Platform research is pending.',
+  platformFull: 'Substantive platform',
+  platformSummary: 'Platform summary',
+  platformVision: 'General vision',
+  platformSlogans: 'Slogans only',
+  platformNoneFound: 'No platform located.',
+  platformUnknown: 'Platform unknown',
+  originalLanguages: 'Original languages',
+  platformSource: 'Platform source',
+  candidates: 'Candidates Affiliated With This Party',
+  candidatesUnavailable: 'Candidate information is not yet available from CEP publications.',
+  office: 'Office sought',
+  geography: 'Electoral geography',
+  candidateStatus: 'CEP candidate status',
+  sourcesAndHistory: 'Sources and Status History',
+  officialCepSource: 'Official CEP party publication',
+  cepPublicationPage: 'CEP publication page',
+  digitalPresenceSnapshot: 'Digital-presence snapshot',
+  channelLabels: {
+    website: 'Website',
+    facebook: 'Facebook',
+    x: 'X',
+    instagram: 'Instagram',
+    youtube: 'YouTube',
+    tiktok: 'TikTok',
+    other: 'Other',
+    platform_page: 'Platform page',
+    platform_document: 'Platform document',
+    contact_page: 'Contact page',
+  },
 }
 
 test('CEP dataset has the published totals and complete sequence index', () => {
@@ -88,6 +147,14 @@ test('status filtering returns only the four non-approved parties', () => {
   assert.ok(rejected.every((party) => party.status === 'not-approved'))
 })
 
+test('stable party slugs are collision-safe and reserve the snapshot route', () => {
+  const slugs = politicalParties.map((party) => getPoliticalPartySlug(party.sequence))
+  assert.equal(new Set(slugs).size, 320)
+  assert.equal(resolvePoliticalPartySlug('cep-163')?.name, 'Fanmi Lavalas')
+  assert.equal(resolvePoliticalPartySlug('digital-presence'), undefined)
+  assert.equal(resolvePoliticalPartySlug('fanmi-lavalas')?.sequence, 163)
+})
+
 test('party directory renders counts, source information, and registry rows', () => {
   const html = renderToStaticMarkup(
     <PartiesDirectory parties={politicalParties} copy={copy} lang="en" />
@@ -99,5 +166,29 @@ test('party directory renders counts, source information, and registry rows', ()
   assert.match(html, /Official CEP source/)
   assert.match(html, /does not confirm placement on the final ballot/)
   assert.match(html, /Fanmi Lavalas/)
+  assert.match(html, /href="\/en\/parties\/cep-163"/)
+  assert.match(html, /href="\/en\/parties\/digital-presence"/)
   assert.match(html, /Source row absent/)
+  assert.doesNotMatch(html, /Verified digital presence/)
+  assert.doesNotMatch(html, /Digital-presence methodology/)
+})
+
+test('party profile renders official facts and truthful research and candidate empty states', () => {
+  const party = resolvePoliticalPartySlug('cep-1')!
+  const html = renderToStaticMarkup(
+    <PartyProfile
+      party={party}
+      presence={undefined}
+      candidates={getPublishedCandidatesForParty('cep-1')}
+      copy={profileCopy}
+      lang="en"
+    />
+  )
+  assert.match(html, /Official CEP party information/)
+  assert.match(html, /Zouti Pou Yon Lot Ayiti/)
+  assert.match(html, /Official Digital Presence/)
+  assert.match(html, /has not yet completed its digital-presence review/)
+  assert.match(html, /Platform research is pending/)
+  assert.match(html, /Candidate information is not yet available/)
+  assert.match(html, /href="\/en\/parties"/)
 })
