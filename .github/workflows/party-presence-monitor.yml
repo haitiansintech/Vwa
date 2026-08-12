@@ -1,0 +1,103 @@
+name: Political party presence monitor
+
+on:
+  schedule:
+    # Weekly by default. Increase during registration/campaign periods by reviewing this cron.
+    - cron: '17 8 * * 1'
+  workflow_dispatch:
+    inputs:
+      action:
+        description: Choose monitoring or reviewer-seeded discovery
+        required: true
+        default: monitor
+        type: choice
+        options:
+          - monitor
+          - discover_seed
+      dry_run:
+        description: Check sources without writing proposals
+        required: true
+        default: true
+        type: boolean
+      party_id:
+        description: Party ID for discovery or optional monitoring filter, for example cep-248
+        required: false
+        type: string
+      seed_url:
+        description: Reviewer-provided URL required for discover_seed
+        required: false
+        type: string
+      resume_after:
+        description: Optional last completed party ID from an interrupted audit
+        required: false
+        type: string
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: political-party-presence-monitor
+  cancel-in-progress: false
+
+jobs:
+  audit:
+    if: vars.PARTY_MONITOR_ENABLED != 'false'
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10.15.1
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - name: Run bounded monitoring or URL-seed discovery
+        env:
+          ACTION: ${{ inputs.action }}
+          DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run || false }}
+          PARTY_ID: ${{ inputs.party_id }}
+          SEED_URL: ${{ inputs.seed_url }}
+          RESUME_AFTER: ${{ inputs.resume_after }}
+        run: |
+          if [ "$ACTION" = "discover_seed" ]; then
+            if [ -z "$PARTY_ID" ] || [ -z "$SEED_URL" ]; then
+              echo "discover_seed requires party_id and seed_url" >&2
+              exit 2
+            fi
+            args=(--party "$PARTY_ID" --url "$SEED_URL")
+            if [ "$DRY_RUN" = "true" ]; then args+=(--dry-run); fi
+            pnpm monitor:discover -- "${args[@]}"
+          else
+            args=()
+            if [ "$DRY_RUN" = "true" ]; then args+=(--dry-run); fi
+            if [ -n "$PARTY_ID" ]; then args+=(--party "$PARTY_ID"); fi
+            if [ -n "$RESUME_AFTER" ]; then args+=(--resume-after "$RESUME_AFTER"); fi
+            pnpm monitor:parties -- "${args[@]}"
+          fi
+      - name: Upload changed CEP documents for inspection
+        if: ${{ hashFiles('.party-monitor-staging/**') != '' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: cep-publication-staging
+          path: .party-monitor-staging
+          retention-days: 14
+      - name: Open or update the review pull request
+        if: ${{ github.event_name == 'schedule' || inputs.dry_run == false }}
+        uses: peter-evans/create-pull-request@v7
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: automation/party-presence-monitor
+          delete-branch: true
+          commit-message: 'chore: propose party presence audit updates'
+          title: 'chore: review political-party presence audit'
+          body: |
+            Automated review queue generated from allowlisted CEP sources, already verified party URLs, or a reviewer-provided party URL seed.
+
+            Discovery is bounded, deterministic, and does not use a search provider or AI model. Nothing in this pull request is published as verified merely because it was discovered. Review each item in `data/party-monitor/pending-updates.json`, record a decision with `pnpm monitor:review`, and inspect staged CEP documents in the workflow artifact.
+          labels: |
+            data-review
+            automated-audit

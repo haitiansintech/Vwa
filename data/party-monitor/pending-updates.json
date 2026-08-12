@@ -1,0 +1,270 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-08-10T00:32:24.651Z",
+  "items": [
+    {
+      "partyId": "cep-160",
+      "changeType": "candidate_channel",
+      "existingValue": null,
+      "proposedValue": {
+        "type": "x",
+        "url": "https://x.com/PartiFusion_ht"
+      },
+      "evidence": [
+        {
+          "description": "Administrator-submitted candidate; ownership is not yet verified.",
+          "urls": [
+            "https://x.com/PartiFusion_ht"
+          ]
+        }
+      ],
+      "confidence": "low",
+      "discoveredAt": "2026-08-09T23:57:38.940Z",
+      "auditedAt": "2026-08-09T23:57:38.940Z",
+      "sourceUrls": [
+        "https://x.com/PartiFusion_ht",
+        "https://x.com/PartiFusion_ht"
+      ],
+      "id": "proposal-8d7f6da93c89d571",
+      "fingerprint": "8d7f6da93c89d571b94fb70af47df819f2efe661655260f37a12623f0c4119d0",
+      "decision": "approved",
+      "reviewer": "Wlubi",
+      "reviewedAt": "2026-08-10T00:13:09.558Z"
+    },
+    {
+      "partyId": "cep-160",
+      "changeType": "candidate_channel",
+      "existingValue": null,
+      "proposedValue": {
+        "type": "website",
+        "url": "https://partifusion.ht/"
+      },
+      "evidence": [
+        {
+          "description": "Administrator-submitted candidate; ownership is not yet verified.",
+          "urls": [
+            "https://x.com/PartiFusion_ht"
+          ]
+        }
+      ],
+      "confidence": "low",
+      "discoveredAt": "2026-08-09T23:57:40.206Z",
+      "auditedAt": "2026-08-09T23:57:40.206Z",
+      "sourceUrls": [
+        "https://partifusion.ht/",
+        "https://x.com/PartiFusion_ht"
+      ],
+      "id": "proposal-e8a0f040f868d229",
+      "fingerprint": "e8a0f040f868d2292244f8ffc3e33e95127a207838f6e0c0e92d321150c8fa77",
+      "decision": "approved",
+      "reviewer": "Wlubi",
+      "reviewedAt": "2026-08-10T00:13:11.019Z"
+    },
+    {
+      "partyId": "cep-248",
+      "changeType": "candidate_channel",
+      "existingValue": null,
+      "proposedValue": {
+        "type": "facebook",
+        "url": "https://www.facebook.com/edehaiti2021"
+      },
+      "evidence": [
+        {
+          "description": "Administrator-submitted candidate; ownership is not yet verified.",
+          "urls": [
+            "https://www.facebook.com/edehaiti2021"
+          ]
+        }
+      ],
+      "confidence": "low",
+      "discoveredAt": "2026-08-09T23:59:34.298Z",
+      "auditedAt": "2026-08-09T23:59:34.298Z",
+      "sourceUrls": [
+        "https://www.facebook.com/edehaiti2021",
+        "https://www.facebook.com/edehaiti2021"
+      ],
+      "id": "proposal-3fdca8838e51bc50",
+      "fingerprint": "3fdca8838e51bc509635d9907e068bb9a3815260b7c40c48e4bf1ad9cb8caff0",
+      "decision": "approved",
+      "reviewer": "Wlubi",
+      "reviewedAt": "2026-08-10T00:13:12.715Z"
+    },
+    {
+      "partyId": "cep-248",
+      "changeType": "candidate_channel",
+      "existingValue": null,
+      "proposedValue": {
+        "type": "website",
+        "url": "https://ede.ht/"
+      },
+      "evidence": [
+        {
+          "description": "Administrator-submitted candidate; ownership is not yet verified.",
+          "urls": [
+            "https://www.facebook.com/edehaiti2021"
+          ]
+        }
+      ],
+      "confidence": "low",
+      "discoveredAt": "2026-08-09T23:59:35.748Z",
+      "auditedAt": "2026-08-09T23:59:35.748Z",
+      "sourceUrls": [
+        "https://ede.ht/",
+        "https://www.facebook.com/edehaiti2021"
+      ],
+      "id": "proposal-4fecb292b15bb945",
+      "fingerprint": "4fecb292b15bb9451b89d92403bc50dad5bd20ffcda9ed9dd19c7a2034a3b9fe",
+      "decision": "approved",
+      "reviewer": "Wlubi",
+      "reviewedAt": "2026-08-10T00:13:15.158Z"
+    },
+    {
+      "partyId": "cep-248",
+      "changeType": "candidate_channel",
+      "existingValue": null,
+      "proposedValue": {
+        "type": "x",
+        "url": "https://x.com/edehaiti2021"
+      },
+      "evidence": [
+        {
+          "description": "Party-branded YouTube channel uses @edehaiti2021 and links to matching EDE X and Facebook accounts; ownership remains pending reviewer approval.",
+          "urls": [
+            "https://ede.ht/",
+            "https://www.youtube.com/@edehaiti2021"
+          ]
+        }
+      ],
+      "confidence": "low",
+      "discoveredAt": "2026-08-10T00:01:28.629Z",
+      "auditedAt": "2026-08-10T00:01:28.629Z",
+      "sourceUrls": [
+        "https://x.com/edehaiti2021",
+        "https://ede.ht/",
+        "https://www.youtube.com/@edehaiti2021"
+      ],
+      "id": "proposal-114f1eed04fa52bb",
+      "fingerprint": "114f1eed04fa52bbb8ab17cebab255da62a865f65c2fde518e28a9aff29a1286",
+      "decision": "approved",
+      "reviewer": "Wlubi",
+      "reviewedAt": "2026-08-10T00:13:16.845Z"
+    },
+    {
+      "partyId": "cep-248",
+      "changeType": "candidate_channel",
+      "existingValue": null,
+      "proposedValue": {
+        "type": "instagram",
+        "url": "https://www.instagram.com/edehaiti2021"
+      },
+      "evidence": [
+        {
+          "description": "Administrator-submitted candidate; ownership is not yet verified.",
+          "urls": [
+            "https://ede.ht/"
+          ]
+        }
+      ],
+      "confidence": "low",
+      "discoveredAt": "2026-08-10T00:01:29.965Z",
+      "auditedAt": "2026-08-10T00:01:29.965Z",
+      "sourceUrls": [
+        "https://www.instagram.com/edehaiti2021",
+        "https://ede.ht/"
+      ],
+      "id": "proposal-bd8c71e262913443",
+      "fingerprint": "bd8c71e262913443bacf8309a06764c3b8b0f088855f71167f820ac1235613c5",
+      "decision": "approved",
+      "reviewer": "Wlubi",
+      "reviewedAt": "2026-08-10T00:13:18.238Z"
+    },
+    {
+      "partyId": "cep-248",
+      "changeType": "candidate_channel",
+      "existingValue": null,
+      "proposedValue": {
+        "type": "youtube",
+        "url": "https://www.youtube.com/@edehaiti2021"
+      },
+      "evidence": [
+        {
+          "description": "Party-branded YouTube channel uses @edehaiti2021 and links to matching EDE X and Facebook accounts; ownership remains pending reviewer approval.",
+          "urls": [
+            "https://ede.ht/",
+            "https://www.youtube.com/@edehaiti2021"
+          ]
+        }
+      ],
+      "confidence": "low",
+      "discoveredAt": "2026-08-10T00:01:31.436Z",
+      "auditedAt": "2026-08-10T00:01:31.436Z",
+      "sourceUrls": [
+        "https://ede.ht/",
+        "https://www.youtube.com/@edehaiti2021"
+      ],
+      "id": "proposal-a7991b56235e9d2d",
+      "fingerprint": "a7991b56235e9d2dc6ee6af8708738bda44bb07f6fe0db3b1814e50007757694",
+      "decision": "approved",
+      "reviewer": "Wlubi",
+      "reviewedAt": "2026-08-10T00:13:19.549Z"
+    },
+    {
+      "partyId": "cep-160",
+      "changeType": "candidate_channel",
+      "existingValue": null,
+      "proposedValue": {
+        "type": "facebook",
+        "url": "https://www.facebook.com/partifusionht"
+      },
+      "evidence": [
+        {
+          "description": "Administrator-submitted candidate for human ownership review.",
+          "urls": [
+            "https://x.com/PartiFusion_ht"
+          ]
+        }
+      ],
+      "confidence": "low",
+      "discoveredAt": "2026-08-10T00:32:11.645Z",
+      "auditedAt": "2026-08-10T00:32:11.645Z",
+      "sourceUrls": [
+        "https://www.facebook.com/partifusionht",
+        "https://x.com/PartiFusion_ht"
+      ],
+      "id": "proposal-e9ceb3c67f6e4898",
+      "fingerprint": "e9ceb3c67f6e4898fc3fbef2944fd25c42c995b636c845dd7c634c71433d0e19",
+      "decision": "approved",
+      "reviewer": "Wlubi",
+      "reviewedAt": "2026-08-10T00:32:22.802Z"
+    },
+    {
+      "partyId": "cep-160",
+      "changeType": "candidate_channel",
+      "existingValue": null,
+      "proposedValue": {
+        "type": "youtube",
+        "url": "https://www.youtube.com/@partifusionhaiti"
+      },
+      "evidence": [
+        {
+          "description": "Administrator-submitted candidate for human ownership review.",
+          "urls": [
+            "https://x.com/PartiFusion_ht"
+          ]
+        }
+      ],
+      "confidence": "low",
+      "discoveredAt": "2026-08-10T00:32:13.355Z",
+      "auditedAt": "2026-08-10T00:32:13.355Z",
+      "sourceUrls": [
+        "https://www.youtube.com/@partifusionhaiti",
+        "https://x.com/PartiFusion_ht"
+      ],
+      "id": "proposal-be13268457766e10",
+      "fingerprint": "be13268457766e1042d33c76057c29cdce19d2df8ea662601e7ecf90da43d03e",
+      "decision": "approved",
+      "reviewer": "Wlubi",
+      "reviewedAt": "2026-08-10T00:32:24.651Z"
+    }
+  ]
+}

@@ -44,8 +44,8 @@ export default async function PartiesPage({ params: { lang } }: Props) {
     sourceAnomaly: t('parties.sourceAnomaly'),
     missingName: t('parties.missingName'),
     needsReview: t('parties.needsReview'),
-    viewProfile: t('parties.viewProfile'),
     tableCaption: t('parties.tableCaption'),
+    digitalPresenceSnapshotLink: t('parties.digitalPresenceSnapshotLink'),
   }
 
   return <PartiesDirectory parties={politicalParties} copy={copy} lang={lang} />

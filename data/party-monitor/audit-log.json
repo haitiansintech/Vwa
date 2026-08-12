@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "event-8d7f6da9-1786320789558",
+      "at": "2026-08-10T00:13:09.558Z",
+      "action": "review_approved",
+      "partyId": "cep-160",
+      "detail": "Wlubi marked proposal-8d7f6da93c89d571 approved."
+    },
+    {
+      "id": "event-e8a0f040-1786320791019",
+      "at": "2026-08-10T00:13:11.019Z",
+      "action": "review_approved",
+      "partyId": "cep-160",
+      "detail": "Wlubi marked proposal-e8a0f040f868d229 approved."
+    },
+    {
+      "id": "event-3fdca883-1786320792715",
+      "at": "2026-08-10T00:13:12.715Z",
+      "action": "review_approved",
+      "partyId": "cep-248",
+      "detail": "Wlubi marked proposal-3fdca8838e51bc50 approved."
+    },
+    {
+      "id": "event-4fecb292-1786320795158",
+      "at": "2026-08-10T00:13:15.158Z",
+      "action": "review_approved",
+      "partyId": "cep-248",
+      "detail": "Wlubi marked proposal-4fecb292b15bb945 approved."
+    },
+    {
+      "id": "event-114f1eed-1786320796845",
+      "at": "2026-08-10T00:13:16.845Z",
+      "action": "review_approved",
+      "partyId": "cep-248",
+      "detail": "Wlubi marked proposal-114f1eed04fa52bb approved."
+    },
+    {
+      "id": "event-bd8c71e2-1786320798238",
+      "at": "2026-08-10T00:13:18.238Z",
+      "action": "review_approved",
+      "partyId": "cep-248",
+      "detail": "Wlubi marked proposal-bd8c71e262913443 approved."
+    },
+    {
+      "id": "event-a7991b56-1786320799549",
+      "at": "2026-08-10T00:13:19.549Z",
+      "action": "review_approved",
+      "partyId": "cep-248",
+      "detail": "Wlubi marked proposal-a7991b56235e9d2d approved."
+    },
+    {
+      "id": "event-audit-complete-1786320801936",
+      "at": "2026-08-10T00:13:21.936Z",
+      "action": "published_audit_completed",
+      "partyId": null,
+      "detail": "Wlubi confirmed that every proposal in this audit was reviewed."
+    },
+    {
+      "id": "event-e9ceb3c6-1786321942802",
+      "at": "2026-08-10T00:32:22.802Z",
+      "action": "review_approved",
+      "partyId": "cep-160",
+      "detail": "Wlubi marked proposal-e9ceb3c67f6e4898 approved."
+    },
+    {
+      "id": "event-be132684-1786321944651",
+      "at": "2026-08-10T00:32:24.651Z",
+      "action": "review_approved",
+      "partyId": "cep-160",
+      "detail": "Wlubi marked proposal-be13268457766e10 approved."
+    },
+    {
+      "id": "event-audit-complete-1786321946992",
+      "at": "2026-08-10T00:32:26.992Z",
+      "action": "published_audit_completed",
+      "partyId": null,
+      "detail": "Wlubi confirmed that every proposal in this audit was reviewed."
+    }
+  ]
+}
