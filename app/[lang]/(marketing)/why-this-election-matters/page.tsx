@@ -1,153 +1,174 @@
-import type { Metadata } from 'next';
-import Link from 'next/link';
+import type { Metadata } from 'next'
+import Link from 'next/link'
 
-
-
-import { cn } from '@/lib/utils';
-import { buttonVariants } from '@/components/ui/button';
-
-
-
-
+import { cn } from '@/lib/utils'
+import { buttonVariants } from '@/components/ui/button'
 
 export const metadata: Metadata = {
   title: 'Why This Election Matters',
   description:
-    "The historical context behind Haiti's 2026 election and what is at stake for the country.",
+    "Why Haiti's 2026-2027 electoral process matters and what the latest CEP updates mean.",
 }
+
+const cepCalendarUrl =
+  'https://cephaiti.ht/publication-officielle-du-calendrier-electoral-2026-2027/'
+const cepUpdatesUrl = 'https://cephaiti.ht/notes-communiques/'
 
 export default function WhyThisElectionMattersPage() {
   return (
     <article className="container max-w-3xl py-12 md:py-20">
       <header className="mb-12">
-        <div className="mb-4 text-sm font-medium text-muted-foreground">Historical Context</div>
+        <div className="mb-4 text-sm font-medium text-muted-foreground">
+          Updated August 11, 2026
+        </div>
         <h1 className="font-heading text-4xl font-bold leading-tight sm:text-5xl">
           Why This Election Matters
         </h1>
-        <p className="mt-4 text-xl text-muted-foreground leading-relaxed">
-          Haiti has not completed a full, legitimate democratic transition in nearly a decade. The
-          2026 election represents a rare, consequential opportunity.
+        <p className="mt-4 text-xl leading-relaxed text-muted-foreground">
+          Haiti is preparing for its first national vote in a decade. The CEP&apos;s new calendar
+          makes the path more concrete, but security, funding, and public trust will determine
+          whether the process succeeds.
         </p>
       </header>
 
-      <div className="prose prose-slate dark:prose-invert max-w-none space-y-8">
+      <div className="prose prose-slate max-w-none space-y-8 dark:prose-invert">
         <section>
           <h2>A Decade Without National Elections</h2>
-
           <p>
-            Haiti’s most recent national election cycle began in 2015, covering the presidency,
-            parliament, and local offices. During this process, Jovenel Moïse was declared the
-            winner of the presidential race. However, the results were widely contested, and the
-            presidential election was ultimately annulled following allegations of fraud and
-            irregularities, along with broader disruptions affecting legislative and local races.
+            Haiti&apos;s last national election cycle began in 2015. After the initial presidential
+            result was annulled amid allegations of fraud and irregularities, a rerun was held in
+            2016. Jovenel Moïse won that vote and took office in 2017.
           </p>
-
           <p>
-            After a period of political transition under interim leadership, new elections were held
-            in 2016. Moïse again ran and won the presidency, taking office in 2017. Parliamentary
-            elections were also completed during this period, but no subsequent national elections
-            have been held to renew most elected offices.
+            No subsequent national elections renewed the country&apos;s elected institutions. As
+            mandates expired, Haiti was left without a functioning national legislature and with
+            many local offices vacant or managed through interim appointments. Moïse&apos;s
+            assassination on July 7, 2021 deepened the institutional crisis, and national authority
+            has since remained in transitional, unelected hands.
           </p>
-
           <p>
-            Over time, the mandates of elected officials at all levels expired without new elections
-            being held, leaving Haiti without a functioning parliament and with many local positions
-            vacant or filled through interim arrangements.
+            The 2026-2027 process is therefore not a routine election. It is an attempt to restore
+            representative institutions after years without nationally elected government.
           </p>
+        </section>
 
+        <section>
+          <h2>What Has Changed</h2>
           <p>
-            On July 7, 2021, Moïse was assassinated, creating a leadership vacuum. Since then, Haiti
-            has been governed by unelected transitional authorities.
+            The electoral process has moved beyond preliminary planning. A revised electoral decree
+            was adopted on June 2, 2026 and later amended. The CEP published its definitive list of
+            political parties on July 9, launched voter registration on July 20, and published a new
+            2026-2027 electoral calendar on July 27.
           </p>
-
           <p>
-            The upcoming vote represents a critical opportunity to restore elected governance and
-            democratic legitimacy across all levels of the state.
+            Under that calendar, the first round of presidential and legislative elections is
+            scheduled for December 13, 2026, together with a popular vote on proposed constitutional
+            changes. Any second round, along with elections for territorial collectivities, is
+            scheduled for February 21, 2027. Final results are expected in March 2027.
+          </p>
+          <p>
+            Recent CEP activity also includes the progressive opening of voter-registration centers,
+            the review of political alliances, and the launch of accreditation for journalists and
+            election observers. These are tangible operational steps, not only promised dates.
           </p>
         </section>
 
         <section>
           <h2>What Is at Stake</h2>
           <p>
-            The stakes of this election extend beyond who wins. What is fundamentally at stake is
-            whether Haiti can restore the basic constitutional framework that makes governance
-            accountable to the people.
+            The election will shape the presidency, the legislature, and local government. More
+            fundamentally, it will test whether Haiti can rebuild institutions that answer to voters
+            and create a lawful basis for governing through the country&apos;s security,
+            humanitarian, and economic crises.
           </p>
-          <p>A credible election outcome would establish:</p>
+          <p>A credible process could provide:</p>
           <ul>
-            <li>A president with a legitimate popular mandate</li>
-            <li>A government capable of negotiating with international partners</li>
-            <li>A precedent that democratic transfers of power are possible in Haiti</li>
-            <li>A foundation for addressing the security and humanitarian crisis</li>
+            <li>Elected national and local authorities with a popular mandate</li>
+            <li>A restored legislature able to exercise representation and oversight</li>
+            <li>A constitutional path away from prolonged transitional rule</li>
+            <li>A stronger basis for public accountability and international cooperation</li>
           </ul>
-        </section>
-
-        <section>
-          <h2>The Role of the Haitian Diaspora</h2>
-
           <p>
-            The Haitian diaspora is one of the most significant forces in Haitian civil society.
-            Remittances from Haitians abroad account for approximately 20% to 25% of Haiti’s GDP,
-            making it one of the highest remittance-dependent economies in the world. Diaspora
-            Haitians maintain deep ties to the country through family, culture, and investment.
-          </p>
-
-          <p>
-            Legally, the Haitian constitution extends citizenship and its associated rights to all
-            children of Haitian nationals, regardless of where they were born. This means millions
-            of Haitians in the United States, Canada, France, and elsewhere may hold the right to
-            participate.
-          </p>
-
-          <p>
-            What has historically been missing is access to clear, trustworthy information about how
-            to exercise that right. Vwa was built to address that gap.
+            Credibility depends on more than holding a vote. Voters and candidates must be able to
+            participate safely, election administration must be impartial, and results must be
+            transparent and open to lawful challenge.
           </p>
         </section>
 
         <section>
-          <h2>What We Know and Do Not Know</h2>
+          <h2>The Calendar Is Official, but Conditional</h2>
           <p>
-            The full mechanics of diaspora participation are still being determined by the Conseil
-            Electoral Provisoire (CEP). We will update this page as official guidance is published.
-            What is clear:
+            The new dates replace the earlier plan for elections on August 30 and December 6, 2026.
+            In publishing the revised calendar, the CEP explicitly stated that meeting its deadlines
+            depends on an acceptable security environment and the availability of sufficient
+            funding.
           </p>
-          <ul>
-            <li>The constitutional right to citizenship is not in question</li>
-            <li>Documentation requirements will likely apply</li>
-            <li>Early preparation is strongly advisable</li>
-            <li>The registration window may be limited</li>
-          </ul>
+          <p>
+            That condition matters. The calendar is the current official plan, not a guarantee. Vwa
+            will distinguish between scheduled milestones, completed steps, and any future changes
+            announced by the CEP.
+          </p>
+        </section>
+
+        <section>
+          <h2>Voter Registration and the Diaspora</h2>
+          <p>
+            The CEP says a voter must be at least 18, be registered on the electoral roll, hold a
+            national identification card (CIN), and retain full civil and political rights. Voter
+            registration began on July 20 and is scheduled to continue through October 13, 2026,
+            with registration-and-voting centers opening progressively across Haiti.
+          </p>
+          <p>
+            Haitians abroad remain deeply connected to the country through family, civic life,
+            investment, and remittances. However, citizenship alone should not be treated as
+            confirmation that a person can vote from abroad. As of this update, the CEP has not
+            published a complete, operational overseas voting process. Diaspora voters should wait
+            for official instructions on registration locations, required documents, and where a
+            ballot may be cast.
+          </p>
         </section>
 
         <section>
           <h2>A Note on Partisanship</h2>
           <p>
             Vwa is a nonpartisan platform. We do not endorse any candidate, party, or political
-            faction. Our purpose is to provide accurate civic information so that Haitians can make
-            their own informed decisions. Political questions belong to Haitian citizens, not to
-            civic technology platforms.
+            faction. Our purpose is to make official civic information easier to understand so that
+            Haitians can make their own informed decisions.
           </p>
         </section>
       </div>
 
       <div className="mt-12 flex flex-col gap-4 sm:flex-row">
-        <Link href="/eligibility" className={cn(buttonVariants(), 'sm:w-auto w-full')}>
+        <Link href="/eligibility" className={cn(buttonVariants(), 'w-full sm:w-auto')}>
           Check Your Eligibility
         </Link>
         <Link
-          href="/resources"
-          className={cn(buttonVariants({ variant: 'outline' }), 'sm:w-auto w-full')}
+          href="/timeline"
+          className={cn(buttonVariants({ variant: 'outline' }), 'w-full sm:w-auto')}
         >
-          Browse Resources
+          View the Election Timeline
         </Link>
       </div>
 
       <div className="mt-8 rounded-lg border border-muted-foreground/20 p-4 text-xs text-muted-foreground">
-        Sources: Haitian Constitution (1987), CEP public communications, Inter-American Commission
-        on Human Rights, United Nations Office for the Coordination of Humanitarian Affairs. This
-        page reflects best available information as of early 2025 and will be updated as the
-        electoral process develops.
+        <p>
+          This page reflects official information available on August 11, 2026. Election dates and
+          procedures may change.
+        </p>
+        <div className="mt-3 flex flex-wrap gap-x-4 gap-y-2">
+          <a
+            className="font-medium text-primary underline-offset-4 hover:underline"
+            href={cepCalendarUrl}
+          >
+            Official CEP calendar
+          </a>
+          <a
+            className="font-medium text-primary underline-offset-4 hover:underline"
+            href={cepUpdatesUrl}
+          >
+            Latest CEP notices
+          </a>
+        </div>
       </div>
     </article>
   )
