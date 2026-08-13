@@ -5,6 +5,7 @@ import { ExternalLink } from 'lucide-react'
 import type { ChannelType, PublishedPartyPresence } from '@/lib/party-monitor/types'
 import { getPresenceState, getPublicOfficialChannels } from '@/lib/party-presence'
 import type { PublishedPoliticalCandidate } from '@/lib/political-candidates'
+import type { PoliticalGrouping } from '@/lib/political-groupings'
 import type { PoliticalParty } from '@/lib/political-parties'
 import { Badge } from '@/components/ui/badge'
 
@@ -13,6 +14,7 @@ export type PartyProfileCopy = {
   officialInformation: string
   cepSequence: string
   cepStatus: string
+  politicalGrouping: string
   electionCycle: string
   electionCycleValue: string
   sourcePublication: string
@@ -46,6 +48,7 @@ export type PartyProfileCopy = {
   candidateStatus: string
   sourcesAndHistory: string
   officialCepSource: string
+  officialCepGroupingSource: string
   cepPublicationPage: string
   digitalPresenceSnapshot: string
   channelLabels: Record<ChannelType, string>
@@ -53,6 +56,7 @@ export type PartyProfileCopy = {
 
 type Props = {
   party: PoliticalParty
+  groupings: PoliticalGrouping[]
   presence?: PublishedPartyPresence
   candidates: PublishedPoliticalCandidate[]
   copy: PartyProfileCopy
@@ -68,7 +72,7 @@ const platformCopyKey = {
   unknown: 'platformUnknown',
 } as const
 
-export function PartyProfile({ party, presence, candidates, copy, lang }: Props) {
+export function PartyProfile({ party, groupings, presence, candidates, copy, lang }: Props) {
   const channels = getPublicOfficialChannels(presence)
   const presenceState = getPresenceState(presence)
   const stateLabel = {
@@ -99,12 +103,18 @@ export function PartyProfile({ party, presence, candidates, copy, lang }: Props)
           </h1>
           {party.acronym && <Badge variant="outline">{party.acronym}</Badge>}
         </div>
-        <dl className="mt-6 grid gap-4 rounded-xl border bg-muted/30 p-5 text-sm sm:grid-cols-2 lg:grid-cols-5">
+        <dl className="mt-6 grid gap-4 rounded-xl border bg-muted/30 p-5 text-sm sm:grid-cols-2 lg:grid-cols-3">
           <Fact label={copy.cepSequence} value={String(party.sequence)} />
           <Fact
             label={copy.cepStatus}
             value={party.status === 'approved' ? copy.approved : copy.notApproved}
           />
+          {groupings.length > 0 && (
+            <Fact
+              label={copy.politicalGrouping}
+              value={groupings.map((grouping) => grouping.name).join(', ')}
+            />
+          )}
           <Fact label={copy.electionCycle} value={copy.electionCycleValue} />
           <Fact label={copy.sourcePublication} value={party.sourcePublished} />
           <Fact label={copy.lastDataUpdate} value={lastPresenceChange ?? party.sourcePublished} />
@@ -281,6 +291,19 @@ export function PartyProfile({ party, presence, candidates, copy, lang }: Props)
                 <ExternalLink className="size-3.5" aria-hidden="true" />
               </a>
             </li>
+            {groupings.length > 0 && (
+              <li>
+                <a
+                  href={groupings[0].sourceUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 font-medium text-primary hover:underline"
+                >
+                  {copy.officialCepGroupingSource}
+                  <ExternalLink className="size-3.5" aria-hidden="true" />
+                </a>
+              </li>
+            )}
             {presence?.changeHistory.map((event) => (
               <li key={`${event.at}-${event.description}`} className="text-muted-foreground">
                 {event.at} · {event.description}

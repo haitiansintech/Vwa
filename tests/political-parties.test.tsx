@@ -7,6 +7,11 @@ import './test-env'
 
 import { getPublishedCandidatesForParty } from '@/lib/political-candidates'
 import {
+  filterPoliticalGroupings,
+  politicalGroupings,
+  validatePoliticalGroupingDataset,
+} from '@/lib/political-groupings'
+import {
   filterPoliticalParties,
   getPoliticalPartySlug,
   politicalParties,
@@ -17,8 +22,27 @@ import { PartiesDirectory, type PartiesDirectoryCopy } from '@/components/partie
 import { PartyProfile, type PartyProfileCopy } from '@/components/parties/party-profile'
 
 const copy: PartiesDirectoryCopy = {
-  heading: 'Political parties registered for the 2026–2027 electoral process',
-  summary: 'Official CEP registry.',
+  eyebrow: 'CEP • August 2026',
+  heading: 'Political groupings approved for the 2026–2027 electoral process',
+  summary: 'Official CEP grouping registry.',
+  groupingsRegistered: 'Groupings registered',
+  groupingsApproved: 'Groupings approved',
+  memberParties: 'Parties in approved groupings',
+  groupingsView: 'Approved groupings',
+  partiesView: 'All political parties',
+  groupingsHeading: 'Approved political groupings',
+  groupingsIntro: 'Each grouping brings together approved political parties.',
+  groupingSearchLabel: 'Search groupings and member parties',
+  groupingSearchPlaceholder: 'Search groupings',
+  groupingResults: '{count} of {total} approved groupings shown',
+  noGroupings: 'No approved grouping matches.',
+  representative: 'CEP-listed representative',
+  memberCount: 'Member parties',
+  members: 'View {count} member parties',
+  noProfileLink: 'No profile link available.',
+  partyRegistryHeading: 'Complete political-party registry',
+  partyRegistrySummary: 'The underlying July registry remains available.',
+  partyRegistryNote: 'Rows 174, 202, and 309 are absent from the July table.',
   registered: 'Total registered',
   approved: 'Approved',
   notApproved: 'Not approved',
@@ -49,6 +73,7 @@ const profileCopy: PartyProfileCopy = {
   officialInformation: 'Official CEP party information',
   cepSequence: 'CEP sequence number',
   cepStatus: 'CEP electoral status',
+  politicalGrouping: 'Approved political grouping',
   electionCycle: 'Election cycle',
   electionCycleValue: '2026–2027 electoral process',
   sourcePublication: 'CEP source published',
@@ -82,6 +107,7 @@ const profileCopy: PartyProfileCopy = {
   candidateStatus: 'CEP candidate status',
   sourcesAndHistory: 'Sources and Status History',
   officialCepSource: 'Official CEP party publication',
+  officialCepGroupingSource: 'Official CEP grouping publication',
   cepPublicationPage: 'CEP publication page',
   digitalPresenceSnapshot: 'Digital-presence snapshot',
   channelLabels: {
@@ -105,6 +131,26 @@ test('CEP dataset has the published totals and complete sequence index', () => {
   assert.equal(result.approved, 316)
   assert.equal(result.notApproved, 4)
   assert.equal(result.uniqueSequences, 320)
+})
+
+test('CEP grouping dataset has the published totals and resolves known party profiles', () => {
+  const result = validatePoliticalGroupingDataset()
+
+  assert.equal(result.approved, 15)
+  assert.equal(result.memberParties, 208)
+  assert.equal(result.linkedParties, 205)
+  assert.equal(result.unlinkedParties, 3)
+})
+
+test('grouping search matches grouping names, representatives, and member parties', () => {
+  assert.deepEqual(
+    filterPoliticalGroupings(politicalGroupings, 'Wadner').map((grouping) => grouping.id),
+    ['soley']
+  )
+  assert.deepEqual(
+    filterPoliticalGroupings(politicalGroupings, 'Fanmi Ayisyen').map((grouping) => grouping.id),
+    ['ayiti-transfome']
+  )
 })
 
 test('the four printed non-approved parties have the verified status', () => {
@@ -155,22 +201,26 @@ test('stable party slugs are collision-safe and reserve the snapshot route', () 
   assert.equal(resolvePoliticalPartySlug('fanmi-lavalas')?.sequence, 163)
 })
 
-test('party directory renders counts, source information, and registry rows', () => {
+test('party directory defaults to approved political groupings and preserves party profile links', () => {
   const html = renderToStaticMarkup(
-    <PartiesDirectory parties={politicalParties} copy={copy} lang="en" />
+    <PartiesDirectory
+      groupings={politicalGroupings}
+      parties={politicalParties}
+      copy={copy}
+      lang="en"
+    />
   )
 
-  assert.match(html, /Political parties registered/)
-  assert.match(html, />320</)
-  assert.match(html, />316</)
+  assert.match(html, /Political groupings approved/)
+  assert.match(html, />18</)
+  assert.match(html, />15</)
+  assert.match(html, />208</)
   assert.match(html, /Official CEP source/)
-  assert.match(html, /does not confirm placement on the final ballot/)
-  assert.match(html, /Fanmi Lavalas/)
-  assert.match(html, /href="\/en\/parties\/cep-163"/)
+  assert.match(html, /SOLÈY/)
+  assert.match(html, /VIKTWA/)
+  assert.match(html, /href="\/en\/parties\/cep-180"/)
   assert.match(html, /href="\/en\/parties\/digital-presence"/)
-  assert.match(html, /Source row absent/)
-  assert.doesNotMatch(html, /Verified digital presence/)
-  assert.doesNotMatch(html, /Digital-presence methodology/)
+  assert.match(html, /Action Démocratique pour Bâtir Haïti/)
 })
 
 test('party profile renders official facts and truthful research and candidate empty states', () => {
@@ -178,6 +228,9 @@ test('party profile renders official facts and truthful research and candidate e
   const html = renderToStaticMarkup(
     <PartyProfile
       party={party}
+      groupings={politicalGroupings.filter((grouping) =>
+        grouping.members.some((member) => member.sequence === party.sequence)
+      )}
       presence={undefined}
       candidates={getPublishedCandidatesForParty('cep-1')}
       copy={profileCopy}
