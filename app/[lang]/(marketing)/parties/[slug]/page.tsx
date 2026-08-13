@@ -4,6 +4,7 @@ import type { SiteLang } from '@/types'
 
 import { getPartyPresence } from '@/lib/party-presence'
 import { getPublishedCandidatesForParty } from '@/lib/political-candidates'
+import { getPoliticalGroupingsForParty } from '@/lib/political-groupings'
 import { politicalParties, resolvePoliticalPartySlug } from '@/lib/political-parties'
 import { PartyProfile, type PartyProfileCopy } from '@/components/parties/party-profile'
 import { getTranslation } from '@/app/i18n'
@@ -41,6 +42,7 @@ export default async function PartyPage({ params: { lang, slug } }: Props) {
     officialInformation: t('parties.profile.officialInformation'),
     cepSequence: t('parties.profile.cepSequence'),
     cepStatus: t('parties.profile.cepStatus'),
+    politicalGrouping: t('parties.profile.politicalGrouping'),
     electionCycle: t('parties.profile.electionCycle'),
     electionCycleValue: t('parties.profile.electionCycleValue'),
     sourcePublication: t('parties.profile.sourcePublication'),
@@ -74,6 +76,7 @@ export default async function PartyPage({ params: { lang, slug } }: Props) {
     candidateStatus: t('parties.profile.candidateStatus'),
     sourcesAndHistory: t('parties.profile.sourcesAndHistory'),
     officialCepSource: t('parties.profile.officialCepSource'),
+    officialCepGroupingSource: t('parties.profile.officialCepGroupingSource'),
     cepPublicationPage: t('parties.profile.cepPublicationPage'),
     digitalPresenceSnapshot: t('parties.profile.digitalPresenceSnapshot'),
     channelLabels: {
@@ -93,6 +96,7 @@ export default async function PartyPage({ params: { lang, slug } }: Props) {
   return (
     <PartyProfile
       party={party}
+      groupings={getPoliticalGroupingsForParty(party.sequence)}
       presence={getPartyPresence(party.sequence)}
       candidates={getPublishedCandidatesForParty(`cep-${party.sequence}`)}
       copy={copy}

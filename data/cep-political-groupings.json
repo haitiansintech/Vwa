@@ -1,0 +1,117 @@
+[
+  {
+    "id": "soley",
+    "name": "SOLÈY",
+    "acronym": "SOLÈY",
+    "representative": "EDOUARD Wadner",
+    "memberSequences": [180, 64, 40, 84, 243, 152, 126, 48, 245, 67, 204, 100, 17]
+  },
+  {
+    "id": "sol-ayiti",
+    "name": "Solidarite pou Ayiti Respire",
+    "acronym": "SOL AYITI",
+    "representative": "MURAT Charlot",
+    "memberSequences": [304, 300, 161, 276, 113, 182, 188, 85, 198, 45, 256]
+  },
+  {
+    "id": "cha",
+    "name": "Coppos-Haiti et Alliés",
+    "acronym": "CHA",
+    "representative": "SALOMON Jamil",
+    "memberSequences": [49, 53, 54, 65, 52, 51, 60, 61, 59, 56, 58, 57, 63]
+  },
+  {
+    "id": "ayiti-transfome",
+    "name": "Ayiti Transfòme",
+    "acronym": "AYITI TRANSFÒME",
+    "representative": "GENESTE Jean Davide",
+    "memberSequences": [112, 80, 143, 33, 70, 154, 215, 199, 290, 109, 224, 168]
+  },
+  {
+    "id": "debloke",
+    "name": "DEBLOKE",
+    "acronym": "DEBLOKE",
+    "representative": "LHERISSON Marie Yanick Mezile",
+    "memberSequences": [77, 134, 18, 289, 89, 46, 237, 42, 315, 121, 71]
+  },
+  {
+    "id": "platfom-rekonsilye",
+    "name": "PLATFÒM REKONSILYE",
+    "acronym": "P.R",
+    "representative": "JIHA Jean Junior",
+    "memberSequences": [187, 99, 239, 176, 227, 261, 30, 177, 241, 238]
+  },
+  {
+    "id": "debout-patriotes",
+    "name": "Debout Patriotes",
+    "acronym": "DPA",
+    "representative": "JOSEPH Wuilson",
+    "memberSequences": [108, 279, 21, 119, 25, 75, 148, 69, 258, 270, 172]
+  },
+  {
+    "id": "en-avant-pour-haiti",
+    "name": "EN AVANT POUR HAITI",
+    "acronym": "EAPH",
+    "representative": "NANCY Vilce",
+    "memberSequences": [107, 140, 86, 311, 132, 16, 218, 122, 185, 76, 7, 186]
+  },
+  {
+    "id": "debout-citoyen",
+    "name": "Debout Citoyen pour la transformation d’Haïti",
+    "acronym": "Debout Citoyen",
+    "representative": "LAFLEUR Phito",
+    "memberSequences": [313, 36, 169, 142, 284, 233, 213, 120, 26, 184]
+  },
+  {
+    "id": "lapeh-ak-alyel-yo",
+    "name": "LAPEH AK ALYE’L YO",
+    "acronym": "LAPEH AK ALYE’L YO",
+    "representative": "BOYER Marie Nelly Verpile",
+    "memberSequences": [193, 179, 24, 221, 138, 268, 212, 166, 162, 308]
+  },
+  {
+    "id": "anfos-pou-sove-lone",
+    "name": "ANFÒS POU SOVE LONÈ",
+    "acronym": "ANFÒS POU SOVE LONÈ",
+    "representative": "GILLES Cemephise",
+    "memberSequences": [11, 22, 68, 265, 226, 74, 2, 39, 240, 131]
+  },
+  {
+    "id": "delivrans",
+    "name": "DELIVRANS",
+    "acronym": "DELIVRANS",
+    "representative": "DELATOUR Djina Guillet",
+    "memberSequences": [189, 66, 104, 158, 124, 281, 196, 285, 97, 28]
+  },
+  {
+    "id": "myel",
+    "name": "MYÈL",
+    "acronym": "MYÈL",
+    "representative": "LEGROS Michel",
+    "memberSequences": [223, 35, 181, 305, 264, 273, 274, 44, 230, 236, 117, 288, 1]
+  },
+  {
+    "id": "viktwa",
+    "name": "VIKTWA",
+    "acronym": "VIKTWA",
+    "representative": "CAMILLE Leblanc",
+    "memberSequences": [
+      4, 234, 246, 228, 37, 191, 266, 95, 14, 20, 257, 32, 283, 91, 208, 255, 306, 278, 210, 225,
+      34, 277, 123, 93, 157, 73, 170, 247, 153, 296, 216, 287, 252, 8, 303, 15, 118, 90, 159, 312,
+      235, 249, 98, 254, 136, 72, 150, 133, 167
+    ],
+    "unlinkedMembers": [
+      { "name": "Action Démocratique pour Bâtir Haïti", "acronym": "ADEBHA" },
+      { "name": "Action Pour un Meilleur Environnement National", "acronym": "AMEN" },
+      { "name": "Afè Peyizan ak Pèp Ayisyen", "acronym": "APPA" }
+    ],
+    "sourceDeclaredMemberCount": 50
+  },
+  {
+    "id": "kapab",
+    "name": "KONBIT AK AKSYON POU AYITI BEL",
+    "acronym": "KAPAB",
+    "representative": "GUE Jean",
+    "memberSequences": [291, 197, 139, 38, 87, 103, 88, 151, 217, 302]
+  }
+]
