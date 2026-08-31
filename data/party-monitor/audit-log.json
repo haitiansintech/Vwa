@@ -77,6 +77,20 @@
       "action": "published_audit_completed",
       "partyId": null,
       "detail": "Wlubi confirmed that every proposal in this audit was reviewed."
+    },
+    {
+      "id": "event-21b7aa93fefef759",
+      "at": "2026-08-31T16:08:36.481Z",
+      "action": "source_check_failed",
+      "partyId": null,
+      "detail": "Response exceeds the 5242880-byte limit."
+    },
+    {
+      "id": "event-819f216d1e008547",
+      "at": "2026-08-31T16:08:36.481Z",
+      "action": "audit_completed",
+      "partyId": null,
+      "detail": "Checked 3 CEP sources and 2 published party records; created 10 proposals."
     }
   ]
 }
