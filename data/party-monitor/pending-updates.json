@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-08-10T00:32:24.651Z",
+  "updatedAt": "2026-08-31T16:08:36.481Z",
   "items": [
     {
       "partyId": "cep-160",
@@ -265,6 +265,346 @@
       "decision": "approved",
       "reviewer": "Wlubi",
       "reviewedAt": "2026-08-10T00:32:24.651Z"
+    },
+    {
+      "partyId": null,
+      "changeType": "cep_publication",
+      "existingValue": null,
+      "proposedValue": {
+        "url": "https://cephaiti.ht/publication-de-la-liste-definitive-des-partis-politioues-agrees/",
+        "contentHash": "f871cc413bd9a77b7b95943226bcdb7a15172a12b01d5af42bf6ceaf38511a97",
+        "etag": null,
+        "lastModified": null,
+        "contentType": "text/html",
+        "status": 200,
+        "firstSeenAt": "2026-08-31T16:08:36.481Z",
+        "lastCheckedAt": "2026-08-31T16:08:36.481Z"
+      },
+      "evidence": [
+        {
+          "description": "Official CEP publication first observed.",
+          "urls": [
+            "https://cephaiti.ht/publication-de-la-liste-definitive-des-partis-politioues-agrees/"
+          ]
+        }
+      ],
+      "confidence": "high",
+      "discoveredAt": "2026-08-31T16:08:36.481Z",
+      "auditedAt": "2026-08-31T16:08:36.481Z",
+      "sourceUrls": [
+        "https://cephaiti.ht/publication-de-la-liste-definitive-des-partis-politioues-agrees/"
+      ],
+      "id": "proposal-0e9f240a2932c067",
+      "fingerprint": "0e9f240a2932c06731168736830ce06093de0f50e2ea622d52e6d6cdf99e8eec",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null
+    },
+    {
+      "partyId": "cep-160",
+      "changeType": "channel_status",
+      "existingValue": {
+        "channelId": "channel-a39143071ad1a62a",
+        "operationalStatus": "unknown",
+        "url": "https://x.com/PartiFusion_ht"
+      },
+      "proposedValue": {
+        "channelId": "channel-a39143071ad1a62a",
+        "operationalStatus": "reachable",
+        "finalUrl": "https://x.com/PartiFusion_ht",
+        "error": null
+      },
+      "evidence": [
+        {
+          "description": "HTTP 200 check.",
+          "urls": [
+            "https://x.com/PartiFusion_ht"
+          ]
+        }
+      ],
+      "confidence": "high",
+      "discoveredAt": "2026-08-31T16:08:36.481Z",
+      "auditedAt": "2026-08-31T16:08:36.481Z",
+      "sourceUrls": [
+        "https://x.com/PartiFusion_ht"
+      ],
+      "id": "proposal-585a78c09aba1c20",
+      "fingerprint": "585a78c09aba1c207ab89e2ed0a944d9ee83a373e5042c193959871e03f2bd5b",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null
+    },
+    {
+      "partyId": "cep-160",
+      "changeType": "channel_status",
+      "existingValue": {
+        "channelId": "channel-e68e19e41c92af17",
+        "operationalStatus": "unknown",
+        "url": "https://partifusion.ht/"
+      },
+      "proposedValue": {
+        "channelId": "channel-e68e19e41c92af17",
+        "operationalStatus": "reachable",
+        "finalUrl": "https://partifusion.ht/",
+        "error": null
+      },
+      "evidence": [
+        {
+          "description": "HTTP 200 check.",
+          "urls": [
+            "https://partifusion.ht/"
+          ]
+        }
+      ],
+      "confidence": "high",
+      "discoveredAt": "2026-08-31T16:08:36.481Z",
+      "auditedAt": "2026-08-31T16:08:36.481Z",
+      "sourceUrls": [
+        "https://partifusion.ht/"
+      ],
+      "id": "proposal-362af249bb2896c3",
+      "fingerprint": "362af249bb2896c3b9ea02a5ba424b29173f6064b58906bb6227fa1c922a90f4",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null
+    },
+    {
+      "partyId": "cep-160",
+      "changeType": "redirect",
+      "existingValue": {
+        "channelId": "channel-ac7286a284a1332d",
+        "operationalStatus": "unknown",
+        "url": "https://www.facebook.com/partifusionht"
+      },
+      "proposedValue": {
+        "channelId": "channel-ac7286a284a1332d",
+        "operationalStatus": "redirected",
+        "finalUrl": "https://www.facebook.com/parti.fusion.ht/",
+        "error": null
+      },
+      "evidence": [
+        {
+          "description": "HTTP 200 check.",
+          "urls": [
+            "https://www.facebook.com/partifusionht"
+          ]
+        }
+      ],
+      "confidence": "high",
+      "discoveredAt": "2026-08-31T16:08:36.481Z",
+      "auditedAt": "2026-08-31T16:08:36.481Z",
+      "sourceUrls": [
+        "https://www.facebook.com/partifusionht"
+      ],
+      "id": "proposal-86f26d98f026550c",
+      "fingerprint": "86f26d98f026550c84e10ca28fc63ec7ece338e8f289cb7ca6e665df445f93d5",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null
+    },
+    {
+      "partyId": "cep-160",
+      "changeType": "channel_status",
+      "existingValue": {
+        "channelId": "channel-3fd35ef5c35cacd6",
+        "operationalStatus": "unknown",
+        "url": "https://www.youtube.com/@partifusionhaiti"
+      },
+      "proposedValue": {
+        "channelId": "channel-3fd35ef5c35cacd6",
+        "operationalStatus": "reachable",
+        "finalUrl": "https://www.youtube.com/@partifusionhaiti",
+        "error": null
+      },
+      "evidence": [
+        {
+          "description": "HTTP 200 check.",
+          "urls": [
+            "https://www.youtube.com/@partifusionhaiti"
+          ]
+        }
+      ],
+      "confidence": "high",
+      "discoveredAt": "2026-08-31T16:08:36.481Z",
+      "auditedAt": "2026-08-31T16:08:36.481Z",
+      "sourceUrls": [
+        "https://www.youtube.com/@partifusionhaiti"
+      ],
+      "id": "proposal-727b2c1aaa765875",
+      "fingerprint": "727b2c1aaa76587588c1c2f45e0c1efc185224f89cff17b56a5297313c583b33",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null
+    },
+    {
+      "partyId": "cep-248",
+      "changeType": "channel_status",
+      "existingValue": {
+        "channelId": "channel-45bc923544759500",
+        "operationalStatus": "unknown",
+        "url": "https://www.facebook.com/edehaiti2021"
+      },
+      "proposedValue": {
+        "channelId": "channel-45bc923544759500",
+        "operationalStatus": "reachable",
+        "finalUrl": "https://www.facebook.com/edehaiti2021",
+        "error": null
+      },
+      "evidence": [
+        {
+          "description": "HTTP 200 check.",
+          "urls": [
+            "https://www.facebook.com/edehaiti2021"
+          ]
+        }
+      ],
+      "confidence": "high",
+      "discoveredAt": "2026-08-31T16:08:36.481Z",
+      "auditedAt": "2026-08-31T16:08:36.481Z",
+      "sourceUrls": [
+        "https://www.facebook.com/edehaiti2021"
+      ],
+      "id": "proposal-4fe10402da2b900b",
+      "fingerprint": "4fe10402da2b900b68f0def4f85f50b99979db2a5f3dd42560ce2ded125b426c",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null
+    },
+    {
+      "partyId": "cep-248",
+      "changeType": "channel_status",
+      "existingValue": {
+        "channelId": "channel-796590cebfe1e9ce",
+        "operationalStatus": "unknown",
+        "url": "https://ede.ht/"
+      },
+      "proposedValue": {
+        "channelId": "channel-796590cebfe1e9ce",
+        "operationalStatus": "reachable",
+        "finalUrl": "https://ede.ht/",
+        "error": null
+      },
+      "evidence": [
+        {
+          "description": "HTTP 200 check.",
+          "urls": [
+            "https://ede.ht/"
+          ]
+        }
+      ],
+      "confidence": "high",
+      "discoveredAt": "2026-08-31T16:08:36.481Z",
+      "auditedAt": "2026-08-31T16:08:36.481Z",
+      "sourceUrls": [
+        "https://ede.ht/"
+      ],
+      "id": "proposal-ab14b668796e01cb",
+      "fingerprint": "ab14b668796e01cbdec14f70d16afacafee0d5144c3ee8c36048391c3b9d3987",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null
+    },
+    {
+      "partyId": "cep-248",
+      "changeType": "channel_status",
+      "existingValue": {
+        "channelId": "channel-5e2daa3c55514a14",
+        "operationalStatus": "unknown",
+        "url": "https://x.com/edehaiti2021"
+      },
+      "proposedValue": {
+        "channelId": "channel-5e2daa3c55514a14",
+        "operationalStatus": "reachable",
+        "finalUrl": "https://x.com/edehaiti2021",
+        "error": null
+      },
+      "evidence": [
+        {
+          "description": "HTTP 200 check.",
+          "urls": [
+            "https://x.com/edehaiti2021"
+          ]
+        }
+      ],
+      "confidence": "high",
+      "discoveredAt": "2026-08-31T16:08:36.481Z",
+      "auditedAt": "2026-08-31T16:08:36.481Z",
+      "sourceUrls": [
+        "https://x.com/edehaiti2021"
+      ],
+      "id": "proposal-f4573b58d5a0ccb3",
+      "fingerprint": "f4573b58d5a0ccb3a55d43c942c2fbbe1c60d1bbdc8301133b6a5919506d08fb",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null
+    },
+    {
+      "partyId": "cep-248",
+      "changeType": "redirect",
+      "existingValue": {
+        "channelId": "channel-ada926e99483b2d1",
+        "operationalStatus": "unknown",
+        "url": "https://www.instagram.com/edehaiti2021"
+      },
+      "proposedValue": {
+        "channelId": "channel-ada926e99483b2d1",
+        "operationalStatus": "redirected",
+        "finalUrl": "https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fedehaiti2021&is_from_rle",
+        "error": null
+      },
+      "evidence": [
+        {
+          "description": "HTTP 200 check.",
+          "urls": [
+            "https://www.instagram.com/edehaiti2021"
+          ]
+        }
+      ],
+      "confidence": "high",
+      "discoveredAt": "2026-08-31T16:08:36.481Z",
+      "auditedAt": "2026-08-31T16:08:36.481Z",
+      "sourceUrls": [
+        "https://www.instagram.com/edehaiti2021"
+      ],
+      "id": "proposal-f0823655b17f43fc",
+      "fingerprint": "f0823655b17f43fcda53719d1b4fe3cb724040b8ff7fd23ae7d7f54784fb3180",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null
+    },
+    {
+      "partyId": "cep-248",
+      "changeType": "channel_status",
+      "existingValue": {
+        "channelId": "channel-5a965a40a4def08d",
+        "operationalStatus": "unknown",
+        "url": "https://www.youtube.com/@edehaiti2021"
+      },
+      "proposedValue": {
+        "channelId": "channel-5a965a40a4def08d",
+        "operationalStatus": "reachable",
+        "finalUrl": "https://www.youtube.com/@edehaiti2021",
+        "error": null
+      },
+      "evidence": [
+        {
+          "description": "HTTP 200 check.",
+          "urls": [
+            "https://www.youtube.com/@edehaiti2021"
+          ]
+        }
+      ],
+      "confidence": "high",
+      "discoveredAt": "2026-08-31T16:08:36.481Z",
+      "auditedAt": "2026-08-31T16:08:36.481Z",
+      "sourceUrls": [
+        "https://www.youtube.com/@edehaiti2021"
+      ],
+      "id": "proposal-1526825e00df51fb",
+      "fingerprint": "1526825e00df51fbc40208904d208ca02662e2ef7eec3cdffe78e89b7d9ea777",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null
     }
   ]
 }
