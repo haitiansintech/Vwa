@@ -112,7 +112,7 @@
     "react-hook-form": "^7.51.1",
     "react-i18next": "^14.1.0",
     "react-textarea-autosize": "^8.5.3",
-    "sharp": "^0.33.3",
+    "sharp": "^0.35.4",
     "shiki": "^1.2.0",
     "stripe": "^14.22.0",
     "tailwind-merge": "^2.2.2",
