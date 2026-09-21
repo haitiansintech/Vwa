@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-08-31T16:08:36.481Z",
+  "updatedAt": "2026-09-21T15:05:17.240Z",
   "items": [
     {
       "partyId": "cep-160",
@@ -602,6 +602,117 @@
       ],
       "id": "proposal-1526825e00df51fb",
       "fingerprint": "1526825e00df51fbc40208904d208ca02662e2ef7eec3cdffe78e89b7d9ea777",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null
+    },
+    {
+      "partyId": null,
+      "changeType": "cep_publication",
+      "existingValue": {
+        "url": "https://cephaiti.ht/publication-de-la-liste-definitive-des-partis-politioues-agrees/",
+        "contentHash": "f871cc413bd9a77b7b95943226bcdb7a15172a12b01d5af42bf6ceaf38511a97",
+        "etag": null,
+        "lastModified": null,
+        "contentType": "text/html",
+        "status": 200,
+        "firstSeenAt": "2026-08-31T16:08:36.481Z",
+        "lastCheckedAt": "2026-08-31T16:08:36.481Z"
+      },
+      "proposedValue": {
+        "url": "https://cephaiti.ht/publication-de-la-liste-definitive-des-partis-politioues-agrees/",
+        "contentHash": "6bb489ea688011b0ed2ea994211ed1d100c26da29932119791c4d425609d199b",
+        "etag": null,
+        "lastModified": null,
+        "contentType": "text/html",
+        "status": 200,
+        "firstSeenAt": "2026-08-31T16:08:36.481Z",
+        "lastCheckedAt": "2026-09-21T15:05:17.240Z"
+      },
+      "evidence": [
+        {
+          "description": "Official CEP content hash changed.",
+          "urls": [
+            "https://cephaiti.ht/publication-de-la-liste-definitive-des-partis-politioues-agrees/"
+          ]
+        }
+      ],
+      "confidence": "high",
+      "discoveredAt": "2026-09-21T15:05:17.240Z",
+      "auditedAt": "2026-09-21T15:05:17.240Z",
+      "sourceUrls": [
+        "https://cephaiti.ht/publication-de-la-liste-definitive-des-partis-politioues-agrees/"
+      ],
+      "id": "proposal-f2a7bac9e6a76fc5",
+      "fingerprint": "f2a7bac9e6a76fc5cbf64dc7dbf4c2a8893024944223a827f1969e874f383c61",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null
+    },
+    {
+      "partyId": "cep-160",
+      "changeType": "channel_status",
+      "existingValue": {
+        "channelId": "channel-a39143071ad1a62a",
+        "operationalStatus": "unknown",
+        "url": "https://x.com/PartiFusion_ht"
+      },
+      "proposedValue": {
+        "channelId": "channel-a39143071ad1a62a",
+        "operationalStatus": "unavailable",
+        "finalUrl": "https://x.com/PartiFusion_ht",
+        "error": null
+      },
+      "evidence": [
+        {
+          "description": "HTTP 403 check.",
+          "urls": [
+            "https://x.com/PartiFusion_ht"
+          ]
+        }
+      ],
+      "confidence": "high",
+      "discoveredAt": "2026-09-21T15:05:17.240Z",
+      "auditedAt": "2026-09-21T15:05:17.240Z",
+      "sourceUrls": [
+        "https://x.com/PartiFusion_ht"
+      ],
+      "id": "proposal-8f7fc789dd9b4305",
+      "fingerprint": "8f7fc789dd9b4305d08b6e49d80e24e50abdf3ac1bd987a1418d64a77198cc3b",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null
+    },
+    {
+      "partyId": "cep-248",
+      "changeType": "channel_status",
+      "existingValue": {
+        "channelId": "channel-5e2daa3c55514a14",
+        "operationalStatus": "unknown",
+        "url": "https://x.com/edehaiti2021"
+      },
+      "proposedValue": {
+        "channelId": "channel-5e2daa3c55514a14",
+        "operationalStatus": "unavailable",
+        "finalUrl": "https://x.com/edehaiti2021",
+        "error": null
+      },
+      "evidence": [
+        {
+          "description": "HTTP 403 check.",
+          "urls": [
+            "https://x.com/edehaiti2021"
+          ]
+        }
+      ],
+      "confidence": "high",
+      "discoveredAt": "2026-09-21T15:05:17.240Z",
+      "auditedAt": "2026-09-21T15:05:17.240Z",
+      "sourceUrls": [
+        "https://x.com/edehaiti2021"
+      ],
+      "id": "proposal-2fdc7eb17d7b7df5",
+      "fingerprint": "2fdc7eb17d7b7df5b92dc51fbe2edaedea6845a46ff760f494df919c239906ed",
       "decision": "pending",
       "reviewer": null,
       "reviewedAt": null
