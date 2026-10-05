@@ -3,23 +3,23 @@
   "sources": [
     {
       "url": "https://cephaiti.ht/",
-      "contentHash": "477d1c6aea2faae366eac4c229d74fb51cea22f56fd7929df82f088bf610a42e",
+      "contentHash": "93a236a9a0b5094bfc5d3cd1937b8b9daa88d704ad249c8487784ed8c3d89c9a",
       "etag": null,
       "lastModified": null,
       "contentType": "text/html",
       "status": 200,
       "firstSeenAt": "2026-08-31T16:08:36.481Z",
-      "lastCheckedAt": "2026-08-31T16:08:36.481Z"
+      "lastCheckedAt": "2026-10-05T17:07:10.143Z"
     },
     {
       "url": "https://cephaiti.ht/publication-de-la-liste-definitive-des-partis-politioues-agrees/",
-      "contentHash": "f871cc413bd9a77b7b95943226bcdb7a15172a12b01d5af42bf6ceaf38511a97",
+      "contentHash": "73ecd9944c31c0b7a383bf5e2f08927319ee3f6e7e5e2c634950c539a7785592",
       "etag": null,
       "lastModified": null,
       "contentType": "text/html",
       "status": 200,
       "firstSeenAt": "2026-08-31T16:08:36.481Z",
-      "lastCheckedAt": "2026-08-31T16:08:36.481Z"
+      "lastCheckedAt": "2026-10-05T17:07:10.143Z"
     },
     {
       "url": "https://cephaiti.ht/wp-content/uploads/2026/08/STRUCTURES-NUMEROS.pdf",
@@ -29,7 +29,7 @@
       "contentType": "application/pdf",
       "status": 200,
       "firstSeenAt": "2026-08-31T16:08:36.481Z",
-      "lastCheckedAt": "2026-08-31T16:08:36.481Z"
+      "lastCheckedAt": "2026-10-05T17:07:10.143Z"
     }
   ]
 }
