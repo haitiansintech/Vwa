@@ -91,6 +91,20 @@
       "action": "audit_completed",
       "partyId": null,
       "detail": "Checked 3 CEP sources and 2 published party records; created 10 proposals."
+    },
+    {
+      "id": "event-b9ea700157dbac39",
+      "at": "2026-10-05T17:07:10.143Z",
+      "action": "source_check_failed",
+      "partyId": null,
+      "detail": "Response exceeds the 5242880-byte limit."
+    },
+    {
+      "id": "event-33405a83c3299696",
+      "at": "2026-10-05T17:07:10.143Z",
+      "action": "audit_completed",
+      "partyId": null,
+      "detail": "Checked 3 CEP sources and 2 published party records; created 3 proposals."
     }
   ]
 }
