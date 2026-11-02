@@ -3,23 +3,23 @@
   "sources": [
     {
       "url": "https://cephaiti.ht/",
-      "contentHash": "477d1c6aea2faae366eac4c229d74fb51cea22f56fd7929df82f088bf610a42e",
+      "contentHash": "6b85f59ee1090832eae56d8c1b786b377d87926b38b3b98f3e27c66664b7f04a",
       "etag": null,
       "lastModified": null,
       "contentType": "text/html",
       "status": 200,
       "firstSeenAt": "2026-08-31T16:08:36.481Z",
-      "lastCheckedAt": "2026-08-31T16:08:36.481Z"
+      "lastCheckedAt": "2026-11-02T18:16:36.548Z"
     },
     {
       "url": "https://cephaiti.ht/publication-de-la-liste-definitive-des-partis-politioues-agrees/",
-      "contentHash": "f871cc413bd9a77b7b95943226bcdb7a15172a12b01d5af42bf6ceaf38511a97",
+      "contentHash": "2bd9a71f449902da6ab750c333e41107b9f8288cb65680dc7b0ca832aec72a1b",
       "etag": null,
       "lastModified": null,
       "contentType": "text/html",
       "status": 200,
       "firstSeenAt": "2026-08-31T16:08:36.481Z",
-      "lastCheckedAt": "2026-08-31T16:08:36.481Z"
+      "lastCheckedAt": "2026-11-02T18:16:36.548Z"
     },
     {
       "url": "https://cephaiti.ht/wp-content/uploads/2026/08/STRUCTURES-NUMEROS.pdf",
@@ -29,7 +29,17 @@
       "contentType": "application/pdf",
       "status": 200,
       "firstSeenAt": "2026-08-31T16:08:36.481Z",
-      "lastCheckedAt": "2026-08-31T16:08:36.481Z"
+      "lastCheckedAt": "2026-11-02T18:16:36.548Z"
+    },
+    {
+      "url": "https://cephaiti.ht/wp-content/uploads/2026/10/CALENDRIER-ACTUALISE-2026-2027.pdf",
+      "contentHash": "0c6a4e6ffa89c53ae0dffcb12c495eb140c446dfc792081f857805e63bf784a7",
+      "etag": null,
+      "lastModified": "Thu, 29 Oct 2026 02:37:06 GMT",
+      "contentType": "application/pdf",
+      "status": 200,
+      "firstSeenAt": "2026-11-02T18:16:36.548Z",
+      "lastCheckedAt": "2026-11-02T18:16:36.548Z"
     }
   ]
 }
